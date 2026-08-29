@@ -10,10 +10,23 @@ const styleClass: Record<string, string> = {
 
 function HandshakeIcon() {
   return (
-    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="hero-boom-handshake-icon">
-      <path d="M8.5 12.5 5 9a2 2 0 0 0-2.8 0l-.7.7a2 2 0 0 0 0 2.8l5 5a3 3 0 0 0 4.2 0l.3-.3" />
-      <path d="M15.5 12.5 19 9a2 2 0 0 1 2.8 0l.7.7a2 2 0 0 1 0 2.8l-5 5a3 3 0 0 1-4.2 0l-1.8-1.8a1.5 1.5 0 0 1 0-2.1v0a1.5 1.5 0 0 1 2.1 0l1.3 1.3" />
-      <path d="M9 12l3-3 2.5 2.5" />
+    <svg viewBox="1 15 62 38" width="34" height="21" className="hero-boom-handshake-icon" aria-hidden="true">
+      {/* cuffs */}
+      <rect x="4" y="24" width="11" height="20" rx="2.5" fill="#3aa7c4" stroke="#0d2a52" strokeWidth="2" />
+      <rect x="49" y="24" width="11" height="20" rx="2.5" fill="#6fd0d6" stroke="#0d2a52" strokeWidth="2" />
+      {/* back hand (reddish) */}
+      <path d="M35 22c3-3 7-3 10 0l9 8.5c1.6 1.5 1.6 3.9 0 5.4-1.5 1.4-3.9 1.4-5.4 0l-4.4-4.1"
+        fill="#c1614c" stroke="#0d2a52" strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" />
+      {/* front hand (tan) */}
+      <path d="M29 22c-3-3-7-3-10 0l-9 8.5c-1.6 1.5-1.6 3.9 0 5.4 1.5 1.4 3.9 1.4 5.4 0l2.3-2.1"
+        fill="#f2b686" stroke="#0d2a52" strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" />
+      {/* clasped fingers */}
+      <path d="M17.5 35.5c-1.3 1.4-1.3 3.6 0 5l7 7c1.6 1.6 4.2 1.6 5.8 0 1.4-1.4 1.4-3.6 0-5"
+        fill="#f2b686" stroke="#0d2a52" strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" />
+      <path d="M25.5 42.5c1.3-1.3 3.5-1.3 4.8 0 1.3 1.3 1.3 3.5 0 4.8"
+        fill="none" stroke="#0d2a52" strokeWidth="2" strokeLinecap="round" />
+      <path d="M20.5 39c1.1-1.1 3-1.1 4.1 0M23 41.5c1.1-1.1 3-1.1 4.1 0"
+        fill="none" stroke="#0d2a52" strokeWidth="1.6" strokeLinecap="round" />
     </svg>
   );
 }

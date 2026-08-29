@@ -863,7 +863,8 @@ function BrandPageFields({ brand: c, set }: { brand: Brand; set: (c: Brand) => v
         const sl = c.slider ?? DEFAULT_BRAND.slider!;
         const upSlider = (p: Partial<typeof sl>) => up("slider", { ...sl, ...p });
         return (
-          <Card title="Brand slider (premium hero-style slide)" hint="An optional animated slide shown right after the hero. 'Wine' = centered product + rotating badge (like OakGrove Cellars). 'Seasons' = giant word with an overlapping image cutout (like the 4 Seasons parallax theme).">
+          <>
+          <Card title="Brand slider (premium hero-style slide)" hint="An optional animated section shown right after the hero. 'Wine' = centered product + rotating badge + arch frame, with prev/next navigation across slides (like OakGrove Cellars). 'Seasons' = giant word with an overlapping image cutout and scroll parallax (like the 4 Seasons theme).">
             <div style={S.fieldWrap}>
               <span style={S.label}>Enabled</span>
               <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
@@ -872,20 +873,28 @@ function BrandPageFields({ brand: c, set }: { brand: Brand; set: (c: Brand) => v
               </div>
             </div>
             <Select label="Style" value={sl.style} options={["wine", "seasons"]} onChange={(v) => upSlider({ style: v as "wine" | "seasons" })} />
-            <Field label="Eyebrow (wine style, small caps line)" value={sl.eyebrow} onChange={(v) => upSlider({ eyebrow: v })} />
-            <Field label={sl.style === "wine" ? "Title (short, e.g. GOLDEN AURA)" : "Giant word (e.g. SPRING)"} value={sl.title} onChange={(v) => upSlider({ title: v })} />
-            {sl.style === "seasons" && (
-              <Field label="Script tagline" value={sl.tagline} onChange={(v) => upSlider({ tagline: v })} />
-            )}
-            <Area label="Body text" value={sl.body} onChange={(v) => upSlider({ body: v })} />
-            <ImageField label="Background image" value={sl.bgImage} onChange={(v) => upSlider({ bgImage: v })} />
-            <ImageField label={sl.style === "wine" ? "Product image (cutout, transparent PNG)" : "Overlapping image cutout"} value={sl.productImage} onChange={(v) => upSlider({ productImage: v })} />
-            {sl.style === "wine" && (
-              <Field label="Rotating badge text" value={sl.badgeText} onChange={(v) => upSlider({ badgeText: v })} />
-            )}
+            <Field label="Eyebrow (static heading shown above every slide)" value={sl.eyebrow} onChange={(v) => upSlider({ eyebrow: v })} />
+            {sl.style === "seasons" && (<>
+              <Field label="Script tagline (static)" value={sl.tagline} onChange={(v) => upSlider({ tagline: v })} />
+              <Area label="Body text (static)" value={sl.body} onChange={(v) => upSlider({ body: v })} />
+            </>)}
             <Field label="Button label (optional)" value={sl.ctaLabel} onChange={(v) => upSlider({ ctaLabel: v })} />
             <Field label="Button link" value={sl.ctaHref} onChange={(v) => upSlider({ ctaHref: v })} />
           </Card>
+          <div style={{ height: 18 }} />
+          <Card title={sl.style === "wine" ? "Slides (product + title changes on prev/next)" : "Slide"} hint={sl.style === "wine" ? "Add multiple slides for a real prev/next carousel — matches the OakGrove reference exactly." : "The seasons style shows one slide; add more only if you want to extend it later."}>
+            <List label="Slides" items={sl.slides} onChange={(slides) => upSlider({ slides })}
+              blank={{ title: sl.style === "wine" ? "NEW VINTAGE" : "WORD", bgImage: "", productImage: "", badgeText: "" }}
+              render={(s, set2) => (<>
+                <Field label={sl.style === "wine" ? "Title (short, e.g. GOLDEN AURA)" : "Giant word (e.g. SPRING)"} value={s.title} onChange={(v) => set2({ ...s, title: v })} />
+                <ImageField label="Background image" value={s.bgImage} onChange={(v) => set2({ ...s, bgImage: v })} />
+                <ImageField label={sl.style === "wine" ? "Product image (cutout, transparent PNG)" : "Overlapping image cutout"} value={s.productImage} onChange={(v) => set2({ ...s, productImage: v })} />
+                {sl.style === "wine" && (
+                  <Field label="Rotating badge text" value={s.badgeText} onChange={(v) => set2({ ...s, badgeText: v })} />
+                )}
+              </>)} />
+          </Card>
+          </>
         );
       })()}
       {tab === "story" && (<>

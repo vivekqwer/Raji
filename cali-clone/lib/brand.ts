@@ -31,18 +31,22 @@ export type BrandPalette = {
   accent: string;   // secondary accent (gold)
 };
 
-export type BrandSlider = {
-  enabled: boolean;
-  style: "wine" | "seasons"; // wine = centered product + rotating badge; seasons = giant word + image cutout
-  eyebrow: string;
-  title: string;         // "wine": short spaced-out title. "seasons": the giant background word.
-  tagline: string;       // "seasons": italic script line under the word.
-  body: string;
+export type BrandSliderSlide = {
+  title: string;         // "wine": short spaced-out title, changes per slide (e.g. "GOLDEN AURA"). "seasons": the giant background word.
   bgImage: string;
   productImage: string;  // "wine": centered product cutout. "seasons": overlapping figure/cutout image.
-  badgeText: string;     // "wine": text looping around the rotating circular badge.
+  badgeText: string;     // "wine": text looping around the rotating circular badge — changes per slide.
+};
+
+export type BrandSlider = {
+  enabled: boolean;
+  style: "wine" | "seasons"; // wine = centered product + rotating badge + arch frame, multi-slide carousel; seasons = giant word + image cutout, scroll parallax
+  eyebrow: string;    // static brand heading shown above every slide, e.g. "GreenCap Cellars"
+  tagline: string;    // "seasons": italic script line under the word (static).
+  body: string;       // "seasons": paragraph under the tagline (static).
   ctaLabel: string;
   ctaHref: string;
+  slides: BrandSliderSlide[];
 };
 
 export type BrandData = {
@@ -147,14 +151,11 @@ export const DEFAULT_BRAND: BrandData = {
     enabled: false,
     style: "wine",
     eyebrow: "",
-    title: "",
     tagline: "",
     body: "",
-    bgImage: "",
-    productImage: "",
-    badgeText: "",
     ctaLabel: "",
     ctaHref: "#",
+    slides: [],
   },
   hero: {
     eyebrow: "CLIENT ARCHIVE",

@@ -53,15 +53,25 @@ const GREENCAP: Brand = {
   slider: {
     enabled: true,
     style: "wine",
-    eyebrow: "GREENCAP CELLARS",
-    title: "GOLDEN AURA",
+    eyebrow: "GreenCap Cellars",
     tagline: "",
     body: "",
-    bgImage: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1800&q=80&auto=format&fit=crop",
-    productImage: "https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=900&q=80&auto=format&fit=crop",
-    badgeText: "Taste the Story",
     ctaLabel: "Explore the vintage",
     ctaHref: "#stats",
+    slides: [
+      {
+        title: "GOLDEN AURA",
+        bgImage: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1800&q=80&auto=format&fit=crop",
+        productImage: "https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=900&q=80&auto=format&fit=crop",
+        badgeText: "Taste the Story",
+      },
+      {
+        title: "RUBY REVERIE",
+        bgImage: "https://images.unsplash.com/photo-1560493676-04071c5f467b?w=1800&q=80&auto=format&fit=crop",
+        productImage: "https://images.unsplash.com/photo-1584916201218-f4242ceb4809?w=900&q=80&auto=format&fit=crop",
+        badgeText: "A Bold Vintage",
+      },
+    ],
   },
   story: {
     title: "A Legacy Bottled",
@@ -148,14 +158,18 @@ const IMPORTED_BRANDS: Brand[] = [
       "enabled": true,
       "style": "seasons",
       "eyebrow": "CLIENT ARCHIVE",
-      "title": "INTELLVE",
       "tagline": "Intelligence, visualised.",
       "body": "AI, ML, IoT and Big Data working together to turn raw facility data into decisions you can act on — content built to make that intelligence feel human.",
-      "bgImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1800&q=80&auto=format&fit=crop",
-      "productImage": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=900&q=80&auto=format&fit=crop",
-      "badgeText": "",
       "ctaLabel": "See the work",
-      "ctaHref": "#stats"
+      "ctaHref": "#stats",
+      "slides": [
+        {
+          "title": "INTELLVE",
+          "bgImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1800&q=80&auto=format&fit=crop",
+          "productImage": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=900&q=80&auto=format&fit=crop",
+          "badgeText": ""
+        }
+      ]
     },
     "stats": [
       {

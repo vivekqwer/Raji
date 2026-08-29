@@ -2,6 +2,10 @@
 export const unsplashUrl = (id: string, w = 1200) =>
   `https://images.unsplash.com/${id}?w=${w}&q=80&auto=format&fit=crop`;
 
+// CMS image fields store either an uploaded/absolute URL or a raw Unsplash id — resolve either.
+export const resolveImg = (value: string, w = 1200) =>
+  value.startsWith("/") || value.startsWith("http") ? value : unsplashUrl(value, w);
+
 export const IMG = {
   hero: "photo-1531123897727-8f129e1688ce",
   portrait1: "photo-1438761681033-6461ffad8d80",

@@ -1,7 +1,25 @@
 "use client";
 import Link from "next/link";
+import { Instagram, Twitter, Linkedin, Facebook, Link as LinkIcon } from "lucide-react";
 import Logo from "@/components/ui/Logo";
 import { DEFAULT_SITE, type SiteChrome } from "@/lib/site";
+
+const FALLBACK_ICON: Record<string, typeof Instagram> = {
+  ig: Instagram,
+  instagram: Instagram,
+  tw: Twitter,
+  twitter: Twitter,
+  ln: Linkedin,
+  linkedin: Linkedin,
+  fb: Facebook,
+  facebook: Facebook,
+};
+
+function SocialIcon({ label, icon }: { label: string; icon?: string }) {
+  if (icon) return <img src={icon} alt={label} className="raji-footer-social-icon" />;
+  const Icon = FALLBACK_ICON[label.toLowerCase()] || LinkIcon;
+  return <Icon size={18} strokeWidth={1.75} />;
+}
 
 export default function Footer({ data = DEFAULT_SITE.footer }: { data?: SiteChrome["footer"] }) {
   return (
@@ -31,7 +49,7 @@ export default function Footer({ data = DEFAULT_SITE.footer }: { data?: SiteChro
             <div className="raji-footer-socials">
               {data.socials.map((s) => (
                 <a key={s.label} href={s.href} aria-label={s.label} className="raji-footer-social">
-                  {s.label}
+                  <SocialIcon label={s.label} icon={s.icon} />
                 </a>
               ))}
             </div>

@@ -11,6 +11,15 @@ export async function getContent(): Promise<SiteContent> {
     stats: { ...DEFAULT_CONTENT.stats, ...stored.stats },
     faq: { ...DEFAULT_CONTENT.faq, ...stored.faq },
     testimonials: { ...DEFAULT_CONTENT.testimonials, ...stored.testimonials },
+    clientLogos: { ...DEFAULT_CONTENT.clientLogos, ...stored.clientLogos },
+    quoteBand: { ...DEFAULT_CONTENT.quoteBand, ...stored.quoteBand },
+    edge: { ...DEFAULT_CONTENT.edge, ...stored.edge },
+    servicesParallax: { ...DEFAULT_CONTENT.servicesParallax, ...stored.servicesParallax },
+    process: { ...DEFAULT_CONTENT.process, ...stored.process },
+    impactFlip: { ...DEFAULT_CONTENT.impactFlip, ...stored.impactFlip },
+    benefits: { ...DEFAULT_CONTENT.benefits, ...stored.benefits },
+    cardsFan: { ...DEFAULT_CONTENT.cardsFan, ...stored.cardsFan },
+    freebie: { ...DEFAULT_CONTENT.freebie, ...stored.freebie },
   };
 }
 

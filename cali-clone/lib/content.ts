@@ -31,12 +31,38 @@ export type FaqContent = { eyebrow: string; title: string; items: FaqItem[] };
 export type Testimonial = { name: string; role: string; quote: string; avatar: string };
 export type TestimonialsContent = { eyebrow: string; title: string; items: Testimonial[] };
 
+export type ClientLogosContent = { caption: string; names: string[] };
+export type QuoteBandContent = { quotes: string[] };
+
+export type ImageCard = { title: string; body: string; img: string };
+export type EdgeContent = { eyebrow: string; title: string; pillars: ImageCard[]; subCards: ImageCard[] };
+export type ServiceCard = { no: string; label: string; title: string; body: string; img: string };
+export type ServicesParallaxContent = { eyebrow: string; title: string; cards: ServiceCard[] };
+export type ProcessStep = { no: string; title: string; body: string; img: string };
+export type ProcessContent = { eyebrow: string; title: string; steps: ProcessStep[] };
+export type ImpactCard = { title: string; body: string };
+export type ImpactFlipContent = { title: string; image: string; cards: ImpactCard[] };
+export type BenefitCard = { title: string; body: string; img: string };
+export type BenefitsContent = { eyebrow: string; title: string; items: BenefitCard[]; ratingNum: string; ratingLabel: string };
+export type FanCard = { no: string; label: string; title: string; img: string };
+export type CardsFanContent = { title: string; cards: FanCard[] };
+export type FreebieContent = { image: string };
+
 export type SiteContent = {
   hero: HeroContent;
   approach: ApproachContent;
   stats: StatsContent;
   faq: FaqContent;
   testimonials: TestimonialsContent;
+  clientLogos: ClientLogosContent;
+  quoteBand: QuoteBandContent;
+  edge: EdgeContent;
+  servicesParallax: ServicesParallaxContent;
+  process: ProcessContent;
+  impactFlip: ImpactFlipContent;
+  benefits: BenefitsContent;
+  cardsFan: CardsFanContent;
+  freebie: FreebieContent;
 };
 
 // ---------- Defaults (current live values — site looks identical until edited) ----------
@@ -50,8 +76,8 @@ export const DEFAULT_CONTENT: SiteContent = {
     sub: "Social media professional with proven expertise in managing and growing brand presence across diverse digital platforms. Specialized in content creation, community engagement, influencer collaborations, and leveraging analytics to optimize performance and drive measurable growth. I combine strategic planning with creative execution to build meaningful connections between brands and their audiences.",
     actions: [
       { label: "View My Work", href: "#services", style: "primary" },
-      { label: "Resume", href: "#resume", style: "outline" },
       { label: "Let's Collaborate", href: "#contact", style: "ghost" },
+      { label: "Resume", href: "#resume", style: "outline" },
     ],
   },
   approach: {
@@ -102,6 +128,85 @@ export const DEFAULT_CONTENT: SiteContent = {
       { name: "Aayush Agarwal", role: "COO, Intellve", quote: "Highly creative and reliable. The social media manager understands our brand voice perfectly and creates content that actually connects with the audience. We've seen better engagement, reach, and overall brand visibility.", avatar: "photo-1544005313-94ddf0286df2" },
       { name: "Hiralkumar Patel", role: "COO, Kunuts", quote: "A very dedicated and proactive social media manager. From reels to captions and analytics, everything is managed smoothly. Timely communication and a clear understanding of trends make working together effortless.", avatar: "photo-1554151228-14d9def656e4" },
     ],
+  },
+  clientLogos: {
+    caption: "Join over 50+ businesses to create unique brand designs.",
+    names: ["Intelleve", "Monarch", "Godrej", "Rapoo", "NBG", "Kunuts", "Furnishing Home", "Pratik", "Studio One", "Tribe Co", "House of Hue", "Aurora Labs", "North Star", "Verve Studio"],
+  },
+  quoteBand: {
+    quotes: [
+      "Every successful campaign begins with deep audience understanding.",
+      "Client collaboration is central to everything I do. I believe in transparent communication, regular performance updates, and adapting strategies based on real results.",
+    ],
+  },
+  edge: {
+    eyebrow: "my edge",
+    title: "Social Media Stories That Connect | Ads That Convert | Designs That Engage",
+    pillars: [
+      { title: "Strategic Content Planning & Calendar Management", body: "Purposeful calendars that align every post with brand goals, audience rhythms, and platform behaviour.", img: "photo-1542038784456-1ea8e935640e" },
+      { title: "Social Media Advertising & Performance Tracking", body: "Paid campaigns engineered for reach, retention, and return — measured against the metrics that matter.", img: "photo-1551836022-d5d88e9218df" },
+      { title: "Audience Growth & Engagement Strategy", body: "Steady, authentic community building that turns followers into champions of your brand.", img: "photo-1521737604893-d14cc237f11d" },
+      { title: "Brand Storytelling Through Visuals & Copy", body: "Story-led visuals and copy crafted to sound like you and convert like clockwork.", img: "photo-1455390582262-044cdead277a" },
+    ],
+    subCards: [
+      { title: "Strategic Clarity in Execution", body: "True excellence begins with clear planning and thoughtful execution.", img: "photo-1517842645767-c639042777db" },
+      { title: "Dedication Beyond the Clock", body: "Social media success demands commitment that extends beyond traditional hours.", img: "photo-1499636136210-6f4ee915583e" },
+    ],
+  },
+  servicesParallax: {
+    eyebrow: "what i do",
+    title: "Where Strategy Meets Social Media Success",
+    cards: [
+      { no: "01", label: "service one", title: "Social Media Strategy & Management", body: "Complete end-to-end management of your social media accounts across all major platforms. I develop comprehensive content calendars, strategically schedule posts, manage daily operations, and ensure your brand voice remains consistent. From Instagram and Facebook to LinkedIn and YouTube, I handle every aspect with expertise, keeping your audience engaged and your brand top-of-mind.", img: "photo-1432888622747-4eb9a8efeb07" },
+      { no: "02", label: "service two", title: "Content Creation & Curation", body: "Designing visually compelling posts, crafting engaging stories, and creating scroll-stopping content that captures attention. I blend creativity with strategy to produce visuals and copy that resonate deeply with your target audience. Whether showcasing products, sharing behind-the-scenes moments, or running promotional campaigns, every post is purposefully crafted to drive engagement and reflect your brand identity.", img: "photo-1542744173-8e7e53415bb0" },
+      { no: "03", label: "service three", title: "Community Management & Engagement", body: "Building meaningful relationships one interaction at a time. I actively monitor your social channels, respond to comments and messages promptly, and engage authentically with your audience. By fostering genuine conversations and addressing concerns professionally, I transform casual followers into loyal brand advocates who champion your business organically.", img: "photo-1556761175-b413da4baf72" },
+      { no: "04", label: "service four", title: "Influencer Collaboration Management", body: "Strategic planning and seamless execution of influencer partnerships that amplify your reach. From identifying the right creators who align with your brand values to coordinating campaigns, managing deliverables, and measuring impact, I handle the entire collaboration process to drive authentic engagement.", img: "photo-1612872087720-bb876e2e67d1" },
+      { no: "05", label: "service five", title: "Analytics & Performance Tracking", body: "Data-driven insights that tell your success story. I track key performance metrics, analyze engagement patterns, identify growth opportunities, and provide clear, actionable reports. These insights translate complex numbers into strategic recommendations, guiding decision-making and ensuring continuous improvement.", img: "photo-1460925895917-afdab827c52f" },
+    ],
+  },
+  process: {
+    eyebrow: "how we work",
+    title: "Achieve Incredible Results in Just 4 Easy Steps!",
+    steps: [
+      { no: "01", title: "Get a Free Consultation", body: "Strategic planning session to understand your brand goals, target audience, and marketing objectives — completely complimentary.", img: "photo-1507003211169-0a1dd7228f2d" },
+      { no: "02", title: "Instant Chat Support", body: "Real-time communication to discuss campaign strategies, content requirements, and answer all your social media queries promptly.", img: "photo-1611605698335-8b1569810432" },
+      { no: "03", title: "Wireframe & Development", body: "Develop customized content calendars and campaign blueprints that align perfectly with your brand identity and business goals.", img: "photo-1517842645767-c639042777db" },
+      { no: "04", title: "Prototype & Testing", body: "Preview and approve all content before publishing, ensuring every post reflects your brand voice and messaging perfectly.", img: "photo-1611162617213-7d7a39e9b1d7" },
+    ],
+  },
+  impactFlip: {
+    title: "How I Create Impact",
+    image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1800&q=80&auto=format&fit=crop",
+    cards: [
+      { title: "Content Strategy", body: "Every post has a purpose. I craft data-backed content calendars that align with your brand voice, audience behaviour, and business goals." },
+      { title: "Brand Growth", body: "From zero to community. I build genuine audience relationships through storytelling, consistent engagement, and trend-led creative direction." },
+      { title: "Analytics & Results", body: "Numbers tell the real story. I translate performance data into actionable insights that continuously improve reach, engagement, and ROI." },
+    ],
+  },
+  benefits: {
+    eyebrow: "why partner with me",
+    title: "Exploring Digital Frontiers with Me: Your Reliable Partner.",
+    items: [
+      { title: "Clear and Prompt Communication", body: "We ensure clear, prompt, and honest communication, keeping you informed every step of the way.", img: "photo-1573164713714-d95e436ab8d6" },
+      { title: "Accelerate Growth", body: "Accelerate growth with enhanced email and social media marketing.", img: "photo-1460925895917-afdab827c52f" },
+      { title: "Responsive and Scalable Solutions", body: "Our solutions adapt seamlessly to your needs, ensuring flexibility, efficiency, and long-term growth.", img: "photo-1556761175-5973dc0f32e7" },
+      { title: "Premium Support", body: "Explore our comprehensive help desk services, ensuring seamless IT support and swift resolution to keep your operations running smoothly.", img: "photo-1542038784456-1ea8e935640e" },
+    ],
+    ratingNum: "4.5+",
+    ratingLabel: "Client Ratings",
+  },
+  cardsFan: {
+    title: "Five things, done well.",
+    cards: [
+      { no: "01", label: "service one", title: "Client Servicing", img: "photo-1573497019940-1c28c88b4f3e" },
+      { no: "02", label: "service two", title: "Social Media", img: "photo-1611605698335-8b1569810432" },
+      { no: "03", label: "service three", title: "Content Writing", img: "photo-1455390582262-044cdead277a" },
+      { no: "04", label: "service four", title: "Brand Strategy", img: "photo-1517842645767-c639042777db" },
+      { no: "05", label: "service five", title: "Analytics", img: "photo-1460925895917-afdab827c52f" },
+    ],
+  },
+  freebie: {
+    image: "/images/raji-library.png",
   },
 };
 

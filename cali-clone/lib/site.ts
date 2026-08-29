@@ -2,7 +2,7 @@
 // Drives Nav + Footer so an admin dashboard can edit them.
 
 export type LinkItem = { label: string; href: string };
-export type SocialItem = { label: string; href: string };
+export type SocialItem = { label: string; href: string; icon?: string };
 
 export type SiteChrome = {
   nav: {

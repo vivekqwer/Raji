@@ -1,8 +1,9 @@
 "use client";
 import { useState, FormEvent } from "react";
 import Image from "next/image";
+import { DEFAULT_CONTENT, FreebieContent } from "@/lib/content";
 
-export default function FreebieSection() {
+export default function FreebieSection({ data = DEFAULT_CONTENT.freebie }: { data?: FreebieContent }) {
   const [state, setState] = useState<"idle" | "ok" | "err">("idle");
 
   const onSubmit = (e: FormEvent) => {
@@ -18,7 +19,7 @@ export default function FreebieSection() {
         {/* LEFT — full portrait image, natural ratio */}
         <div className="freebie-media">
           <Image
-            src="/images/raji-library.png"
+            src={data.image}
             alt="Raji at her creative workspace"
             width={941}
             height={1672}

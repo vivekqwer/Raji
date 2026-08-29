@@ -5,6 +5,7 @@ import {
   LayoutDashboard, Sparkles, User, BarChart3, MessageSquareQuote, HelpCircle,
   PanelTop, PanelBottom, Newspaper, Briefcase, LogOut, ExternalLink, ChevronRight,
   Monitor, Tablet, Smartphone, Eye, RefreshCw, Mail, FileText, X,
+  Images, Quote, Layers, Rocket, ListChecks, Grid3x3, Gift, RectangleHorizontal,
   type LucideIcon,
 } from "lucide-react";
 
@@ -27,10 +28,19 @@ type Screen = { id: string; label: string; group: string; doc: DocKey; preview: 
 
 const SCREENS: Screen[] = [
   { id: "hero", label: "Hero", group: "Home Page", doc: "home", preview: "/", icon: Sparkles },
+  { id: "clientLogos", label: "Client Logos", group: "Home Page", doc: "home", preview: "/", icon: Images },
   { id: "approach", label: "Approach", group: "Home Page", doc: "home", preview: "/", icon: User },
+  { id: "quoteBand", label: "Quote Band", group: "Home Page", doc: "home", preview: "/", icon: Quote },
+  { id: "edge", label: "My Edge", group: "Home Page", doc: "home", preview: "/", icon: Layers },
   { id: "stats", label: "Stats", group: "Home Page", doc: "home", preview: "/", icon: BarChart3 },
+  { id: "servicesParallax", label: "Services (Parallax)", group: "Home Page", doc: "home", preview: "/", icon: RectangleHorizontal },
+  { id: "process", label: "Process Steps", group: "Home Page", doc: "home", preview: "/", icon: ListChecks },
+  { id: "impactFlip", label: "Impact Flip Cards", group: "Home Page", doc: "home", preview: "/", icon: Rocket },
+  { id: "benefits", label: "Benefits", group: "Home Page", doc: "home", preview: "/", icon: Grid3x3 },
+  { id: "cardsFan", label: "Services (Fan Cards)", group: "Home Page", doc: "home", preview: "/", icon: Grid3x3 },
   { id: "testimonials", label: "Testimonials", group: "Home Page", doc: "home", preview: "/", icon: MessageSquareQuote },
   { id: "faq", label: "FAQ", group: "Home Page", doc: "home", preview: "/", icon: HelpCircle },
+  { id: "freebie", label: "Connect / Freebie", group: "Home Page", doc: "home", preview: "/", icon: Gift },
   { id: "header", label: "Header / Nav", group: "Header & Footer", doc: "site", preview: "/", icon: PanelTop },
   { id: "footer", label: "Footer", group: "Header & Footer", doc: "site", preview: "/", icon: PanelBottom },
   { id: "about", label: "About Us", group: "Pages", doc: "about", preview: "/about", icon: User },
@@ -300,10 +310,19 @@ function Overview({ onNavigate }: { onNavigate: (id: string) => void }) {
 function Editor({ active, data, setDoc }: { active: string; data: unknown; setDoc: (d: unknown) => void }) {
   switch (active) {
     case "hero": return <HeroEditor c={data as SiteContent} set={setDoc as (c: SiteContent) => void} />;
+    case "clientLogos": return <ClientLogosEditor c={data as SiteContent} set={setDoc as (c: SiteContent) => void} />;
     case "approach": return <ApproachEditor c={data as SiteContent} set={setDoc as (c: SiteContent) => void} />;
+    case "quoteBand": return <QuoteBandEditor c={data as SiteContent} set={setDoc as (c: SiteContent) => void} />;
+    case "edge": return <EdgeEditor c={data as SiteContent} set={setDoc as (c: SiteContent) => void} />;
     case "stats": return <StatsEditor c={data as SiteContent} set={setDoc as (c: SiteContent) => void} />;
+    case "servicesParallax": return <ServicesParallaxEditor c={data as SiteContent} set={setDoc as (c: SiteContent) => void} />;
+    case "process": return <ProcessEditor c={data as SiteContent} set={setDoc as (c: SiteContent) => void} />;
+    case "impactFlip": return <ImpactFlipEditor c={data as SiteContent} set={setDoc as (c: SiteContent) => void} />;
+    case "benefits": return <BenefitsEditor c={data as SiteContent} set={setDoc as (c: SiteContent) => void} />;
+    case "cardsFan": return <CardsFanEditor c={data as SiteContent} set={setDoc as (c: SiteContent) => void} />;
     case "testimonials": return <TestiEditor c={data as SiteContent} set={setDoc as (c: SiteContent) => void} />;
     case "faq": return <FaqEditor c={data as SiteContent} set={setDoc as (c: SiteContent) => void} />;
+    case "freebie": return <FreebieEditor c={data as SiteContent} set={setDoc as (c: SiteContent) => void} />;
     case "header": return <HeaderEditor c={data as SiteChrome} set={setDoc as (c: SiteChrome) => void} />;
     case "footer": return <FooterEditor c={data as SiteChrome} set={setDoc as (c: SiteChrome) => void} />;
     case "about": return <AboutEditor c={data as AboutData} set={setDoc as (c: AboutData) => void} />;
@@ -403,6 +422,150 @@ function FaqEditor({ c, set }: { c: SiteContent; set: (c: SiteContent) => void }
   );
 }
 
+function ClientLogosEditor({ c, set }: { c: SiteContent; set: (c: SiteContent) => void }) {
+  const cl = c.clientLogos;
+  const up = (p: Partial<typeof cl>) => set({ ...c, clientLogos: { ...cl, ...p } });
+  return (
+    <Card title="Client logo marquee" hint="Scrolling strip of client names above the Approach section.">
+      <Field label="Caption" value={cl.caption} onChange={(v) => up({ caption: v })} />
+      <List label="Client names" items={cl.names} onChange={(names) => up({ names })}
+        blank={"New Client"} render={(n, s) => <Field label="Name" value={n} onChange={s} />} />
+    </Card>
+  );
+}
+function QuoteBandEditor({ c, set }: { c: SiteContent; set: (c: SiteContent) => void }) {
+  const q = c.quoteBand;
+  const up = (p: Partial<typeof q>) => set({ ...c, quoteBand: { ...q, ...p } });
+  return (
+    <Card title="Quote band">
+      <List label="Quotes" items={q.quotes} onChange={(quotes) => up({ quotes })}
+        blank={"New quote."} render={(t, s) => <Area label="Quote" value={t} onChange={s} />} />
+    </Card>
+  );
+}
+function EdgeEditor({ c, set }: { c: SiteContent; set: (c: SiteContent) => void }) {
+  const e = c.edge;
+  const up = (p: Partial<typeof e>) => set({ ...c, edge: { ...e, ...p } });
+  return (
+    <Card title="My Edge section">
+      <Field label="Eyebrow" value={e.eyebrow} onChange={(v) => up({ eyebrow: v })} />
+      <Area label="Title" value={e.title} onChange={(v) => up({ title: v })} />
+      <List label="Pillars (4 large cards)" items={e.pillars} onChange={(pillars) => up({ pillars })}
+        blank={{ title: "New pillar", body: "", img: "" }}
+        render={(p, s) => (<>
+          <ImageField label="Image" value={p.img} onChange={(v) => s({ ...p, img: v })} />
+          <Field label="Title" value={p.title} onChange={(v) => s({ ...p, title: v })} />
+          <Area label="Body" value={p.body} onChange={(v) => s({ ...p, body: v })} />
+        </>)} />
+      <List label="Sub-cards (2 wide cards)" items={e.subCards} onChange={(subCards) => up({ subCards })}
+        blank={{ title: "New card", body: "", img: "" }}
+        render={(p, s) => (<>
+          <ImageField label="Image" value={p.img} onChange={(v) => s({ ...p, img: v })} />
+          <Field label="Title" value={p.title} onChange={(v) => s({ ...p, title: v })} />
+          <Area label="Body" value={p.body} onChange={(v) => s({ ...p, body: v })} />
+        </>)} />
+    </Card>
+  );
+}
+function ServicesParallaxEditor({ c, set }: { c: SiteContent; set: (c: SiteContent) => void }) {
+  const sp = c.servicesParallax;
+  const up = (p: Partial<typeof sp>) => set({ ...c, servicesParallax: { ...sp, ...p } });
+  return (
+    <Card title="Services (scroll-stack parallax)">
+      <Field label="Eyebrow" value={sp.eyebrow} onChange={(v) => up({ eyebrow: v })} />
+      <Field label="Title" value={sp.title} onChange={(v) => up({ title: v })} />
+      <List label="Cards" items={sp.cards} onChange={(cards) => up({ cards })}
+        blank={{ no: "06", label: "service", title: "New service", body: "", img: "" }}
+        render={(card, s) => (<>
+          <ImageField label="Image" value={card.img} onChange={(v) => s({ ...card, img: v })} />
+          <Field label="Number" value={card.no} onChange={(v) => s({ ...card, no: v })} />
+          <Field label="Label" value={card.label} onChange={(v) => s({ ...card, label: v })} />
+          <Field label="Title" value={card.title} onChange={(v) => s({ ...card, title: v })} />
+          <Area label="Body" value={card.body} onChange={(v) => s({ ...card, body: v })} />
+        </>)} />
+    </Card>
+  );
+}
+function ProcessEditor({ c, set }: { c: SiteContent; set: (c: SiteContent) => void }) {
+  const p = c.process;
+  const up = (v: Partial<typeof p>) => set({ ...c, process: { ...p, ...v } });
+  return (
+    <Card title="Process steps">
+      <Field label="Eyebrow" value={p.eyebrow} onChange={(v) => up({ eyebrow: v })} />
+      <Field label="Title" value={p.title} onChange={(v) => up({ title: v })} />
+      <List label="Steps" items={p.steps} onChange={(steps) => up({ steps })}
+        blank={{ no: "05", title: "New step", body: "", img: "" }}
+        render={(st, s) => (<>
+          <ImageField label="Image" value={st.img} onChange={(v) => s({ ...st, img: v })} />
+          <Field label="Number" value={st.no} onChange={(v) => s({ ...st, no: v })} />
+          <Field label="Title" value={st.title} onChange={(v) => s({ ...st, title: v })} />
+          <Area label="Body" value={st.body} onChange={(v) => s({ ...st, body: v })} />
+        </>)} />
+    </Card>
+  );
+}
+function ImpactFlipEditor({ c, set }: { c: SiteContent; set: (c: SiteContent) => void }) {
+  const i = c.impactFlip;
+  const up = (p: Partial<typeof i>) => set({ ...c, impactFlip: { ...i, ...p } });
+  return (
+    <Card title="Impact flip cards" hint="Three flip-cards over a shared background image.">
+      <Field label="Heading" value={i.title} onChange={(v) => up({ title: v })} />
+      <ImageField label="Shared background image" value={i.image} onChange={(v) => up({ image: v })} />
+      <List label="Cards" items={i.cards} onChange={(cards) => up({ cards })}
+        blank={{ title: "New card", body: "" }}
+        render={(card, s) => (<>
+          <Field label="Title" value={card.title} onChange={(v) => s({ ...card, title: v })} />
+          <Area label="Body" value={card.body} onChange={(v) => s({ ...card, body: v })} />
+        </>)} />
+    </Card>
+  );
+}
+function BenefitsEditor({ c, set }: { c: SiteContent; set: (c: SiteContent) => void }) {
+  const b = c.benefits;
+  const up = (p: Partial<typeof b>) => set({ ...c, benefits: { ...b, ...p } });
+  return (
+    <Card title="Benefits">
+      <Field label="Eyebrow" value={b.eyebrow} onChange={(v) => up({ eyebrow: v })} />
+      <Field label="Title" value={b.title} onChange={(v) => up({ title: v })} />
+      <List label="Cards" items={b.items} onChange={(items) => up({ items })}
+        blank={{ title: "New benefit", body: "", img: "" }}
+        render={(it, s) => (<>
+          <ImageField label="Image" value={it.img} onChange={(v) => s({ ...it, img: v })} />
+          <Field label="Title" value={it.title} onChange={(v) => s({ ...it, title: v })} />
+          <Area label="Body" value={it.body} onChange={(v) => s({ ...it, body: v })} />
+        </>)} />
+      <Field label="Rating number" value={b.ratingNum} onChange={(v) => up({ ratingNum: v })} />
+      <Field label="Rating label" value={b.ratingLabel} onChange={(v) => up({ ratingLabel: v })} />
+    </Card>
+  );
+}
+function CardsFanEditor({ c, set }: { c: SiteContent; set: (c: SiteContent) => void }) {
+  const cf = c.cardsFan;
+  const up = (p: Partial<typeof cf>) => set({ ...c, cardsFan: { ...cf, ...p } });
+  return (
+    <Card title="Services (fan cards)">
+      <Field label="Title" value={cf.title} onChange={(v) => up({ title: v })} />
+      <List label="Cards" items={cf.cards} onChange={(cards) => up({ cards })}
+        blank={{ no: "06", label: "service", title: "New service", img: "" }}
+        render={(card, s) => (<>
+          <ImageField label="Image" value={card.img} onChange={(v) => s({ ...card, img: v })} />
+          <Field label="Number" value={card.no} onChange={(v) => s({ ...card, no: v })} />
+          <Field label="Label" value={card.label} onChange={(v) => s({ ...card, label: v })} />
+          <Field label="Title" value={card.title} onChange={(v) => s({ ...card, title: v })} />
+        </>)} />
+    </Card>
+  );
+}
+function FreebieEditor({ c, set }: { c: SiteContent; set: (c: SiteContent) => void }) {
+  const f = c.freebie;
+  const up = (p: Partial<typeof f>) => set({ ...c, freebie: { ...f, ...p } });
+  return (
+    <Card title="Connect / Freebie section" hint="Bottom-of-page portrait + email capture, right before the footer.">
+      <ImageField label="Portrait image" value={f.image} onChange={(v) => up({ image: v })} />
+    </Card>
+  );
+}
+
 // ---------- SITE editors ----------
 function HeaderEditor({ c, set }: { c: SiteChrome; set: (c: SiteChrome) => void }) {
   const n = c.nav;
@@ -434,10 +597,11 @@ function FooterEditor({ c, set }: { c: SiteChrome; set: (c: SiteChrome) => void 
       <Field label="CTA link" value={f.ctaHref} onChange={(v) => up({ ctaHref: v })} />
       <Area label="Tagline" value={f.tagline} onChange={(v) => up({ tagline: v })} />
       <List label="Social links" items={f.socials} onChange={(socials) => up({ socials })}
-        blank={{ label: "xx", href: "#" }}
+        blank={{ label: "ig", href: "#", icon: "" }}
         render={(it, s) => (<>
-          <Field label="Label (short text shown)" value={it.label} onChange={(v) => s({ ...it, label: v })} />
+          <Field label="Label (ig / tw / ln / fb — picks the default icon)" value={it.label} onChange={(v) => s({ ...it, label: v })} />
           <Field label="Link" value={it.href} onChange={(v) => s({ ...it, href: v })} />
+          <ImageField label="Custom icon (optional — overrides the default)" value={it.icon ?? ""} onChange={(v) => s({ ...it, icon: v })} />
         </>)} />
       <List label="Services column" items={f.serviceLinks} onChange={(serviceLinks) => up({ serviceLinks })}
         blank={{ label: "Service", href: "#" }}

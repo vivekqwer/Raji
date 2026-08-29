@@ -21,19 +21,19 @@ export default async function HomePage() {
   return (
     <main>
       <HeroSection data={content.hero} />
-      <ClientLogoMarquee />
+      <ClientLogoMarquee data={content.clientLogos} />
       <ApproachSection data={content.approach} />
-      <QuoteBand />
-      <EdgeSection />
+      <QuoteBand data={content.quoteBand} />
+      <EdgeSection data={content.edge} />
       <StatsSectionV2 data={content.stats} />
-      <ServicesParallax />
-      <ProcessSection />
-      <ImpactFlip theme="cream" />
-      <BenefitsSection />
-      <CardsFan />
+      <ServicesParallax data={content.servicesParallax} />
+      <ProcessSection data={content.process} />
+      <ImpactFlip theme="cream" data={content.impactFlip} />
+      <BenefitsSection data={content.benefits} />
+      <CardsFan data={content.cardsFan} />
       <ClientLoveSection data={content.testimonials} />
       <FAQSection data={content.faq} />
-      <FreebieSection />
+      <FreebieSection data={content.freebie} />
     </main>
   );
 }

@@ -2,24 +2,11 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
-import { unsplashUrl } from "@/lib/unsplash";
+import { resolveImg } from "@/lib/unsplash";
+import { DEFAULT_CONTENT, CardsFanContent } from "@/lib/content";
 
-type FanCard = {
-  no: string;
-  label: string;
-  title: string;
-  img: string;
-};
-
-const CARDS: FanCard[] = [
-  { no: "01", label: "service one",   title: "Client Servicing", img: "photo-1573497019940-1c28c88b4f3e" },
-  { no: "02", label: "service two",   title: "Social Media",     img: "photo-1611605698335-8b1569810432" },
-  { no: "03", label: "service three", title: "Content Writing",  img: "photo-1455390582262-044cdead277a" },
-  { no: "04", label: "service four",  title: "Brand Strategy",   img: "photo-1517842645767-c639042777db" },
-  { no: "05", label: "service five",  title: "Analytics",        img: "photo-1460925895917-afdab827c52f" },
-];
-
-export default function CardsFan() {
+export default function CardsFan({ data = DEFAULT_CONTENT.cardsFan }: { data?: CardsFanContent }) {
+  const CARDS = data.cards;
   const wrapRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -119,7 +106,7 @@ export default function CardsFan() {
     <section ref={wrapRef} className="fan-section">
       <div className="fan-head">
         <p className="eyebrow">what i do</p>
-        <h2>Five things, done well.</h2>
+        <h2>{data.title}</h2>
         <p className="fan-hint">scroll to spread</p>
       </div>
       <div className="fan-track">
@@ -127,7 +114,7 @@ export default function CardsFan() {
           <article key={c.no} className="fcard">
             <div className="fcard-img">
               <Image
-                src={unsplashUrl(c.img, 900)}
+                src={resolveImg(c.img, 900)}
                 alt={c.title}
                 fill
                 sizes="(max-width: 767px) 60vw, 18vw"

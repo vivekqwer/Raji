@@ -1,43 +1,17 @@
 "use client";
 import { useEffect, useRef } from "react";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
+import { resolveImg } from "@/lib/unsplash";
+import { DEFAULT_CONTENT, ImpactFlipContent } from "@/lib/content";
 
-type CardSpec = {
-  title: string;
-  body: string;
-  bg: string;
-  accent: string;
-  icon: "wave" | "clover" | "diamond";
-};
-
-const CARDS: CardSpec[] = [
-  {
-    title: "Content Strategy",
-    body: "Every post has a purpose. I craft data-backed content calendars that align with your brand voice, audience behaviour, and business goals.",
-    bg: "linear-gradient(160deg, #b8843d 0%, #8a5e26 100%)",
-    accent: "#f0d181",
-    icon: "wave",
-  },
-  {
-    title: "Brand Growth",
-    body: "From zero to community. I build genuine audience relationships through storytelling, consistent engagement, and trend-led creative direction.",
-    bg: "linear-gradient(160deg, #3a2f1a 0%, #5a4828 100%)",
-    accent: "#f0d181",
-    icon: "clover",
-  },
-  {
-    title: "Analytics & Results",
-    body: "Numbers tell the real story. I translate performance data into actionable insights that continuously improve reach, engagement, and ROI.",
-    bg: "linear-gradient(160deg, #897558 0%, #5c4d35 100%)",
-    accent: "#f6efd9",
-    icon: "diamond",
-  },
+type CardTheme = { bg: string; accent: string; icon: "wave" | "clover" | "diamond" };
+const THEMES: CardTheme[] = [
+  { bg: "linear-gradient(160deg, #b8843d 0%, #8a5e26 100%)", accent: "#f0d181", icon: "wave" },
+  { bg: "linear-gradient(160deg, #3a2f1a 0%, #5a4828 100%)", accent: "#f0d181", icon: "clover" },
+  { bg: "linear-gradient(160deg, #897558 0%, #5c4d35 100%)", accent: "#f6efd9", icon: "diamond" },
 ];
 
-const IMG_URL =
-  "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1800&q=80&auto=format&fit=crop";
-
-function Icon({ kind }: { kind: CardSpec["icon"] }) {
+function Icon({ kind }: { kind: CardTheme["icon"] }) {
   if (kind === "wave") {
     return (
       <svg viewBox="0 0 64 64" width="68" height="68" aria-hidden="true">
@@ -74,7 +48,9 @@ function Icon({ kind }: { kind: CardSpec["icon"] }) {
   );
 }
 
-export default function ImpactFlip({ theme = "dark" }: { theme?: "dark" | "cream" }) {
+export default function ImpactFlip({ theme = "dark", data = DEFAULT_CONTENT.impactFlip }: { theme?: "dark" | "cream"; data?: ImpactFlipContent }) {
+  const CARDS = data.cards.map((c, i) => ({ ...c, ...(THEMES[i] ?? THEMES[0]) }));
+  const IMG_URL = resolveImg(data.image, 1800);
   const wrapRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -126,7 +102,7 @@ export default function ImpactFlip({ theme = "dark" }: { theme?: "dark" | "cream
 
   return (
     <section ref={wrapRef} className={`impact-section${theme === "cream" ? " impact-cream" : ""}`}>
-      <h2 className="impact-heading">How I Create Impact</h2>
+      <h2 className="impact-heading">{data.title}</h2>
       <div className="impact-stage">
         {CARDS.map((c, i) => (
           <div key={c.title} className="istrip">

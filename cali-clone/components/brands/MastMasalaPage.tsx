@@ -5,6 +5,7 @@ import Image from "next/image";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
 import { DEFAULT_BRAND, type BrandData } from "@/lib/brand";
 import AnalyticsChartCard from "@/components/brands/AnalyticsChartCard";
+import BrandSlider from "@/components/brands/BrandSlider";
 
 /* ─── Types ─────────────────────────────────────────── */
 type Tab = "content" | "social" | "servicing";
@@ -390,6 +391,9 @@ export default function MastMasalaPage({ data = DEFAULT_BRAND }: { data?: BrandD
         <div className="bp-hero-divider" />
       </section>
 
+      {/* ── Section 1.5: Brand Slider (optional, CMS-toggled) ── */}
+      {data.slider?.enabled && <BrandSlider data={data.slider} />}
+
       {/* ── Section 2: Stats strip ──────────────────────── */}
       <section className="bp-stats">
         <div className="bp-stats-inner" ref={statsRef}>
@@ -506,6 +510,7 @@ export default function MastMasalaPage({ data = DEFAULT_BRAND }: { data?: BrandD
       </section>
 
       {/* ── Section 4: Gallery ──────────────────────────── */}
+      {data.gallery.images.length > 0 && (
       <section className="bp-gallery-section">
         <div className="bp-gallery-inner" ref={galleryRef}>
           <h2 className="bp-section-title">{data.gallery.title}</h2>
@@ -528,6 +533,7 @@ export default function MastMasalaPage({ data = DEFAULT_BRAND }: { data?: BrandD
           </div>
         </div>
       </section>
+      )}
 
       {/* ── Section 5: Brand Story ───────────────────────── */}
       <section className="bp-story-section">

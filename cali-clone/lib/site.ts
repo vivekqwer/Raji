@@ -49,10 +49,7 @@ export const DEFAULT_SITE: SiteChrome = {
     tagline:
       "Social media strategy, content and steady community building for brands that want growth with intention.",
     socials: [
-      { label: "ig", href: "#" },
-      { label: "tw", href: "#" },
       { label: "ln", href: "#" },
-      { label: "fb", href: "#" },
     ],
     serviceLinks: [
       { label: "Client Servicing", href: "#" },

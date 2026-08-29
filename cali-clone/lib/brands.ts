@@ -26,6 +26,95 @@ const MAST_MASALA: Brand = {
   cardDescription: "60 years of spice legacy — festive content and steady social growth.",
 };
 
+// GreenCap — wine-label brand, showcases the "wine" brand-slider style (product + rotating badge).
+const GREENCAP: Brand = {
+  ...DEFAULT_BRAND,
+  slug: "greencap",
+  name: "GreenCap",
+  published: true,
+  logo: "",
+  cardDescription: "Boutique wine label — premium bottle storytelling and a slider-led brand page.",
+  palette: {
+    primary: "#8a5e26",
+    bg: "#f6efd9",
+    bgSoft: "#fbf6e3",
+    ink: "#1a1208",
+    accent: "#f0d181",
+  },
+  brandColor: "linear-gradient(135deg, #8a5e26, #b8843d)",
+  logoBg: "#211a16",
+  hero: {
+    eyebrow: "CLIENT ARCHIVE",
+    title: "GREENCAP",
+    bgText: "GC",
+    tagline: "Every Bottle, A Story",
+    tags: ["Content Writing", "Social Media", "Client Servicing"],
+  },
+  slider: {
+    enabled: true,
+    style: "wine",
+    eyebrow: "GREENCAP CELLARS",
+    title: "GOLDEN AURA",
+    tagline: "",
+    body: "",
+    bgImage: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1800&q=80&auto=format&fit=crop",
+    productImage: "https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=900&q=80&auto=format&fit=crop",
+    badgeText: "Taste the Story",
+    ctaLabel: "Explore the vintage",
+    ctaHref: "#stats",
+  },
+  story: {
+    title: "A Legacy Bottled",
+    body: "GreenCap is a boutique wine label built on patient craft — small-batch vintages, honest labels, and a story worth telling one bottle at a time. Our social content translates that craft into a feed people slow down for.",
+    bigNum: "12",
+  },
+  approach: {
+    eyebrow: "HOW WE WORK",
+    heading: "Crafted for <em>Taste</em>",
+    items: [
+      { num: "01", title: "Label-Led Storytelling", body: "Every post starts from the bottle — label details, tasting notes, and the story behind the vintage." },
+      { num: "02", title: "Seasonal Content Calendar", body: "Harvest, cellar, and release moments mapped to a calendar that builds anticipation all year." },
+      { num: "03", title: "Community Over Volume", body: "Fewer, richer posts aimed at a discerning audience — engagement over impressions." },
+    ],
+  },
+  workDone: {
+    title: "Work Done",
+    bullets: [
+      "Label-led content calendar",
+      "Harvest & release campaign posts",
+      "Tasting-note copywriting",
+      "Monthly performance reporting",
+    ],
+  },
+  calendar: {
+    title: "Content Calendar Glimpse",
+    rows: [
+      { type: "Reel", date: "1/9/2024", concept: "Harvest Season", copy: "From vine to bottle — a look inside the harvest." },
+      { type: "Static", date: "14/10/2024", concept: "Tasting Notes", copy: "Golden Aura — notes of citrus, oak, and honey." },
+      { type: "Reel", date: "2/12/2024", concept: "New Release", copy: "Meet the newest vintage in the GreenCap cellar." },
+    ],
+  },
+  mom: {
+    title: "GreenCap — Vintage Content Planning",
+    bullets: [
+      "Harvest & release roadmap ready",
+      "Label and tasting-note posts finalised",
+      "Seasonal content plan set",
+      "Success metrics defined",
+    ],
+  },
+  gallery: { title: "Creative Gallery", images: [] },
+  analytics: DEFAULT_BRAND.analytics.map((a) => ({ ...a })),
+  featured: { ...DEFAULT_BRAND.featured, video: "" },
+  philosophy: { ...DEFAULT_BRAND.philosophy, video: "" },
+  delivered: { ...DEFAULT_BRAND.delivered, cards: [] },
+  cta: {
+    sub: "Want a brand page like this?",
+    label: "Book a discovery call with Raji →",
+    href: "/contact",
+  },
+};
+
 // Imported from rajeshwarichauhan.in portfolio (client-servicing / social-media / content-writing).
 // Factual fields (logo, gallery images, history, analytics) are from the source pages;
 // narrative sections use brand-aware templated copy. Media (video) fields left blank.
@@ -54,6 +143,19 @@ const IMPORTED_BRANDS: Brand[] = [
         "Social Media",
         "Client Servicing"
       ]
+    },
+    "slider": {
+      "enabled": true,
+      "style": "seasons",
+      "eyebrow": "CLIENT ARCHIVE",
+      "title": "INTELLVE",
+      "tagline": "Intelligence, visualised.",
+      "body": "AI, ML, IoT and Big Data working together to turn raw facility data into decisions you can act on — content built to make that intelligence feel human.",
+      "bgImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1800&q=80&auto=format&fit=crop",
+      "productImage": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=900&q=80&auto=format&fit=crop",
+      "badgeText": "",
+      "ctaLabel": "See the work",
+      "ctaHref": "#stats"
     },
     "stats": [
       {
@@ -3336,7 +3438,7 @@ const IMPORTED_BRANDS: Brand[] = [
 export const DEFAULT_BRANDS: BrandsData = {
   archiveTitle: "Brands",
   archiveIntro: "A selection of brands we've helped grow with strategy, content and community.",
-  items: [MAST_MASALA, ...IMPORTED_BRANDS],
+  items: [MAST_MASALA, GREENCAP, ...IMPORTED_BRANDS],
 };
 
 export function findBrand(d: BrandsData, slug: string): Brand | undefined {

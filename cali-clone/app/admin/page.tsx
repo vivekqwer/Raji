@@ -803,6 +803,7 @@ function BrandPagesEditor({ c, set, selected, onSelect }: {
 const BRAND_TABS: [string, string][] = [
   ["identity", "Identity & Theme"],
   ["hero", "Hero & Stats"],
+  ["slider", "Brand Slider"],
   ["story", "Story & Work"],
   ["media", "Analytics & Gallery"],
   ["sections", "Sections"],
@@ -858,6 +859,35 @@ function BrandPageFields({ brand: c, set }: { brand: Brand; set: (c: Brand) => v
           </>)} />
       </Card>
       </>)}
+      {tab === "slider" && (() => {
+        const sl = c.slider ?? DEFAULT_BRAND.slider!;
+        const upSlider = (p: Partial<typeof sl>) => up("slider", { ...sl, ...p });
+        return (
+          <Card title="Brand slider (premium hero-style slide)" hint="An optional animated slide shown right after the hero. 'Wine' = centered product + rotating badge (like OakGrove Cellars). 'Seasons' = giant word with an overlapping image cutout (like the 4 Seasons parallax theme).">
+            <div style={S.fieldWrap}>
+              <span style={S.label}>Enabled</span>
+              <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
+                <button onClick={() => upSlider({ enabled: true })} style={{ ...S.statusBtn, ...(sl.enabled ? S.statusPub : {}) }}>● On</button>
+                <button onClick={() => upSlider({ enabled: false })} style={{ ...S.statusBtn, ...(!sl.enabled ? S.statusDraft : {}) }}>● Off</button>
+              </div>
+            </div>
+            <Select label="Style" value={sl.style} options={["wine", "seasons"]} onChange={(v) => upSlider({ style: v as "wine" | "seasons" })} />
+            <Field label="Eyebrow (wine style, small caps line)" value={sl.eyebrow} onChange={(v) => upSlider({ eyebrow: v })} />
+            <Field label={sl.style === "wine" ? "Title (short, e.g. GOLDEN AURA)" : "Giant word (e.g. SPRING)"} value={sl.title} onChange={(v) => upSlider({ title: v })} />
+            {sl.style === "seasons" && (
+              <Field label="Script tagline" value={sl.tagline} onChange={(v) => upSlider({ tagline: v })} />
+            )}
+            <Area label="Body text" value={sl.body} onChange={(v) => upSlider({ body: v })} />
+            <ImageField label="Background image" value={sl.bgImage} onChange={(v) => upSlider({ bgImage: v })} />
+            <ImageField label={sl.style === "wine" ? "Product image (cutout, transparent PNG)" : "Overlapping image cutout"} value={sl.productImage} onChange={(v) => upSlider({ productImage: v })} />
+            {sl.style === "wine" && (
+              <Field label="Rotating badge text" value={sl.badgeText} onChange={(v) => upSlider({ badgeText: v })} />
+            )}
+            <Field label="Button label (optional)" value={sl.ctaLabel} onChange={(v) => upSlider({ ctaLabel: v })} />
+            <Field label="Button link" value={sl.ctaHref} onChange={(v) => upSlider({ ctaHref: v })} />
+          </Card>
+        );
+      })()}
       {tab === "story" && (<>
       <Card title="Story">
         <Field label="Title" value={c.story.title} onChange={(v) => up("story", { ...c.story, title: v })} />

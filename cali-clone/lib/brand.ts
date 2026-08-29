@@ -31,9 +31,24 @@ export type BrandPalette = {
   accent: string;   // secondary accent (gold)
 };
 
+export type BrandSlider = {
+  enabled: boolean;
+  style: "wine" | "seasons"; // wine = centered product + rotating badge; seasons = giant word + image cutout
+  eyebrow: string;
+  title: string;         // "wine": short spaced-out title. "seasons": the giant background word.
+  tagline: string;       // "seasons": italic script line under the word.
+  body: string;
+  bgImage: string;
+  productImage: string;  // "wine": centered product cutout. "seasons": overlapping figure/cutout image.
+  badgeText: string;     // "wine": text looping around the rotating circular badge.
+  ctaLabel: string;
+  ctaHref: string;
+};
+
 export type BrandData = {
   // Whole-page theme — drives CSS variables on the brand page.
   palette: BrandPalette;
+  slider?: BrandSlider;
   // Any CSS color OR gradient — used as the brand accent (e.g. social-tab media).
   // Solid: "#c0392b" · Gradient: "linear-gradient(135deg,#c0392b,#e74c3c)"
   brandColor: string;
@@ -128,6 +143,19 @@ export const DEFAULT_BRAND: BrandData = {
     accent: "#f0d181",
   },
   brandColor: "linear-gradient(135deg, #e2231a, #c0392b)",
+  slider: {
+    enabled: false,
+    style: "wine",
+    eyebrow: "",
+    title: "",
+    tagline: "",
+    body: "",
+    bgImage: "",
+    productImage: "",
+    badgeText: "",
+    ctaLabel: "",
+    ctaHref: "#",
+  },
   hero: {
     eyebrow: "CLIENT ARCHIVE",
     title: "MAST MASALA",

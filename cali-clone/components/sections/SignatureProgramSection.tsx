@@ -21,7 +21,7 @@ export default function SignatureProgramSection() {
             poster={unsplashUrl(IMG.desk4, 1200)}
             className="absolute inset-0 w-full h-full object-cover"
           >
-            <source src={VIDEOS.hero} type="video/mp4" />
+            {VIDEOS.hero && <source src={VIDEOS.hero} type="video/mp4" />}
           </video>
         </div>
         <div ref={textRef as React.Ref<HTMLDivElement>} className="flex flex-col gap-8 max-w-[540px]">

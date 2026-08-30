@@ -19,7 +19,7 @@ export default function EdgeSection({ data = DEFAULT_CONTENT.edge }: { data?: Ed
                   alt=""
                   fill
                   sizes="56px"
-                  style={{ objectFit: "cover" }}
+                  style={{ objectFit: "contain" }}
                 />
               </div>
               <h3 className="edge-pillar-title">{p.title}</h3>
@@ -37,7 +37,7 @@ export default function EdgeSection({ data = DEFAULT_CONTENT.edge }: { data?: Ed
                   alt=""
                   fill
                   sizes="(max-width: 767px) 100vw, 320px"
-                  style={{ objectFit: "cover" }}
+                  style={{ objectFit: "contain" }}
                 />
               </div>
               <div className="edge-sub-text">

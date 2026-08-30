@@ -15,86 +15,83 @@ export default function ServicesParallax({ data = DEFAULT_CONTENT.servicesParall
     const cards = Array.from(root.querySelectorAll<HTMLElement>(".pcard"));
     if (cards.length === 0) return;
 
-    const triggers: ScrollTrigger[] = [];
+    const mm = gsap.matchMedia();
 
-    cards.forEach((card, i) => {
-      const baseY = i * 12;
-      const scale = 1 - i * 0.04;
-      gsap.set(card, {
-        y: baseY,
-        scale,
-        zIndex: cards.length - i,
-        opacity: 1,
+    mm.add("(min-width: 768px)", () => {
+      cards.forEach((card, i) => {
+        gsap.set(card, {
+          y: i * 12,
+          scale: 1 - i * 0.04,
+          zIndex: cards.length - i,
+          opacity: 1,
+        });
       });
-    });
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: root,
-        start: "top top",
-        end: `+=${cards.length * 90}%`,
-        scrub: 1,
-        pin: true,
-        pinSpacing: true,
-        anticipatePin: 1,
-        invalidateOnRefresh: true,
-      },
-      defaults: { ease: "power2.inOut" },
-    });
-    if (tl.scrollTrigger) triggers.push(tl.scrollTrigger);
-
-    cards.forEach((card, i) => {
-      if (i === cards.length - 1) return;
-      tl.to(
-        card,
-        {
-          yPercent: -120,
-          opacity: 0,
-          duration: 1,
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: root,
+          start: "top top",
+          end: `+=${cards.length * 90}%`,
+          scrub: 1,
+          pin: true,
+          pinSpacing: true,
+          anticipatePin: 1,
+          invalidateOnRefresh: true,
         },
-        i
-      );
-      cards.forEach((other, j) => {
-        if (j > i && j <= cards.length - 1) {
-          tl.to(
-            other,
-            {
-              y: (j - i - 1) * 12,
-              scale: 1 - (j - i - 1) * 0.04,
-              duration: 1,
-            },
-            i
-          );
-        }
+        defaults: { ease: "power2.inOut" },
+      });
+
+      cards.forEach((card, i) => {
+        if (i === cards.length - 1) return;
+        tl.to(
+          card,
+          {
+            yPercent: -120,
+            opacity: 0,
+            duration: 1,
+          },
+          i
+        );
+        cards.forEach((other, j) => {
+          if (j > i && j <= cards.length - 1) {
+            tl.to(
+              other,
+              {
+                y: (j - i - 1) * 12,
+                scale: 1 - (j - i - 1) * 0.04,
+                duration: 1,
+              },
+              i
+            );
+          }
+        });
+      });
+
+      requestAnimationFrame(() => ScrollTrigger.refresh());
+
+      return () => {
+        tl.scrollTrigger?.kill();
+        tl.kill();
+      };
+    });
+
+    mm.add("(max-width: 767px)", () => {
+      cards.forEach((card) => {
+        gsap.set(card, { clearProps: "all" });
+      });
+      cards.forEach((card) => {
+        ScrollTrigger.create({
+          trigger: card,
+          start: "top 85%",
+          once: true,
+          onEnter: () => {
+            gsap.from(card, { y: 40, opacity: 0, duration: 0.6, ease: "power3.out" });
+          },
+        });
       });
     });
 
-    cards.forEach((card) => {
-      const img = card.querySelector<HTMLElement>(".pcard-img");
-      if (!img) return;
-      const t = gsap.fromTo(
-        img,
-        { yPercent: -10 },
-        {
-          yPercent: 10,
-          ease: "none",
-          scrollTrigger: {
-            trigger: card,
-            start: "top bottom",
-            end: "bottom top",
-            scrub: 0.6,
-          },
-        }
-      );
-      if (t.scrollTrigger) triggers.push(t.scrollTrigger);
-    });
-
-    requestAnimationFrame(() => ScrollTrigger.refresh());
-
-    return () => {
-      triggers.forEach((t) => t.kill());
-      tl.kill();
-    };
+    return () => mm.revert();
   }, []);
 
   return (
@@ -112,9 +109,9 @@ export default function ServicesParallax({ data = DEFAULT_CONTENT.servicesParall
                   src={resolveImg(c.img, 1800)}
                   alt={c.title}
                   fill
-                  sizes="(max-width: 767px) 100vw, 96vw"
+                  sizes="(max-width: 767px) 92vw, 96vw"
                   priority={c.no === "01"}
-                  style={{ objectFit: "cover" }}
+                  style={{ objectFit: "contain", objectPosition: "center" }}
                 />
               </div>
               <div className="pcard-overlay" />

@@ -27,7 +27,9 @@ export const IMG = {
   flat2: "photo-1478737270239-2f02b77fc618",
 };
 
-export const VIDEOS = {
-  hero: "https://cdn.coverr.co/videos/coverr-a-woman-typing-on-a-laptop-1581/1080p.mp4",
-  coach: "https://cdn.coverr.co/videos/coverr-pouring-coffee-2510/1080p.mp4",
+// The former cdn.coverr.co sources 404'd — left blank until real footage is supplied.
+// Consumers guard on truthiness and fall back to the <video> poster image.
+export const VIDEOS: { hero: string; coach: string } = {
+  hero: "",
+  coach: "",
 };

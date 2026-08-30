@@ -18,7 +18,7 @@ export default function BenefitsSection({ data = DEFAULT_CONTENT.benefits }: { d
                   alt={b.title}
                   fill
                   sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 25vw"
-                  style={{ objectFit: "cover" }}
+                  style={{ objectFit: "contain" }}
                 />
               </div>
               <div className="benefits-card-text">

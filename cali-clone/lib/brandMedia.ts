@@ -304,17 +304,7 @@ export const BRAND_MEDIA: Record<string, BrandImage[]> = {
       "height": 472
     },
     {
-      "src": "/images/brands/intellve/reach-growth.png",
-      "width": 467,
-      "height": 472
-    },
-    {
       "src": "/images/brands/intellve/ctr2-1.png",
-      "width": 473,
-      "height": 457
-    },
-    {
-      "src": "/images/brands/intellve/ctr2.png",
       "width": 473,
       "height": 457
     },
@@ -391,17 +381,7 @@ export const BRAND_MEDIA: Record<string, BrandImage[]> = {
       "height": 1080
     },
     {
-      "src": "/images/brands/kunuts/kunuts-jan-makarsankrat.png",
-      "width": 1080,
-      "height": 1080
-    },
-    {
       "src": "/images/brands/kunuts/kunuts-jan-republic-day.jpg",
-      "width": 1080,
-      "height": 1080
-    },
-    {
-      "src": "/images/brands/kunuts/kunuts-jan-republic-day-1-1.jpg",
       "width": 1080,
       "height": 1080
     },
@@ -1111,11 +1091,6 @@ export const BRAND_MEDIA: Record<string, BrandImage[]> = {
       "height": 1350
     },
     {
-      "src": "/images/brands/furnishing-home/furnishing-home-cc-3.png",
-      "width": 1080,
-      "height": 1350
-    },
-    {
       "src": "/images/brands/furnishing-home/furnishing-home-cc-4-1.png",
       "width": 1080,
       "height": 1350
@@ -1127,11 +1102,6 @@ export const BRAND_MEDIA: Record<string, BrandImage[]> = {
     },
     {
       "src": "/images/brands/furnishing-home/furnishing-home-cc-6-1.png",
-      "width": 1080,
-      "height": 1350
-    },
-    {
-      "src": "/images/brands/furnishing-home/furnishing-home-cc-6.png",
       "width": 1080,
       "height": 1350
     },
@@ -1395,11 +1365,6 @@ export const BRAND_MEDIA: Record<string, BrandImage[]> = {
       "height": 1280
     },
     {
-      "src": "/images/brands/icici/5.jpeg",
-      "width": 768,
-      "height": 1280
-    },
-    {
       "src": "/images/brands/icici/3-1.jpeg",
       "width": 590,
       "height": 1280
@@ -1412,17 +1377,7 @@ export const BRAND_MEDIA: Record<string, BrandImage[]> = {
       "height": 1600
     },
     {
-      "src": "/images/brands/godrej/whatsapp-image-2026-01-04-at-9-55-12-am.jpeg",
-      "width": 1600,
-      "height": 1600
-    },
-    {
       "src": "/images/brands/godrej/whatsapp-image-2026-01-04-at-9-55-12-am-2-1.jpeg",
-      "width": 1500,
-      "height": 1500
-    },
-    {
-      "src": "/images/brands/godrej/whatsapp-image-2026-01-04-at-9-55-12-am-2.jpeg",
       "width": 1500,
       "height": 1500
     },
@@ -1468,11 +1423,6 @@ export const BRAND_MEDIA: Record<string, BrandImage[]> = {
     },
     {
       "src": "/images/brands/godrej/whatsapp-image-2026-01-04-at-9-55-12-am-1-1.jpeg",
-      "width": 611,
-      "height": 611
-    },
-    {
-      "src": "/images/brands/godrej/whatsapp-image-2026-01-04-at-9-55-12-am-1.jpeg",
       "width": 611,
       "height": 611
     },
@@ -1559,11 +1509,6 @@ export const BRAND_MEDIA: Record<string, BrandImage[]> = {
       "height": 1600
     },
     {
-      "src": "/images/brands/chemistrie/high-angle-natural-cream-concept.jpg",
-      "width": 1280,
-      "height": 1600
-    },
-    {
       "src": "/images/brands/chemistrie/natural-products-arrangement-top-view-2.jpg",
       "width": 1400,
       "height": 1400
@@ -1575,11 +1520,6 @@ export const BRAND_MEDIA: Record<string, BrandImage[]> = {
     },
     {
       "src": "/images/brands/chemistrie/beach-skincare-product-still-life-2.jpg",
-      "width": 1067,
-      "height": 1600
-    },
-    {
-      "src": "/images/brands/chemistrie/beach-skincare-product-still-life.jpg",
       "width": 1067,
       "height": 1600
     },
@@ -1769,11 +1709,6 @@ export const BRAND_MEDIA: Record<string, BrandImage[]> = {
     },
     {
       "src": "/images/brands/greencap-health/green-cap-creatives-24.png",
-      "width": 1080,
-      "height": 1350
-    },
-    {
-      "src": "/images/brands/greencap-health/process-ongoing-support.png",
       "width": 1080,
       "height": 1350
     },

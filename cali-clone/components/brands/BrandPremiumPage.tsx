@@ -60,8 +60,12 @@ export default function BrandPremiumPage({ data }: { data: Brand }) {
     // portrait only, so fall back to the largest images rather than rendering
     // an empty showcase.
     const byArea = [...creative].sort((a, b) => b.width * b.height - a.width * a.height);
-    const wide = creative.filter((m) => ratio(m) >= 1.2).slice(0, 2);
-    const lead = wide.length > 0 ? wide : byArea.slice(0, 1);
+    const wide = creative.filter((m) => ratio(m) >= 1.2).slice(0, 3);
+    // The showcase stacks its images, so it wants three; top up from the
+    // largest remaining creative when a brand has fewer landscape shots.
+    const lead = wide.length >= 3
+      ? wide
+      : [...wide, ...byArea.filter((m) => !wide.some((w) => w.src === m.src))].slice(0, 3);
     return {
       charts: chartImgs,
       showcase: lead,
@@ -186,21 +190,34 @@ export default function BrandPremiumPage({ data }: { data: Brand }) {
       </section>
     ),
 
+    /* Sticky stack: each image pins in turn and the next scrolls up over it.
+       Sizing is capped by max-height with width:auto, so the whole frame scales
+       down — the image is never cropped. */
     showcase:
       showcase.length > 0 ? (
         <section key="showcase" className="sp-showcase">
-          {showcase.map((img, i) => (
-            <figure key={img.src} className="sp-showcase-item" data-reveal>
-              <Image
-                src={img.src}
-                alt={`${data.name} creative`}
-                width={img.width}
-                height={img.height}
-                sizes="(max-width:900px) 100vw, 90vw"
-              />
-              <figcaption>{i === 0 ? "Creative direction" : "Campaign work"}</figcaption>
-            </figure>
-          ))}
+          <p className="sp-eyebrow sp-center" data-reveal>Selected work</p>
+          <div className="sp-stack">
+            {showcase.map((img, i) => (
+              <figure
+                key={img.src}
+                className="sp-stack-item"
+                style={{ zIndex: i + 1, top: `calc(var(--sp-stack-top) + ${i * 14}px)` }}
+              >
+                <Image
+                  src={img.src}
+                  alt={`${data.name} creative`}
+                  width={img.width}
+                  height={img.height}
+                  sizes="(max-width:900px) 92vw, 80vw"
+                />
+                <figcaption>
+                  <span>{String(i + 1).padStart(2, "0")}</span>
+                  {["Creative direction", "Campaign work", "In the feed"][i] ?? "Selected work"}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
         </section>
       ) : null,
 
@@ -335,10 +352,18 @@ export default function BrandPremiumPage({ data }: { data: Brand }) {
             <img src={data.logo} alt={data.name} className="sp-hero-logo" />
           )}
           <p className="sp-hero-kicker">{data.hero.eyebrow}</p>
+          {/* Chars animate individually, but each word is kept in its own
+              nowrap box so a long brand name breaks between words, never
+              mid-word. */}
           <h1 className="sp-hero-title" aria-label={data.name}>
-            {data.name.split("").map((ch, i) => (
-              <span key={i} className="sp-hero-word">
-                {ch === " " ? " " : ch}
+            {data.name.split(" ").map((word, w, arr) => (
+              <span key={w} className="sp-hero-wordwrap">
+                {word.split("").map((ch, i) => (
+                  <span key={i} className="sp-hero-word">
+                    {ch}
+                  </span>
+                ))}
+                {w < arr.length - 1 ? " " : ""}
               </span>
             ))}
           </h1>

@@ -3,6 +3,7 @@
 // page can lay every image out at its true aspect ratio and never crop.
 const fs = require("fs");
 const path = require("path");
+const crypto = require("crypto");
 
 const SRC_ROOT = path.join(__dirname, "..", "..", "client-archives");
 const OUT_ROOT = path.join(__dirname, "..", "public", "images", "brands");
@@ -91,17 +92,37 @@ function slugifyFile(name, taken) {
   return candidate;
 }
 
-// WordPress served some images under several near-identical names, and the
-// gallery keys on src — duplicates meant React key collisions and the same
-// photo rendered many times over.
-function dedupe(entries) {
-  const seen = new Set();
-  return entries.filter((e) => {
-    const key = `${e.src}`;
-    if (seen.has(key)) return false;
-    seen.add(key);
-    return true;
-  });
+// WordPress served the same photo under several names, so galleries were
+// showing one image two, three, even four times. Deleting the copies by hand
+// doesn't hold — this script re-copies from client-archives on every run — so
+// dedupe here, by file CONTENT, and delete any copy already written to public.
+function dedupe(entries, dir) {
+  const seenSrc = new Set();
+  const seenHash = new Map();
+  const kept = [];
+  for (const e of entries) {
+    if (seenSrc.has(e.src)) continue;
+    seenSrc.add(e.src);
+
+    const file = path.join(dir, path.basename(e.src));
+    let hash;
+    try {
+      hash = crypto.createHash("md5").update(fs.readFileSync(file)).digest("hex");
+    } catch {
+      kept.push(e);
+      continue;
+    }
+    const first = seenHash.get(hash);
+    if (first) {
+      // Identical bytes to one we already kept — drop it and remove the file.
+      try { fs.unlinkSync(file); } catch {}
+      console.log(`  · dropped duplicate ${path.basename(e.src)} (same image as ${first})`);
+      continue;
+    }
+    seenHash.set(hash, path.basename(e.src));
+    kept.push(e);
+  }
+  return kept;
 }
 
 const manifest = {};
@@ -133,8 +154,8 @@ for (const [folder, slug] of Object.entries(FOLDER_TO_SLUG)) {
 
   // Widest-first so the layout can lead with landscape hero-grade shots
   entries.sort((a, b) => b.width * b.height - a.width * a.height);
-  manifest[slug] = dedupe(entries);
-  console.log(`${slug}: ${entries.length} images`);
+  manifest[slug] = dedupe(entries, outDir);
+  console.log(`${slug}: ${manifest[slug].length} images`);
 }
 
 // Some brands' media never came from the WordPress scrape (e.g. Vamas, pulled off
@@ -155,7 +176,7 @@ for (const slug of fs.readdirSync(OUT_ROOT)) {
     entries.push({ src: `/images/brands/${slug}/${name}`, width: dims.width, height: dims.height });
   }
   entries.sort((a, b) => b.width * b.height - a.width * a.height);
-  manifest[slug] = dedupe(entries);
+  manifest[slug] = dedupe(entries, dir);
   console.log(`${slug}: ${manifest[slug].length} images (pre-existing folder)`);
 }
 

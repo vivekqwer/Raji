@@ -3,8 +3,6 @@
 // "use client" MastMasalaPage component. Edit DEFAULT_BRAND to change
 // the page, or override it later via the admin dashboard (getDoc("brand", ...)).
 
-const BASE = "https://rajeshwarichauhan.in/wp-content/uploads";
-
 export type BrandStat = { raw: number; suffix: string; decimals: number; label: string };
 export type CalRow = { type: string; date: string; concept: string; copy: string };
 export type Metric = { value: string; label: string };
@@ -243,12 +241,12 @@ export const DEFAULT_BRAND: BrandData = {
   gallery: {
     title: "Creative Gallery",
     images: [
-      { src: `${BASE}/2025/12/Mast-Masala_Gandhi-Jayanti.jpg`, alt: "Gandhi Jayanti post" },
-      { src: `${BASE}/2025/12/mast-masala-dashera_-2.jpg`,     alt: "Dussehra post" },
-      { src: `${BASE}/2025/12/Mast-Masala-Dhanteras_1.jpg`,    alt: "Dhanteras post" },
-      { src: `${BASE}/2025/12/Mast-Masala-Oct-22-post.jpg`,    alt: "October post" },
-      { src: `${BASE}/2025/12/Mast-Masala-Oct-21-post.jpg`,    alt: "October post 2" },
-      { src: `${BASE}/2025/12/happy-makar-sankrant.jpg`,       alt: "Makar Sankranti post" },
+      { src: "/images/brands/mast-masala/mast-masala-gandhi-jayanti.jpg", alt: "Gandhi Jayanti post" },
+      { src: "/images/brands/mast-masala/mast-masala-dashera-2.jpg",      alt: "Dussehra post" },
+      { src: "/images/brands/mast-masala/mast-masala-dhanteras-1.jpg",    alt: "Dhanteras post" },
+      { src: "/images/brands/mast-masala/mast-masala-oct-22-post.jpg",    alt: "October post" },
+      { src: "/images/brands/mast-masala/mast-masala-oct-21-post.jpg",    alt: "October post 2" },
+      { src: "/images/brands/mast-masala/happy-makar-sankrant.jpg",       alt: "Makar Sankranti post" },
     ],
   },
 

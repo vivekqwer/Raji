@@ -26,106 +26,6 @@ const MAST_MASALA: Brand = {
   logo: "https://mastspices.com/wp-content/uploads/2025/08/logo-107x104.png",
   cardDescription: "60 years of spice legacy — festive content and steady social growth.",
 };
-
-// GreenCap — wine-label brand, showcases the "wine" brand-slider style (product + rotating badge).
-const GREENCAP: Brand = {
-  ...DEFAULT_BRAND,
-  slug: "greencap",
-  name: "GreenCap",
-  published: true,
-  logo: "",
-  cardDescription: "Boutique wine label — premium bottle storytelling and a slider-led brand page.",
-  palette: {
-    primary: "#8a5e26",
-    bg: "#f6efd9",
-    bgSoft: "#fbf6e3",
-    ink: "#1a1208",
-    accent: "#f0d181",
-  },
-  brandColor: "linear-gradient(135deg, #8a5e26, #b8843d)",
-  logoBg: "#211a16",
-  hero: {
-    eyebrow: "CLIENT ARCHIVE",
-    title: "GREENCAP",
-    bgText: "GC",
-    tagline: "Every Bottle, A Story",
-    tags: ["Content Writing", "Social Media", "Client Servicing"],
-  },
-  slider: {
-    enabled: true,
-    style: "wine",
-    eyebrow: "GreenCap Cellars",
-    tagline: "",
-    body: "",
-    ctaLabel: "Explore the vintage",
-    ctaHref: "#stats",
-    slides: [
-      {
-        title: "GOLDEN AURA",
-        bgImage: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1800&q=80&auto=format&fit=crop",
-        productImage: "https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=900&q=80&auto=format&fit=crop",
-        badgeText: "Taste the Story",
-      },
-      {
-        title: "RUBY REVERIE",
-        bgImage: "https://images.unsplash.com/photo-1560493676-04071c5f467b?w=1800&q=80&auto=format&fit=crop",
-        productImage: "https://images.unsplash.com/photo-1584916201218-f4242ceb4809?w=900&q=80&auto=format&fit=crop",
-        badgeText: "A Bold Vintage",
-      },
-    ],
-  },
-  story: {
-    title: "A Legacy Bottled",
-    body: "GreenCap is a boutique wine label built on patient craft — small-batch vintages, honest labels, and a story worth telling one bottle at a time. Our social content translates that craft into a feed people slow down for.",
-    bigNum: "12",
-  },
-  approach: {
-    eyebrow: "HOW WE WORK",
-    heading: "Crafted for <em>Taste</em>",
-    items: [
-      { num: "01", title: "Label-Led Storytelling", body: "Every post starts from the bottle — label details, tasting notes, and the story behind the vintage." },
-      { num: "02", title: "Seasonal Content Calendar", body: "Harvest, cellar, and release moments mapped to a calendar that builds anticipation all year." },
-      { num: "03", title: "Community Over Volume", body: "Fewer, richer posts aimed at a discerning audience — engagement over impressions." },
-    ],
-  },
-  workDone: {
-    title: "Work Done",
-    bullets: [
-      "Label-led content calendar",
-      "Harvest & release campaign posts",
-      "Tasting-note copywriting",
-      "Monthly performance reporting",
-    ],
-  },
-  calendar: {
-    title: "Content Calendar Glimpse",
-    rows: [
-      { type: "Reel", date: "1/9/2024", concept: "Harvest Season", copy: "From vine to bottle — a look inside the harvest." },
-      { type: "Static", date: "14/10/2024", concept: "Tasting Notes", copy: "Golden Aura — notes of citrus, oak, and honey." },
-      { type: "Reel", date: "2/12/2024", concept: "New Release", copy: "Meet the newest vintage in the GreenCap cellar." },
-    ],
-  },
-  mom: {
-    title: "GreenCap — Vintage Content Planning",
-    bullets: [
-      "Harvest & release roadmap ready",
-      "Label and tasting-note posts finalised",
-      "Seasonal content plan set",
-      "Success metrics defined",
-    ],
-  },
-  gallery: { title: "Creative Gallery", images: [] },
-  analytics: DEFAULT_BRAND.analytics.map((a) => ({ ...a })),
-  featured: { ...DEFAULT_BRAND.featured, video: "" },
-  philosophy: { ...DEFAULT_BRAND.philosophy, video: "" },
-  delivered: { ...DEFAULT_BRAND.delivered, cards: [] },
-  cta: {
-    sub: "Want a brand page like this?",
-    label: "Book a discovery call with Raji →",
-    href: "/contact",
-  },
-};
-
 // Imported from rajeshwarichauhan.in portfolio (client-servicing / social-media / content-writing).
 // Factual fields (logo, gallery images, history, analytics) are from the source pages;
 // narrative sections use brand-aware templated copy. Media (video) fields left blank.
@@ -133,7 +33,7 @@ const IMPORTED_BRANDS: Brand[] = [
   {
     "slug": "intellve",
     "name": "Intellve",
-    "logo": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/Intellve.png",
+    "logo": "",
     "cardDescription": "AI, ML and IoT-driven facility surveillance software brand — social, content and client servicing.",
     "published": true,
     "palette": {
@@ -457,7 +357,7 @@ const IMPORTED_BRANDS: Brand[] = [
   {
     "slug": "kunuts",
     "name": "Kunuts",
-    "logo": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/Kunuts.png",
+    "logo": "",
     "cardDescription": "Premium dry fruits brand. Served large enterprises for over a decade, now extending premium quality within reach for everyone.",
     "published": true,
     "palette": {
@@ -1071,7 +971,7 @@ const IMPORTED_BRANDS: Brand[] = [
   {
     "slug": "monarch",
     "name": "Monarch",
-    "logo": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/Monarch.png",
+    "logo": "",
     "cardDescription": "Monarch Bath, established in 1965, offers quality bathroom and kitchen fixtures from global brands combining technology, functionality and comfort.",
     "published": true,
     "palette": {
@@ -1407,7 +1307,7 @@ const IMPORTED_BRANDS: Brand[] = [
   {
     "slug": "rapoo",
     "name": "Rapoo",
-    "logo": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/Rapoo.png",
+    "logo": "",
     "cardDescription": "Client servicing, social media and content writing for Rapoo India, a leading wireless computer peripherals brand.",
     "published": true,
     "palette": {
@@ -1731,7 +1631,7 @@ const IMPORTED_BRANDS: Brand[] = [
   {
     "slug": "rapoo-middle-east",
     "name": "Rapoo Middle East",
-    "logo": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/Rapoo.png",
+    "logo": "",
     "cardDescription": "Wireless peripherals pioneer sold in over 80 countries. Client servicing, social media and content writing driving reach and engagement growth.",
     "published": true,
     "palette": {
@@ -2030,7 +1930,7 @@ const IMPORTED_BRANDS: Brand[] = [
   {
     "slug": "furnishing-home",
     "name": "Furnishing Home",
-    "logo": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/Furnishing_Home.png",
+    "logo": "",
     "cardDescription": "Home soft furnishings brand with 55+ years of heritage, brought to life through content, social media and client servicing.",
     "published": true,
     "palette": {
@@ -2215,10 +2115,6 @@ const IMPORTED_BRANDS: Brand[] = [
           "alt": "Dhanteras"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/Bhaidooj-scaled.png",
-          "alt": "Bhaidooj Scaled"
-        },
-        {
           "src": "/images/brands/furnishing-home/bhaidooj.png",
           "alt": "Bhaidooj"
         },
@@ -2233,10 +2129,6 @@ const IMPORTED_BRANDS: Brand[] = [
         {
           "src": "/images/brands/furnishing-home/furnishing-home-cc-11.png",
           "alt": "Cc"
-        },
-        {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2026/02/Upolstery.png",
-          "alt": "Upolstery"
         }
       ]
     },
@@ -2308,7 +2200,7 @@ const IMPORTED_BRANDS: Brand[] = [
   {
     "slug": "secure-my-shop",
     "name": "Secure My Shop",
-    "logo": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/Secure_My_Shop.png",
+    "logo": "",
     "cardDescription": "An ISO 9001:2005 and ISO 27001 certified solutions company building AI, ML, IoT and Big Data software for security and productivity monitoring.",
     "published": true,
     "palette": {
@@ -2644,7 +2536,7 @@ const IMPORTED_BRANDS: Brand[] = [
   {
     "slug": "icici",
     "name": "ICICI",
-    "logo": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/ICICI_Pru.png",
+    "logo": "",
     "cardDescription": "Content writing engagement for ICICI Prudential Life Insurance, including content-calendar planning and copy for the Saksham Pro platform and app UI.",
     "published": true,
     "palette": {
@@ -3676,7 +3568,7 @@ const LIVE_SITE_BRANDS: Brand[] = [
 export const DEFAULT_BRANDS: BrandsData = {
   archiveTitle: "Brands",
   archiveIntro: "A selection of brands we've helped grow with strategy, content and community.",
-  items: [MAST_MASALA, GREENCAP, ...LIVE_SITE_BRANDS, ...IMPORTED_BRANDS],
+  items: [MAST_MASALA, ...LIVE_SITE_BRANDS, ...IMPORTED_BRANDS],
 };
 
 export function findBrand(d: BrandsData, slug: string): Brand | undefined {

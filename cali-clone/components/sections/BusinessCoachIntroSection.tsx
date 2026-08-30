@@ -34,7 +34,7 @@ export default function BusinessCoachIntroSection() {
             poster={unsplashUrl(IMG.portrait4, 1200)}
             className="absolute inset-0 w-full h-full object-cover"
           >
-            <source src={VIDEOS.coach} type="video/mp4" />
+            {VIDEOS.coach && <source src={VIDEOS.coach} type="video/mp4" />}
           </video>
         </div>
       </div>

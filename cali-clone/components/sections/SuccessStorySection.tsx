@@ -41,7 +41,7 @@ export default function SuccessStorySection() {
               poster={unsplashUrl(IMG.portrait7, 1000)}
               className="absolute inset-0 w-full h-full object-cover"
             >
-              <source src={VIDEOS.coach} type="video/mp4" />
+              {VIDEOS.coach && <source src={VIDEOS.coach} type="video/mp4" />}
             </video>
           </div>
           <span className="fu eyebrow">client&apos;s success story</span>

@@ -31,7 +31,8 @@ export type FaqContent = { eyebrow: string; title: string; items: FaqItem[] };
 export type Testimonial = { name: string; role: string; quote: string; avatar: string };
 export type TestimonialsContent = { eyebrow: string; title: string; items: Testimonial[] };
 
-export type ClientLogosContent = { caption: string; names: string[] };
+export type ClientLogo = { name: string; src: string };
+export type ClientLogosContent = { caption: string; names: string[]; logos: ClientLogo[] };
 export type QuoteBandContent = { quotes: string[] };
 
 export type ImageCard = { title: string; body: string; img: string };
@@ -128,6 +129,21 @@ export const DEFAULT_CONTENT: SiteContent = {
   clientLogos: {
     caption: "Join over 50+ businesses to create unique brand designs.",
     names: ["Intelleve", "Monarch", "Godrej", "Rapoo", "NBG", "Kunuts", "Furnishing Home", "Pratik", "Studio One", "Tribe Co", "House of Hue", "Aurora Labs", "North Star", "Verve Studio"],
+    logos: [
+      { name: "Intellve", src: "/images/brands/intellve/logo.png" },
+      { name: "Kunuts", src: "/images/brands/kunuts/logo.png" },
+      { name: "Salus", src: "/images/brands/salus/logo.png" },
+      { name: "Monarch", src: "/images/brands/monarch/logo.png" },
+      { name: "Rapoo", src: "/images/brands/rapoo/logo.png" },
+      { name: "Rapoo Middle East", src: "/images/brands/rapoo-middle-east/logo.png" },
+      { name: "Furnishing Home", src: "/images/brands/furnishing-home/logo.png" },
+      { name: "Secure My Shop", src: "/images/brands/secure-my-shop/logo.png" },
+      { name: "ICICI", src: "/images/brands/icici/logo.png" },
+      { name: "GreenCap Health", src: "/images/brands/greencap-health/logo.png" },
+      { name: "The Chemist Pharmacy", src: "/images/brands/the-chemist-pharmacy/logo.png" },
+      { name: "Chemistrie", src: "/images/brands/chemistrie/logo.png" },
+      { name: "Crystal", src: "/images/brands/crystal/logo.png" },
+    ],
   },
   quoteBand: {
     quotes: [

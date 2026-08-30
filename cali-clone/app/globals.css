@@ -1710,6 +1710,33 @@ img, video {
   transition: opacity 0.3s var(--ease-out);
 }
 .clm-item:hover { opacity: 1; color: var(--color-accent-2); }
+/* Logo chips — dark rounded pill so the (mostly white) brand logos stay visible
+   on the cream section and read as one premium set. */
+.clm-logo-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 84px;
+  min-width: 150px;
+  padding: 0 28px;
+  background: #211a16;
+  border: 1px solid rgba(246, 239, 217, 0.10);
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+}
+.clm-logo-chip:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.20);
+}
+.clm-logo-img {
+  max-height: 48px;
+  max-width: 130px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
 @keyframes clm-scroll {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
@@ -1719,6 +1746,8 @@ img, video {
   .clm-caption { margin-bottom: 24px; font-size: 18px; }
   .clm-track { gap: 40px; }
   .clm-item { font-size: 24px; }
+  .clm-logo-chip { height: 64px; min-width: 120px; padding: 0 20px; border-radius: 14px; }
+  .clm-logo-img { max-height: 36px; max-width: 104px; }
 }
 
 /* ===== Approach Section ===== */

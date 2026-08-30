@@ -6,6 +6,7 @@ import {
   PanelTop, PanelBottom, Newspaper, Briefcase, LogOut, ExternalLink, ChevronRight,
   Monitor, Tablet, Smartphone, Eye, RefreshCw, Mail, FileText, X,
   Images, Quote, Layers, Rocket, ListChecks, Grid3x3, Gift, RectangleHorizontal,
+  Menu,
   type LucideIcon,
 } from "lucide-react";
 
@@ -68,6 +69,9 @@ export default function AdminPage() {
   const [msg, setMsg] = useState("");
   const [previewOpen, setPreviewOpen] = useState(false);
   const [device, setDevice] = useState<Device>("desktop");
+  const [menuOpen, setMenuOpen] = useState(false); // mobile sidebar drawer
+  // Navigate + close the mobile drawer in one go.
+  const go = (id: string) => { setActive(id); setMenuOpen(false); };
   const [refreshKey, setRefreshKey] = useState(0);
   const [selectedBrand, setSelectedBrand] = useState(0);
   const [selectedPost, setSelectedPost] = useState(0);
@@ -127,18 +131,21 @@ export default function AdminPage() {
   return (
     <div style={S.shell} className="raji-cms">
       <style>{CMS_CSS}</style>
-      {/* Sidebar */}
-      <aside style={S.sidebar}>
+      {/* Sidebar (slide-in drawer on mobile) */}
+      <aside style={S.sidebar} className={`cms-sidebar${menuOpen ? " cms-open" : ""}`}>
         <div style={S.brandRow}>
           <div style={S.brandMark}>R</div>
           <div>
             <div style={S.brandName}>Raji CMS</div>
             <div style={S.brandSub}>Content Manager</div>
           </div>
+          <button onClick={() => setMenuOpen(false)} className="cms-drawer-close" style={{ ...S.linkBtn, marginLeft: "auto", padding: 6 }} aria-label="Close menu">
+            <X size={18} />
+          </button>
         </div>
 
         <nav style={{ flex: 1 }}>
-          <button onClick={() => setActive("overview")} style={{ ...S.navItem, ...(active === "overview" ? S.navItemActive : {}) }}>
+          <button onClick={() => go("overview")} style={{ ...S.navItem, ...(active === "overview" ? S.navItemActive : {}) }}>
             <LayoutDashboard size={17} /> Dashboard
           </button>
 
@@ -148,7 +155,7 @@ export default function AdminPage() {
               {SCREENS.filter((s) => s.group === g).map((s) => {
                 const Icon = s.icon;
                 return (
-                  <button key={s.id} onClick={() => setActive(s.id)} style={{ ...S.navItem, ...(active === s.id ? S.navItemActive : {}) }}>
+                  <button key={s.id} onClick={() => go(s.id)} style={{ ...S.navItem, ...(active === s.id ? S.navItemActive : {}) }}>
                     <Icon size={17} /> {s.label}
                   </button>
                 );
@@ -161,11 +168,15 @@ export default function AdminPage() {
           <LogOut size={17} /> Logout
         </button>
       </aside>
+      {menuOpen && <div className="cms-overlay" onClick={() => setMenuOpen(false)} />}
 
       {/* Right */}
       <div style={S.right}>
-        <header style={S.topbar}>
+        <header style={S.topbar} className="cms-topbar">
           <div style={{ display: "flex", alignItems: "center", gap: 8, minWidth: 0 }}>
+            <button onClick={() => setMenuOpen(true)} className="cms-hamburger" style={{ ...S.linkBtn, padding: 7 }} aria-label="Open menu">
+              <Menu size={18} />
+            </button>
             <span style={{ color: "#8a857c", fontSize: 14 }}>{title}</span>
             {screen && <ChevronRight size={15} color="#5a564e" />}
             {screen && <strong style={{ color: "#fff", fontSize: 15 }}>{sub}</strong>}
@@ -182,7 +193,7 @@ export default function AdminPage() {
           </div>
         </header>
 
-        <main style={S.main}>
+        <main style={S.main} className="cms-main">
           {active === "overview"
             ? <Overview onNavigate={setActive} />
             : data === undefined
@@ -1285,6 +1296,32 @@ const CMS_CSS = `
 .raji-cms ::-webkit-scrollbar-thumb:hover { background: #4a473f; background-clip: padding-box; }
 .raji-cms section { animation: cmsFade .2s ease; }
 @keyframes cmsFade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+
+/* Mobile-only chrome hidden on desktop */
+.raji-cms .cms-hamburger, .raji-cms .cms-drawer-close, .raji-cms .cms-overlay { display: none; }
+
+/* ── Mobile: sidebar becomes a slide-in drawer, topbar wraps ── */
+@media (max-width: 860px) {
+  .raji-cms .cms-sidebar {
+    position: fixed !important;
+    left: 0; top: 0;
+    height: 100dvh !important;
+    z-index: 200;
+    transform: translateX(-100%);
+    transition: transform .28s ease;
+    box-shadow: 0 0 44px rgba(0,0,0,.55);
+  }
+  .raji-cms .cms-sidebar.cms-open { transform: translateX(0); }
+  .raji-cms .cms-overlay {
+    display: block;
+    position: fixed; inset: 0; z-index: 150;
+    background: rgba(0,0,0,.5);
+  }
+  .raji-cms .cms-hamburger { display: inline-flex; }
+  .raji-cms .cms-drawer-close { display: inline-flex; }
+  .raji-cms .cms-topbar { flex-wrap: wrap; padding: 10px 14px !important; row-gap: 8px; }
+  .raji-cms .cms-main { padding: 16px !important; }
+}
 `;
 
 const S: Record<string, React.CSSProperties> = {

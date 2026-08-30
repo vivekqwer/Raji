@@ -11,6 +11,7 @@
   --sp-gold: var(--bpx-accent, #c8a05e);
   --sp-divider: rgba(244, 238, 226, 0.14);
   --sp-pad: 20px;
+  --sp-radius: 16px;   /* consistent card corner rounding across the page */
   background: var(--sp-ink);
   color: var(--sp-cream);
   /* clip (not hidden) prevents horizontal scroll WITHOUT making this a scroll
@@ -324,13 +325,14 @@
   margin: 0;
   background: var(--sp-panel);
   border: 1px solid var(--sp-divider);
-  border-radius: 6px;
-  padding: 10px;
+  border-radius: 18px;
+  padding: 12px;
+  overflow: hidden;
 }
 .brand-premium .sp-growth-card img {
   width: 100%;
   height: auto;
-  border-radius: 3px;
+  border-radius: 12px;
 }
 
 /* ── Approach ── */
@@ -404,7 +406,7 @@
 .brand-premium .sp-gallery-item {
   break-inside: avoid;
   margin: 0 0 14px;
-  border-radius: 3px;
+  border-radius: var(--sp-radius);
   overflow: hidden;
   background: var(--sp-panel);
 }
@@ -441,7 +443,7 @@
   background: var(--sp-panel);
   border: 1px solid var(--sp-divider);
   padding: 28px 22px;
-  border-radius: 4px;
+  border-radius: var(--sp-radius);
 }
 .brand-premium .sp-delivered-num {
   display: block;
@@ -539,6 +541,8 @@
 
   .brand-premium .sp-stats { padding: 80px var(--sp-pad); }
   .brand-premium .sp-stats-inner { grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  /* All four analytics cards in a single row on desktop. */
+  .brand-premium .sp-growth-grid { grid-template-columns: repeat(4, 1fr); gap: 18px; }
   .brand-premium .sp-stat { padding: 0 18px; border-left: 1px solid var(--sp-divider); }
   .brand-premium .sp-stat:first-child { border-left: none; }
 
@@ -614,8 +618,7 @@
   max-width: none;
 }
 .brand-premium--gallery-led .sp-stack-frame,
-.brand-premium--gallery-led .sp-stack-frame img { border-radius: 2px; }
-.brand-premium--gallery-led .sp-stack-item figcaption { padding: 0 4px; }
+.brand-premium--gallery-led .sp-stack-frame img { border-radius: 24px; }
 .brand-premium--gallery-led .sp-stats {
   background: transparent;
 }

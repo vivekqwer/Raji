@@ -13,7 +13,9 @@
   --sp-pad: 20px;
   background: var(--sp-ink);
   color: var(--sp-cream);
-  overflow-x: hidden;
+  /* clip (not hidden) prevents horizontal scroll WITHOUT making this a scroll
+     container — hidden would break position:sticky on the showcase stack. */
+  overflow-x: clip;
 }
 .brand-premium img {
   max-width: 100%;
@@ -173,14 +175,15 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 28px 0;
+  gap: 14px;
 }
+/* Each stat is its own rounded card. */
 .brand-premium .sp-stat {
   text-align: center;
-  padding: 0 12px;
-}
-.brand-premium .sp-stat:nth-child(even) {
-  border-left: 1px solid var(--sp-divider);
+  padding: 26px 16px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid var(--sp-divider);
+  border-radius: 18px;
 }
 .brand-premium .sp-stat-num {
   display: block;
@@ -233,55 +236,63 @@
   max-width: 640px;
 }
 
-/* ── Showcase: sticky stack, capped height, never cropped ── */
+/* ── Showcase: sticky stack — uniform rounded cards; each pins at the top and
+   the next scrolls up over it. Image fills the whole card (cover). ── */
 .brand-premium .sp-showcase {
-  padding: 0 var(--sp-pad) 40px;
-  max-width: 1300px;
+  padding: 0 var(--sp-pad) 16px;
+  max-width: 900px;
   margin: 0 auto;
-  --sp-stack-top: 84px;
+  --sp-stack-top: 90px;
 }
 .brand-premium .sp-stack {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 18px;
+  /* trim the trailing scroll runway so there isn't a big empty gap after the
+     last card pins */
+  padding-bottom: 4px;
 }
 .brand-premium .sp-stack-item {
   position: sticky;
+  top: var(--sp-stack-top);
   margin: 0;
-  background: var(--sp-panel);
-  border: 1px solid var(--sp-divider);
-  border-radius: 8px;
-  padding: 10px;
-  box-shadow: 0 -18px 40px rgba(0, 0, 0, 0.55);
 }
-/* Fixed-size box shared by all 3 stack cards, every brand. object-fit:contain
-   on the fill'd <Image> inside shows the full photo — letterboxed, never
-   cropped — no matter the source's native aspect ratio. */
+/* Uniform card — same size for every image; the photo fills it edge-to-edge. */
 .brand-premium .sp-stack-frame {
   position: relative;
   width: 100%;
-  max-width: 480px;
-  aspect-ratio: 4 / 3;
-  max-height: 46vh;
+  aspect-ratio: 16 / 11;
+  max-height: 64vh;
   margin: 0 auto;
-  border-radius: 4px;
+  border-radius: 24px;
   overflow: hidden;
+  background: var(--sp-panel);
+  border: 1px solid var(--sp-divider);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.55);
 }
 .brand-premium .sp-stack-frame img {
-  border-radius: 4px;
+  border-radius: 24px;
 }
+/* caption as a glass pill overlaid on the image, bottom-left */
 .brand-premium .sp-stack-item figcaption {
-  display: flex;
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  z-index: 2;
+  display: inline-flex;
   align-items: center;
   gap: 10px;
-  margin-top: 10px;
-  padding: 0 4px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(20, 16, 14, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   font-family: var(--font-body);
   font-size: 10px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--sp-cream-dim);
+  color: var(--sp-cream);
 }
 .brand-premium .sp-stack-item figcaption span {
   color: var(--sp-gold);
@@ -527,7 +538,7 @@
   .brand-premium .sp-hero-logo--lead { height: 76px; margin-bottom: 34px; }
 
   .brand-premium .sp-stats { padding: 80px var(--sp-pad); }
-  .brand-premium .sp-stats-inner { grid-template-columns: repeat(4, 1fr); gap: 0; }
+  .brand-premium .sp-stats-inner { grid-template-columns: repeat(4, 1fr); gap: 16px; }
   .brand-premium .sp-stat { padding: 0 18px; border-left: 1px solid var(--sp-divider); }
   .brand-premium .sp-stat:first-child { border-left: none; }
 

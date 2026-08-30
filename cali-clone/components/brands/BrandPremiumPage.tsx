@@ -10,7 +10,6 @@ function easeOutExpo(t: number) {
   return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
 }
 
-const ratio = (i: BrandImage) => i.width / i.height;
 
 /* Three editorial layouts so consecutive brand pages don't read as one template.
    Each variant reorders the sections and swaps the hero / stats / gallery
@@ -53,19 +52,33 @@ export default function BrandPremiumPage({ data }: { data: Brand }) {
         m.src.split("/").pop() ?? ""
       );
     const isLogo = (m: BrandImage) => /(^|\/)(logo|cropped-)|[-_]logo\./i.test(m.src);
+    // AI-generated headers, screenshots and placeholders are not real creative —
+    // keep them out of the showcase and gallery entirely.
+    const isJunk = (m: BrandImage) =>
+      /(chatgpt|screenshot|whatsapp|untitled|banner|header|placeholder|favicon|icon)/i.test(
+        m.src.split("/").pop() ?? ""
+      );
 
     const chartImgs = media.filter(isChart);
-    const creative = media.filter((m) => !isChart(m) && !isLogo(m));
-    // Lead with the widest creative available. Several brands shoot square or
-    // portrait only, so fall back to the largest images rather than rendering
-    // an empty showcase.
-    const byArea = [...creative].sort((a, b) => b.width * b.height - a.width * a.height);
-    const wide = creative.filter((m) => ratio(m) >= 1.2).slice(0, 3);
-    // The showcase stacks its images, so it wants three; top up from the
-    // largest remaining creative when a brand has fewer landscape shots.
-    const lead = wide.length >= 3
-      ? wide
-      : [...wide, ...byArea.filter((m) => !wide.some((w) => w.src === m.src))].slice(0, 3);
+    const creative = media.filter((m) => !isChart(m) && !isLogo(m) && !isJunk(m));
+
+    // Pick the three best creatives for the sticky showcase. Since each card now
+    // fills edge-to-edge (object-fit:cover) aspect ratio no longer matters, so we
+    // rank by quality instead: descriptive/campaign-named posts (e.g. "diwali",
+    // "gandhi-jayanti") over generic dumps (static-04, post-7), then by resolution.
+    const generic = (m: BrandImage) =>
+      /^(static|post|img|image|dsc|photo|design|final|copy)[-_ ]*\d*\.\w+$/i.test(
+        m.src.split("/").pop() ?? ""
+      );
+    // Prefer sharp images for the big cards; relax only if too few exist.
+    const sharp = creative.filter((m) => Math.min(m.width, m.height) >= 500);
+    const pool = sharp.length >= 3 ? sharp : creative;
+    const ranked = [...pool].sort(
+      (a, b) =>
+        (generic(a) ? 1 : 0) - (generic(b) ? 1 : 0) ||       // named first
+        b.width * b.height - a.width * a.height               // then highest-res
+    );
+    const lead = ranked.slice(0, 3);
     return {
       charts: chartImgs,
       showcase: lead,
@@ -205,21 +218,21 @@ export default function BrandPremiumPage({ data }: { data: Brand }) {
               <figure
                 key={img.src}
                 className="sp-stack-item"
-                style={{ zIndex: i + 1, top: `calc(var(--sp-stack-top) + ${i * 14}px)` }}
+                style={{ zIndex: i + 1 }}
               >
                 <div className="sp-stack-frame">
                   <Image
                     src={img.src}
                     alt={`${data.name} creative`}
                     fill
-                    style={{ objectFit: "contain" }}
+                    style={{ objectFit: "cover" }}
                     sizes="(max-width:900px) 92vw, 80vw"
                   />
+                  <figcaption>
+                    <span>{String(i + 1).padStart(2, "0")}</span>
+                    {["Creative direction", "Campaign work", "In the feed"][i] ?? "Selected work"}
+                  </figcaption>
                 </div>
-                <figcaption>
-                  <span>{String(i + 1).padStart(2, "0")}</span>
-                  {["Creative direction", "Campaign work", "In the feed"][i] ?? "Selected work"}
-                </figcaption>
               </figure>
             ))}
           </div>

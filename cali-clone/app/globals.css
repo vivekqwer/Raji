@@ -56,7 +56,9 @@
 html, body {
   background: var(--color-bg);
   color: var(--color-text);
-  overflow-x: hidden;
+  /* clip (not hidden) stops horizontal scroll without turning the page into a
+     scroll container, which would break position:sticky (brand showcase stack). */
+  overflow-x: clip;
   max-width: 100%;
 }
 

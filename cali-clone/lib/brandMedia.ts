@@ -5,161 +5,631 @@
 export type BrandImage = { src: string; width: number; height: number };
 
 export const BRAND_MEDIA: Record<string, BrandImage[]> = {
-  "mast-masala": [
+  "chemistrie": [
     {
-      "src": "/images/brands/mast-masala/02-chole-masala.jpg",
+      "src": "/images/brands/chemistrie/logo.png",
+      "width": 4000,
+      "height": 4000
+    },
+    {
+      "src": "/images/brands/chemistrie/dda85c0a-53f5-4881-bc23-c9d3314d64c7.jpg",
+      "width": 2500,
+      "height": 2500
+    },
+    {
+      "src": "/images/brands/chemistrie/stock-product.jpg",
+      "width": 1600,
+      "height": 2249
+    },
+    {
+      "src": "/images/brands/chemistrie/stock-note.jpg",
+      "width": 1600,
+      "height": 2133
+    },
+    {
+      "src": "/images/brands/chemistrie/stock-skin.jpg",
+      "width": 1600,
+      "height": 2034
+    },
+    {
+      "src": "/images/brands/chemistrie/952.jpg",
+      "width": 1600,
+      "height": 1600
+    },
+    {
+      "src": "/images/brands/chemistrie/natural-products-arrangement-top-view.jpg",
+      "width": 1600,
+      "height": 1600
+    },
+    {
+      "src": "/images/brands/chemistrie/stock-lifestyle.jpg",
+      "width": 1600,
+      "height": 1600
+    },
+    {
+      "src": "/images/brands/chemistrie/stock-packaging.jpg",
+      "width": 1600,
+      "height": 1600
+    },
+    {
+      "src": "/images/brands/chemistrie/founder-1.jpg",
+      "width": 1200,
+      "height": 1799
+    },
+    {
+      "src": "/images/brands/chemistrie/high-angle-natural-cream-concept-2.jpg",
+      "width": 1280,
+      "height": 1600
+    },
+    {
+      "src": "/images/brands/chemistrie/founder-2.jpg",
+      "width": 1200,
+      "height": 1500
+    },
+    {
+      "src": "/images/brands/chemistrie/beach-skincare-product-still-life-2.jpg",
+      "width": 1067,
+      "height": 1600
+    },
+    {
+      "src": "/images/brands/chemistrie/stock-ingredients.jpg",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "/images/brands/chemistrie/stock-lab.jpg",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "crystal": [
+    {
+      "src": "/images/brands/crystal/hero-2.jpg",
+      "width": 1501,
+      "height": 1501
+    },
+    {
+      "src": "/images/brands/crystal/hero-3.jpg",
+      "width": 1501,
+      "height": 1501
+    },
+    {
+      "src": "/images/brands/crystal/amz-4.jpg",
+      "width": 1500,
+      "height": 1296
+    },
+    {
+      "src": "/images/brands/crystal/crystal-prefooter.png",
+      "width": 1203,
+      "height": 913
+    },
+    {
+      "src": "/images/brands/crystal/amz-1.jpg",
+      "width": 1500,
+      "height": 625
+    },
+    {
+      "src": "/images/brands/crystal/hero-poster.jpg",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "src": "/images/brands/crystal/1-1.jpg",
+      "width": 960,
+      "height": 832
+    },
+    {
+      "src": "/images/brands/crystal/2-1-1-2.jpg",
+      "width": 960,
+      "height": 832
+    },
+    {
+      "src": "/images/brands/crystal/2-1-1.jpg",
+      "width": 960,
+      "height": 832
+    },
+    {
+      "src": "/images/brands/crystal/3-1.jpg",
+      "width": 960,
+      "height": 832
+    },
+    {
+      "src": "/images/brands/crystal/4-2.jpg",
+      "width": 960,
+      "height": 832
+    },
+    {
+      "src": "/images/brands/crystal/amz-1-2.jpg",
+      "width": 686,
+      "height": 1048
+    },
+    {
+      "src": "/images/brands/crystal/1-2.jpg",
+      "width": 941,
+      "height": 534
+    },
+    {
+      "src": "/images/brands/crystal/01-crystal-cooker-1024x419.jpg",
+      "width": 1024,
+      "height": 419
+    },
+    {
+      "src": "/images/brands/crystal/02-crystal-kadhai-1024x419.jpg",
+      "width": 1024,
+      "height": 419
+    },
+    {
+      "src": "/images/brands/crystal/03-trusted-indian-brand-heritage-1024x419.jpg",
+      "width": 1024,
+      "height": 419
+    },
+    {
+      "src": "/images/brands/crystal/3-lac-factory-size.jpg",
+      "width": 840,
+      "height": 316
+    },
+    {
+      "src": "/images/brands/crystal/factories.jpg",
+      "width": 840,
+      "height": 316
+    },
+    {
+      "src": "/images/brands/crystal/office.jpg",
+      "width": 840,
+      "height": 316
+    },
+    {
+      "src": "/images/brands/crystal/outlets.jpg",
+      "width": 840,
+      "height": 316
+    },
+    {
+      "src": "/images/brands/crystal/warehouse.jpg",
+      "width": 840,
+      "height": 316
+    },
+    {
+      "src": "/images/brands/crystal/logo.png",
+      "width": 334,
+      "height": 105
+    }
+  ],
+  "furnishing-home": [
+    {
+      "src": "/images/brands/furnishing-home/bhaidooj.png",
+      "width": 1600,
+      "height": 2000
+    },
+    {
+      "src": "/images/brands/furnishing-home/564987481-18063087149576460-6542216695873398226-n.jpg",
+      "width": 1440,
+      "height": 1800
+    },
+    {
+      "src": "/images/brands/furnishing-home/dhanteras.jpeg",
+      "width": 1280,
+      "height": 1600
+    },
+    {
+      "src": "/images/brands/furnishing-home/chatgpt-image-dec-27-2025-09-44-17-pm.png",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "src": "/images/brands/furnishing-home/chatgpt-image-dec-28-2025-07-34-33-pm.png",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "src": "/images/brands/furnishing-home/furnishing-home-cc-1.png",
       "width": 1080,
       "height": 1350
     },
     {
-      "src": "/images/brands/mast-masala/04-sambhar-masala.jpg",
+      "src": "/images/brands/furnishing-home/furnishing-home-cc-10.png",
       "width": 1080,
       "height": 1350
     },
     {
-      "src": "/images/brands/mast-masala/05-shahi-chicken-masala.jpg",
+      "src": "/images/brands/furnishing-home/furnishing-home-cc-11.png",
       "width": 1080,
       "height": 1350
     },
     {
-      "src": "/images/brands/mast-masala/07-chicken-tandoori-masala.jpg",
+      "src": "/images/brands/furnishing-home/furnishing-home-cc-13.png",
       "width": 1080,
       "height": 1350
     },
     {
-      "src": "/images/brands/mast-masala/09-pav-bhaji-masala.jpg",
+      "src": "/images/brands/furnishing-home/furnishing-home-cc-2.png",
       "width": 1080,
       "height": 1350
     },
     {
-      "src": "/images/brands/mast-masala/10-biryani-masala.jpg",
+      "src": "/images/brands/furnishing-home/furnishing-home-cc-3-1.png",
       "width": 1080,
       "height": 1350
     },
     {
-      "src": "/images/brands/mast-masala/11-amchur-powder.jpg",
+      "src": "/images/brands/furnishing-home/furnishing-home-cc-4-1.png",
       "width": 1080,
       "height": 1350
     },
     {
-      "src": "/images/brands/mast-masala/14-coriander-cumin-powder.jpg",
+      "src": "/images/brands/furnishing-home/furnishing-home-cc-5.png",
       "width": 1080,
       "height": 1350
     },
     {
-      "src": "/images/brands/mast-masala/15-biryani-masala.jpg",
+      "src": "/images/brands/furnishing-home/furnishing-home-cc-6-1.png",
       "width": 1080,
       "height": 1350
     },
     {
-      "src": "/images/brands/mast-masala/16-jeera-powder.jpg",
+      "src": "/images/brands/furnishing-home/furnishing-home-cc-7.png",
       "width": 1080,
       "height": 1350
     },
     {
-      "src": "/images/brands/mast-masala/17-pani-puri-masala.jpg",
+      "src": "/images/brands/furnishing-home/furnishing-home-cc-8.png",
       "width": 1080,
       "height": 1350
     },
     {
-      "src": "/images/brands/mast-masala/18-coriander-powder.jpg",
-      "width": 1080,
-      "height": 1350
+      "src": "/images/brands/furnishing-home/freepik-generate-this-type-for-image-img1-with-a-beautiful-5.png",
+      "width": 960,
+      "height": 1088
     },
     {
-      "src": "/images/brands/mast-masala/21-red-chilli-masala.jpg",
-      "width": 1080,
-      "height": 1350
+      "src": "/images/brands/furnishing-home/freepik-close-up-shots-59138.png",
+      "width": 832,
+      "height": 1248
     },
     {
-      "src": "/images/brands/mast-masala/22-turmeric-powder.jpg",
-      "width": 1080,
-      "height": 1350
+      "src": "/images/brands/furnishing-home/freepik-generate-diiferent-angles-and-beautiful-close-up-s-5-2.png",
+      "width": 832,
+      "height": 1248
     },
     {
-      "src": "/images/brands/mast-masala/25-hing.jpg",
-      "width": 1080,
-      "height": 1350
+      "src": "/images/brands/furnishing-home/freepik-generate-diiferent-angles-and-beautiful-close-up-s-5-3.png",
+      "width": 832,
+      "height": 1248
     },
     {
-      "src": "/images/brands/mast-masala/27-rajshahi-masala.jpg",
-      "width": 1080,
-      "height": 1350
+      "src": "/images/brands/furnishing-home/freepik-generate-diiferent-angles-and-beautiful-close-up-s-5-4.png",
+      "width": 832,
+      "height": 1248
     },
     {
-      "src": "/images/brands/mast-masala/28-meat-masala.jpg",
-      "width": 1080,
-      "height": 1350
+      "src": "/images/brands/furnishing-home/freepik-generate-diiferent-angles-and-beautiful-close-up-s-5-5.png",
+      "width": 832,
+      "height": 1248
     },
     {
-      "src": "/images/brands/mast-masala/10-th-guru-nanak-jayanti.jpg",
-      "width": 1080,
-      "height": 1080
+      "src": "/images/brands/furnishing-home/freepik-generate-diiferent-angles-and-beautiful-close-up-s-5-6.png",
+      "width": 832,
+      "height": 1248
     },
     {
-      "src": "/images/brands/mast-masala/happy-makar-sankrant.jpg",
-      "width": 1080,
-      "height": 1080
+      "src": "/images/brands/furnishing-home/freepik-generate-diiferent-angles-and-beautiful-close-up-s-5-7.png",
+      "width": 832,
+      "height": 1248
     },
     {
-      "src": "/images/brands/mast-masala/happy-pongal.jpg",
-      "width": 1080,
-      "height": 1080
+      "src": "/images/brands/furnishing-home/freepik-generate-diiferent-angles-and-beautiful-close-up-s-5-8.png",
+      "width": 832,
+      "height": 1248
     },
     {
-      "src": "/images/brands/mast-masala/mast-masala-dashera-2.jpg",
-      "width": 1080,
-      "height": 1080
+      "src": "/images/brands/furnishing-home/freepik-generate-diiferent-angles-and-beautiful-close-up-s-5.png",
+      "width": 832,
+      "height": 1248
     },
     {
-      "src": "/images/brands/mast-masala/mast-masala-dhanteras-1.jpg",
-      "width": 1080,
-      "height": 1080
+      "src": "/images/brands/furnishing-home/freepik-gnenerate-this-type-if-image-img1-with-the-use-of-59-2.png",
+      "width": 832,
+      "height": 1248
     },
     {
-      "src": "/images/brands/mast-masala/mast-masala-oct-18-post.jpg",
-      "width": 1080,
-      "height": 1080
+      "src": "/images/brands/furnishing-home/freepik-gnenerate-this-type-if-image-img1-with-the-use-of-59-3.png",
+      "width": 832,
+      "height": 1248
     },
     {
-      "src": "/images/brands/mast-masala/mast-masala-oct-19-post.jpg",
-      "width": 1080,
-      "height": 1080
+      "src": "/images/brands/furnishing-home/freepik-gnenerate-this-type-if-image-img1-with-the-use-of-59.png",
+      "width": 832,
+      "height": 1248
     },
     {
-      "src": "/images/brands/mast-masala/mast-masala-oct-21-post.jpg",
-      "width": 1080,
-      "height": 1080
+      "src": "/images/brands/furnishing-home/engagement-6.png",
+      "width": 694,
+      "height": 497
     },
     {
-      "src": "/images/brands/mast-masala/mast-masala-oct-22-post.jpg",
-      "width": 1080,
-      "height": 1080
+      "src": "/images/brands/furnishing-home/reach-growth-6.png",
+      "width": 680,
+      "height": 494
     },
     {
-      "src": "/images/brands/mast-masala/mast-masala-gandhi-jayanti.jpg",
-      "width": 1080,
-      "height": 1080
+      "src": "/images/brands/furnishing-home/ctrleft-3.png",
+      "width": 687,
+      "height": 343
     },
     {
-      "src": "/images/brands/mast-masala/reach-growth-8.png",
-      "width": 469,
-      "height": 498
+      "src": "/images/brands/furnishing-home/retension-1.png",
+      "width": 688,
+      "height": 341
+    }
+  ],
+  "godrej": [
+    {
+      "src": "/images/brands/godrej/whatsapp-image-2026-01-04-at-9-55-12-am-3.jpeg",
+      "width": 1600,
+      "height": 1600
     },
     {
-      "src": "/images/brands/mast-masala/engagement-8.png",
+      "src": "/images/brands/godrej/whatsapp-image-2026-01-04-at-9-55-12-am-2-1.jpeg",
+      "width": 1500,
+      "height": 1500
+    },
+    {
+      "src": "/images/brands/godrej/whatsapp-image-2026-01-04-at-9-55-13-am.jpeg",
+      "width": 1500,
+      "height": 1500
+    },
+    {
+      "src": "/images/brands/godrej/chatgpt-image-jan-3-2026-01-15-35-pm.png",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "src": "/images/brands/godrej/chatgpt-image-jan-3-2026-12-44-08-pm.png",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "src": "/images/brands/godrej/chatgpt-image-jan-3-2026-12-46-00-pm.png",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "src": "/images/brands/godrej/chatgpt-image-jan-3-2026-12-47-13-pm.png",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "src": "/images/brands/godrej/chatgpt-image-jan-3-2026-12-48-38-pm.png",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "src": "/images/brands/godrej/chatgpt-image-jan-3-2026-12-50-16-pm.png",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "src": "/images/brands/godrej/chatgpt-image-jan-3-2026-12-51-55-pm.png",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "src": "/images/brands/godrej/whatsapp-image-2026-01-04-at-9-55-12-am-1-1.jpeg",
+      "width": 611,
+      "height": 611
+    },
+    {
+      "src": "/images/brands/godrej/godrej.png",
+      "width": 500,
+      "height": 500
+    },
+    {
+      "src": "/images/brands/godrej/reach-growth.png",
+      "width": 467,
+      "height": 472
+    },
+    {
+      "src": "/images/brands/godrej/ctr2.png",
       "width": 473,
-      "height": 490
+      "height": 457
     },
     {
-      "src": "/images/brands/mast-masala/ctrleft-4.png",
-      "width": 474,
-      "height": 430
+      "src": "/images/brands/godrej/engamenrt2.png",
+      "width": 462,
+      "height": 452
     },
     {
-      "src": "/images/brands/mast-masala/retension-3.png",
-      "width": 471,
-      "height": 431
+      "src": "/images/brands/godrej/retension-4.png",
+      "width": 463,
+      "height": 441
+    }
+  ],
+  "greencap-health": [
+    {
+      "src": "/images/brands/greencap-health/lab-work-photo.jpg",
+      "width": 1200,
+      "height": 1800
+    },
+    {
+      "src": "/images/brands/greencap-health/logo.png",
+      "width": 2560,
+      "height": 641
+    },
+    {
+      "src": "/images/brands/greencap-health/pharmacy-partners.png",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "src": "/images/brands/greencap-health/green-cap-creatives-07.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "src": "/images/brands/greencap-health/green-cap-creatives-12-1.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "src": "/images/brands/greencap-health/green-cap-creatives-12-3.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "src": "/images/brands/greencap-health/green-cap-creatives-24.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "src": "/images/brands/greencap-health/process-provider-review.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "src": "/images/brands/greencap-health/process-select-plan.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "src": "/images/brands/greencap-health/story1.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "src": "/images/brands/greencap-health/story2.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "src": "/images/brands/greencap-health/story3.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "src": "/images/brands/greencap-health/08-desire-2.png",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "src": "/images/brands/greencap-health/acne-cream-wb.png",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "src": "/images/brands/greencap-health/acne-cream.png",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "src": "/images/brands/greencap-health/capsules-wb.png",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "src": "/images/brands/greencap-health/capsules.png",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "src": "/images/brands/greencap-health/semaglutide-wb.png",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "src": "/images/brands/greencap-health/semaglutide.png",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "src": "/images/brands/greencap-health/sildenafil-1.png",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "src": "/images/brands/greencap-health/sildenafil-2.png",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "src": "/images/brands/greencap-health/tadalafil-1.png",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "src": "/images/brands/greencap-health/triple-troche-wb.png",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "src": "/images/brands/greencap-health/triple-troche.png",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "src": "/images/brands/greencap-health/referral-photo.jpg",
+      "width": 1200,
+      "height": 800
+    },
+    {
+      "src": "/images/brands/greencap-health/cialis-transparent.png",
+      "width": 768,
+      "height": 768
+    },
+    {
+      "src": "/images/brands/greencap-health/viagra-transparent.png",
+      "width": 768,
+      "height": 768
+    },
+    {
+      "src": "/images/brands/greencap-health/unnamed.png",
+      "width": 292,
+      "height": 316
+    }
+  ],
+  "icici": [
+    {
+      "src": "/images/brands/icici/chatgpt-image-jan-4-2026-04-17-35-pm.png",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "src": "/images/brands/icici/chatgpt-image-jan-4-2026-04-20-32-pm.png",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "src": "/images/brands/icici/4.jpeg",
+      "width": 1005,
+      "height": 1280
+    },
+    {
+      "src": "/images/brands/icici/6-1.jpeg",
+      "width": 1005,
+      "height": 1280
+    },
+    {
+      "src": "/images/brands/icici/7-1.jpeg",
+      "width": 1005,
+      "height": 1280
+    },
+    {
+      "src": "/images/brands/icici/1.jpeg",
+      "width": 768,
+      "height": 1280
+    },
+    {
+      "src": "/images/brands/icici/2.jpeg",
+      "width": 768,
+      "height": 1280
+    },
+    {
+      "src": "/images/brands/icici/5-1.jpeg",
+      "width": 768,
+      "height": 1280
+    },
+    {
+      "src": "/images/brands/icici/3-1.jpeg",
+      "width": 590,
+      "height": 1280
     }
   ],
   "intellve": [
@@ -361,6 +831,11 @@ export const BRAND_MEDIA: Record<string, BrandImage[]> = {
       "height": 1080
     },
     {
+      "src": "/images/brands/kunuts/kunuts-jan-2psd.jpg",
+      "width": 1080,
+      "height": 1080
+    },
+    {
       "src": "/images/brands/kunuts/kunuts-jan-3.jpg",
       "width": 1080,
       "height": 1080
@@ -382,11 +857,6 @@ export const BRAND_MEDIA: Record<string, BrandImage[]> = {
     },
     {
       "src": "/images/brands/kunuts/kunuts-jan-republic-day.jpg",
-      "width": 1080,
-      "height": 1080
-    },
-    {
-      "src": "/images/brands/kunuts/kunuts-jan-2psd.jpg",
       "width": 1080,
       "height": 1080
     },
@@ -416,211 +886,161 @@ export const BRAND_MEDIA: Record<string, BrandImage[]> = {
       "height": 396
     }
   ],
-  "salus": [
+  "mast-masala": [
     {
-      "src": "/images/brands/salus/dsc0189-1.jpg",
-      "width": 1600,
-      "height": 2282
-    },
-    {
-      "src": "/images/brands/salus/sa-4152-live-3.jpg",
-      "width": 1600,
-      "height": 1649
-    },
-    {
-      "src": "/images/brands/salus/7155-10.jpg",
-      "width": 1600,
-      "height": 1600
-    },
-    {
-      "src": "/images/brands/salus/7155-7.jpg",
-      "width": 1600,
-      "height": 1600
-    },
-    {
-      "src": "/images/brands/salus/456193014-2192862997737420-8031508299174057732-n.jpg",
-      "width": 1440,
-      "height": 1440
-    },
-    {
-      "src": "/images/brands/salus/56089-1.jpg",
-      "width": 1600,
-      "height": 1067
-    },
-    {
-      "src": "/images/brands/salus/56089-3.jpg",
-      "width": 1600,
-      "height": 1067
-    },
-    {
-      "src": "/images/brands/salus/sa-7153-bgd.jpg",
-      "width": 1600,
-      "height": 1000
-    },
-    {
-      "src": "/images/brands/salus/chatgpt-image-dec-30-2025-09-55-20-pm.png",
-      "width": 1536,
-      "height": 1024
-    },
-    {
-      "src": "/images/brands/salus/chatgpt-image-jan-4-2026-08-55-21-am.png",
-      "width": 1024,
-      "height": 1536
-    },
-    {
-      "src": "/images/brands/salus/13-1.jpg",
-      "width": 1080,
-      "height": 1440
-    },
-    {
-      "src": "/images/brands/salus/16-2.jpg",
-      "width": 1080,
-      "height": 1440
-    },
-    {
-      "src": "/images/brands/salus/17-1.png",
+      "src": "/images/brands/mast-masala/02-chole-masala.jpg",
       "width": 1080,
       "height": 1350
     },
     {
-      "src": "/images/brands/salus/sa-4152-live-1-1.jpg",
+      "src": "/images/brands/mast-masala/04-sambhar-masala.jpg",
       "width": 1080,
       "height": 1350
     },
     {
-      "src": "/images/brands/salus/salus-9.jpg",
-      "width": 700,
-      "height": 1794
+      "src": "/images/brands/mast-masala/05-shahi-chicken-masala.jpg",
+      "width": 1080,
+      "height": 1350
     },
     {
-      "src": "/images/brands/salus/2-1.jpg",
+      "src": "/images/brands/mast-masala/07-chicken-tandoori-masala.jpg",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "src": "/images/brands/mast-masala/09-pav-bhaji-masala.jpg",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "src": "/images/brands/mast-masala/10-biryani-masala.jpg",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "src": "/images/brands/mast-masala/11-amchur-powder.jpg",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "src": "/images/brands/mast-masala/14-coriander-cumin-powder.jpg",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "src": "/images/brands/mast-masala/15-biryani-masala.jpg",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "src": "/images/brands/mast-masala/16-jeera-powder.jpg",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "src": "/images/brands/mast-masala/17-pani-puri-masala.jpg",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "src": "/images/brands/mast-masala/18-coriander-powder.jpg",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "src": "/images/brands/mast-masala/21-red-chilli-masala.jpg",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "src": "/images/brands/mast-masala/22-turmeric-powder.jpg",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "src": "/images/brands/mast-masala/25-hing.jpg",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "src": "/images/brands/mast-masala/27-rajshahi-masala.jpg",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "src": "/images/brands/mast-masala/28-meat-masala.jpg",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "src": "/images/brands/mast-masala/10-th-guru-nanak-jayanti.jpg",
       "width": 1080,
       "height": 1080
     },
     {
-      "src": "/images/brands/salus/431977276-410283718245931-7764317246885861589-n.jpg",
+      "src": "/images/brands/mast-masala/happy-makar-sankrant.jpg",
       "width": 1080,
       "height": 1080
     },
     {
-      "src": "/images/brands/salus/433478734-366351463041248-825631383532726654-n.jpg",
+      "src": "/images/brands/mast-masala/happy-pongal.jpg",
       "width": 1080,
       "height": 1080
     },
     {
-      "src": "/images/brands/salus/436283118-1533709947360122-9198187085610752614-n.jpg",
+      "src": "/images/brands/mast-masala/mast-masala-dashera-2.jpg",
       "width": 1080,
       "height": 1080
     },
     {
-      "src": "/images/brands/salus/437296980-963829161518959-6682349479197223728-n.jpg",
+      "src": "/images/brands/mast-masala/mast-masala-dhanteras-1.jpg",
       "width": 1080,
       "height": 1080
     },
     {
-      "src": "/images/brands/salus/437939287-444412791420947-1581008568433222134-n.jpg",
+      "src": "/images/brands/mast-masala/mast-masala-gandhi-jayanti.jpg",
       "width": 1080,
       "height": 1080
     },
     {
-      "src": "/images/brands/salus/437981279-7324738997621909-1183900633170419247-n.jpg",
+      "src": "/images/brands/mast-masala/mast-masala-oct-18-post.jpg",
       "width": 1080,
       "height": 1080
     },
     {
-      "src": "/images/brands/salus/440373174-961749555089587-7992986260996373891-n.jpg",
+      "src": "/images/brands/mast-masala/mast-masala-oct-19-post.jpg",
       "width": 1080,
       "height": 1080
     },
     {
-      "src": "/images/brands/salus/441181954-750928500201159-5840406652411348696-n.jpg",
+      "src": "/images/brands/mast-masala/mast-masala-oct-21-post.jpg",
       "width": 1080,
       "height": 1080
     },
     {
-      "src": "/images/brands/salus/447789938-452501517382539-2549015562025870240-n.jpg",
+      "src": "/images/brands/mast-masala/mast-masala-oct-22-post.jpg",
       "width": 1080,
       "height": 1080
     },
     {
-      "src": "/images/brands/salus/455307251-871122814874747-7740840006228908689-n.jpg",
-      "width": 1080,
-      "height": 1080
+      "src": "/images/brands/mast-masala/reach-growth-8.png",
+      "width": 469,
+      "height": 498
     },
     {
-      "src": "/images/brands/salus/salus-may-grid-12-1.png",
-      "width": 1080,
-      "height": 1080
+      "src": "/images/brands/mast-masala/engagement-8.png",
+      "width": 473,
+      "height": 490
     },
     {
-      "src": "/images/brands/salus/1s9a0446.jpg",
-      "width": 1000,
-      "height": 1000
-    },
-    {
-      "src": "/images/brands/salus/fhs26-hd3-02.jpg",
-      "width": 749,
-      "height": 1124
-    },
-    {
-      "src": "/images/brands/salus/7159-4.jpg",
-      "width": 800,
-      "height": 800
-    },
-    {
-      "src": "/images/brands/salus/7159-6.jpg",
-      "width": 800,
-      "height": 800
-    },
-    {
-      "src": "/images/brands/salus/7159-7.jpg",
-      "width": 800,
-      "height": 800
-    },
-    {
-      "src": "/images/brands/salus/salus-1.jpg",
-      "width": 700,
-      "height": 693
-    },
-    {
-      "src": "/images/brands/salus/salus-8.jpg",
-      "width": 700,
-      "height": 467
-    },
-    {
-      "src": "/images/brands/salus/salus-8-1.jpg",
-      "width": 430,
-      "height": 733
-    },
-    {
-      "src": "/images/brands/salus/salus-6.jpg",
-      "width": 430,
-      "height": 700
-    },
-    {
-      "src": "/images/brands/salus/engagement-2.png",
-      "width": 462,
-      "height": 459
-    },
-    {
-      "src": "/images/brands/salus/reach-growth-2.png",
-      "width": 464,
-      "height": 452
-    },
-    {
-      "src": "/images/brands/salus/ctrleft-1.png",
-      "width": 463,
-      "height": 429
-    },
-    {
-      "src": "/images/brands/salus/retention-4.png",
-      "width": 465,
-      "height": 427
-    },
-    {
-      "src": "/images/brands/salus/salus-2.jpg",
-      "width": 430,
+      "src": "/images/brands/mast-masala/ctrleft-4.png",
+      "width": 474,
       "height": 430
+    },
+    {
+      "src": "/images/brands/mast-masala/retension-3.png",
+      "width": 471,
+      "height": 431
     }
   ],
   "monarch": [
@@ -1034,171 +1454,211 @@ export const BRAND_MEDIA: Record<string, BrandImage[]> = {
       "height": 473
     }
   ],
-  "furnishing-home": [
+  "salus": [
     {
-      "src": "/images/brands/furnishing-home/bhaidooj.png",
+      "src": "/images/brands/salus/dsc0189-1.jpg",
       "width": 1600,
-      "height": 2000
+      "height": 2282
     },
     {
-      "src": "/images/brands/furnishing-home/564987481-18063087149576460-6542216695873398226-n.jpg",
-      "width": 1440,
-      "height": 1800
+      "src": "/images/brands/salus/sa-4152-live-3.jpg",
+      "width": 1600,
+      "height": 1649
     },
     {
-      "src": "/images/brands/furnishing-home/dhanteras.jpeg",
-      "width": 1280,
+      "src": "/images/brands/salus/7155-10.jpg",
+      "width": 1600,
       "height": 1600
     },
     {
-      "src": "/images/brands/furnishing-home/chatgpt-image-dec-27-2025-09-44-17-pm.png",
-      "width": 1024,
-      "height": 1536
+      "src": "/images/brands/salus/7155-7.jpg",
+      "width": 1600,
+      "height": 1600
     },
     {
-      "src": "/images/brands/furnishing-home/chatgpt-image-dec-28-2025-07-34-33-pm.png",
+      "src": "/images/brands/salus/456193014-2192862997737420-8031508299174057732-n.jpg",
+      "width": 1440,
+      "height": 1440
+    },
+    {
+      "src": "/images/brands/salus/56089-1.jpg",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "/images/brands/salus/56089-3.jpg",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "/images/brands/salus/sa-7153-bgd.jpg",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "src": "/images/brands/salus/chatgpt-image-dec-30-2025-09-55-20-pm.png",
       "width": 1536,
       "height": 1024
     },
     {
-      "src": "/images/brands/furnishing-home/furnishing-home-cc-1.png",
+      "src": "/images/brands/salus/chatgpt-image-jan-4-2026-08-55-21-am.png",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "src": "/images/brands/salus/13-1.jpg",
+      "width": 1080,
+      "height": 1440
+    },
+    {
+      "src": "/images/brands/salus/16-2.jpg",
+      "width": 1080,
+      "height": 1440
+    },
+    {
+      "src": "/images/brands/salus/17-1.png",
       "width": 1080,
       "height": 1350
     },
     {
-      "src": "/images/brands/furnishing-home/furnishing-home-cc-10.png",
+      "src": "/images/brands/salus/sa-4152-live-1-1.jpg",
       "width": 1080,
       "height": 1350
     },
     {
-      "src": "/images/brands/furnishing-home/furnishing-home-cc-11.png",
+      "src": "/images/brands/salus/salus-9.jpg",
+      "width": 700,
+      "height": 1794
+    },
+    {
+      "src": "/images/brands/salus/2-1.jpg",
       "width": 1080,
-      "height": 1350
+      "height": 1080
     },
     {
-      "src": "/images/brands/furnishing-home/furnishing-home-cc-13.png",
+      "src": "/images/brands/salus/431977276-410283718245931-7764317246885861589-n.jpg",
       "width": 1080,
-      "height": 1350
+      "height": 1080
     },
     {
-      "src": "/images/brands/furnishing-home/furnishing-home-cc-2.png",
+      "src": "/images/brands/salus/433478734-366351463041248-825631383532726654-n.jpg",
       "width": 1080,
-      "height": 1350
+      "height": 1080
     },
     {
-      "src": "/images/brands/furnishing-home/furnishing-home-cc-3-1.png",
+      "src": "/images/brands/salus/436283118-1533709947360122-9198187085610752614-n.jpg",
       "width": 1080,
-      "height": 1350
+      "height": 1080
     },
     {
-      "src": "/images/brands/furnishing-home/furnishing-home-cc-4-1.png",
+      "src": "/images/brands/salus/437296980-963829161518959-6682349479197223728-n.jpg",
       "width": 1080,
-      "height": 1350
+      "height": 1080
     },
     {
-      "src": "/images/brands/furnishing-home/furnishing-home-cc-5.png",
+      "src": "/images/brands/salus/437939287-444412791420947-1581008568433222134-n.jpg",
       "width": 1080,
-      "height": 1350
+      "height": 1080
     },
     {
-      "src": "/images/brands/furnishing-home/furnishing-home-cc-6-1.png",
+      "src": "/images/brands/salus/437981279-7324738997621909-1183900633170419247-n.jpg",
       "width": 1080,
-      "height": 1350
+      "height": 1080
     },
     {
-      "src": "/images/brands/furnishing-home/furnishing-home-cc-7.png",
+      "src": "/images/brands/salus/440373174-961749555089587-7992986260996373891-n.jpg",
       "width": 1080,
-      "height": 1350
+      "height": 1080
     },
     {
-      "src": "/images/brands/furnishing-home/furnishing-home-cc-8.png",
+      "src": "/images/brands/salus/441181954-750928500201159-5840406652411348696-n.jpg",
       "width": 1080,
-      "height": 1350
+      "height": 1080
     },
     {
-      "src": "/images/brands/furnishing-home/freepik-generate-this-type-for-image-img1-with-a-beautiful-5.png",
-      "width": 960,
-      "height": 1088
+      "src": "/images/brands/salus/447789938-452501517382539-2549015562025870240-n.jpg",
+      "width": 1080,
+      "height": 1080
     },
     {
-      "src": "/images/brands/furnishing-home/freepik-close-up-shots-59138.png",
-      "width": 832,
-      "height": 1248
+      "src": "/images/brands/salus/455307251-871122814874747-7740840006228908689-n.jpg",
+      "width": 1080,
+      "height": 1080
     },
     {
-      "src": "/images/brands/furnishing-home/freepik-generate-diiferent-angles-and-beautiful-close-up-s-5.png",
-      "width": 832,
-      "height": 1248
+      "src": "/images/brands/salus/salus-may-grid-12-1.png",
+      "width": 1080,
+      "height": 1080
     },
     {
-      "src": "/images/brands/furnishing-home/freepik-generate-diiferent-angles-and-beautiful-close-up-s-5-2.png",
-      "width": 832,
-      "height": 1248
+      "src": "/images/brands/salus/1s9a0446.jpg",
+      "width": 1000,
+      "height": 1000
     },
     {
-      "src": "/images/brands/furnishing-home/freepik-generate-diiferent-angles-and-beautiful-close-up-s-5-3.png",
-      "width": 832,
-      "height": 1248
+      "src": "/images/brands/salus/fhs26-hd3-02.jpg",
+      "width": 749,
+      "height": 1124
     },
     {
-      "src": "/images/brands/furnishing-home/freepik-generate-diiferent-angles-and-beautiful-close-up-s-5-4.png",
-      "width": 832,
-      "height": 1248
+      "src": "/images/brands/salus/7159-4.jpg",
+      "width": 800,
+      "height": 800
     },
     {
-      "src": "/images/brands/furnishing-home/freepik-generate-diiferent-angles-and-beautiful-close-up-s-5-5.png",
-      "width": 832,
-      "height": 1248
+      "src": "/images/brands/salus/7159-6.jpg",
+      "width": 800,
+      "height": 800
     },
     {
-      "src": "/images/brands/furnishing-home/freepik-generate-diiferent-angles-and-beautiful-close-up-s-5-6.png",
-      "width": 832,
-      "height": 1248
+      "src": "/images/brands/salus/7159-7.jpg",
+      "width": 800,
+      "height": 800
     },
     {
-      "src": "/images/brands/furnishing-home/freepik-generate-diiferent-angles-and-beautiful-close-up-s-5-7.png",
-      "width": 832,
-      "height": 1248
+      "src": "/images/brands/salus/salus-1.jpg",
+      "width": 700,
+      "height": 693
     },
     {
-      "src": "/images/brands/furnishing-home/freepik-generate-diiferent-angles-and-beautiful-close-up-s-5-8.png",
-      "width": 832,
-      "height": 1248
+      "src": "/images/brands/salus/salus-8.jpg",
+      "width": 700,
+      "height": 467
     },
     {
-      "src": "/images/brands/furnishing-home/freepik-gnenerate-this-type-if-image-img1-with-the-use-of-59.png",
-      "width": 832,
-      "height": 1248
+      "src": "/images/brands/salus/salus-8-1.jpg",
+      "width": 430,
+      "height": 733
     },
     {
-      "src": "/images/brands/furnishing-home/freepik-gnenerate-this-type-if-image-img1-with-the-use-of-59-2.png",
-      "width": 832,
-      "height": 1248
+      "src": "/images/brands/salus/salus-6.jpg",
+      "width": 430,
+      "height": 700
     },
     {
-      "src": "/images/brands/furnishing-home/freepik-gnenerate-this-type-if-image-img1-with-the-use-of-59-3.png",
-      "width": 832,
-      "height": 1248
+      "src": "/images/brands/salus/engagement-2.png",
+      "width": 462,
+      "height": 459
     },
     {
-      "src": "/images/brands/furnishing-home/engagement-6.png",
-      "width": 694,
-      "height": 497
+      "src": "/images/brands/salus/reach-growth-2.png",
+      "width": 464,
+      "height": 452
     },
     {
-      "src": "/images/brands/furnishing-home/reach-growth-6.png",
-      "width": 680,
-      "height": 494
+      "src": "/images/brands/salus/ctrleft-1.png",
+      "width": 463,
+      "height": 429
     },
     {
-      "src": "/images/brands/furnishing-home/ctrleft-3.png",
-      "width": 687,
-      "height": 343
+      "src": "/images/brands/salus/retention-4.png",
+      "width": 465,
+      "height": 427
     },
     {
-      "src": "/images/brands/furnishing-home/retension-1.png",
-      "width": 688,
-      "height": 341
+      "src": "/images/brands/salus/salus-2.jpg",
+      "width": 430,
+      "height": 430
     }
   ],
   "secure-my-shop": [
@@ -1323,511 +1783,6 @@ export const BRAND_MEDIA: Record<string, BrandImage[]> = {
       "height": 441
     }
   ],
-  "icici": [
-    {
-      "src": "/images/brands/icici/chatgpt-image-jan-4-2026-04-17-35-pm.png",
-      "width": 1536,
-      "height": 1024
-    },
-    {
-      "src": "/images/brands/icici/chatgpt-image-jan-4-2026-04-20-32-pm.png",
-      "width": 1024,
-      "height": 1536
-    },
-    {
-      "src": "/images/brands/icici/4.jpeg",
-      "width": 1005,
-      "height": 1280
-    },
-    {
-      "src": "/images/brands/icici/6-1.jpeg",
-      "width": 1005,
-      "height": 1280
-    },
-    {
-      "src": "/images/brands/icici/7-1.jpeg",
-      "width": 1005,
-      "height": 1280
-    },
-    {
-      "src": "/images/brands/icici/1.jpeg",
-      "width": 768,
-      "height": 1280
-    },
-    {
-      "src": "/images/brands/icici/2.jpeg",
-      "width": 768,
-      "height": 1280
-    },
-    {
-      "src": "/images/brands/icici/5-1.jpeg",
-      "width": 768,
-      "height": 1280
-    },
-    {
-      "src": "/images/brands/icici/3-1.jpeg",
-      "width": 590,
-      "height": 1280
-    }
-  ],
-  "godrej": [
-    {
-      "src": "/images/brands/godrej/whatsapp-image-2026-01-04-at-9-55-12-am-3.jpeg",
-      "width": 1600,
-      "height": 1600
-    },
-    {
-      "src": "/images/brands/godrej/whatsapp-image-2026-01-04-at-9-55-12-am-2-1.jpeg",
-      "width": 1500,
-      "height": 1500
-    },
-    {
-      "src": "/images/brands/godrej/whatsapp-image-2026-01-04-at-9-55-13-am.jpeg",
-      "width": 1500,
-      "height": 1500
-    },
-    {
-      "src": "/images/brands/godrej/chatgpt-image-jan-3-2026-01-15-35-pm.png",
-      "width": 1536,
-      "height": 1024
-    },
-    {
-      "src": "/images/brands/godrej/chatgpt-image-jan-3-2026-12-44-08-pm.png",
-      "width": 1024,
-      "height": 1536
-    },
-    {
-      "src": "/images/brands/godrej/chatgpt-image-jan-3-2026-12-46-00-pm.png",
-      "width": 1024,
-      "height": 1536
-    },
-    {
-      "src": "/images/brands/godrej/chatgpt-image-jan-3-2026-12-47-13-pm.png",
-      "width": 1024,
-      "height": 1536
-    },
-    {
-      "src": "/images/brands/godrej/chatgpt-image-jan-3-2026-12-48-38-pm.png",
-      "width": 1024,
-      "height": 1536
-    },
-    {
-      "src": "/images/brands/godrej/chatgpt-image-jan-3-2026-12-50-16-pm.png",
-      "width": 1024,
-      "height": 1536
-    },
-    {
-      "src": "/images/brands/godrej/chatgpt-image-jan-3-2026-12-51-55-pm.png",
-      "width": 1024,
-      "height": 1536
-    },
-    {
-      "src": "/images/brands/godrej/whatsapp-image-2026-01-04-at-9-55-12-am-1-1.jpeg",
-      "width": 611,
-      "height": 611
-    },
-    {
-      "src": "/images/brands/godrej/godrej.png",
-      "width": 500,
-      "height": 500
-    },
-    {
-      "src": "/images/brands/godrej/reach-growth.png",
-      "width": 467,
-      "height": 472
-    },
-    {
-      "src": "/images/brands/godrej/ctr2.png",
-      "width": 473,
-      "height": 457
-    },
-    {
-      "src": "/images/brands/godrej/engamenrt2.png",
-      "width": 462,
-      "height": 452
-    },
-    {
-      "src": "/images/brands/godrej/retension-4.png",
-      "width": 463,
-      "height": 441
-    }
-  ],
-  "chemistrie": [
-    {
-      "src": "/images/brands/chemistrie/logo.png",
-      "width": 4000,
-      "height": 4000
-    },
-    {
-      "src": "/images/brands/chemistrie/dda85c0a-53f5-4881-bc23-c9d3314d64c7.jpg",
-      "width": 2500,
-      "height": 2500
-    },
-    {
-      "src": "/images/brands/chemistrie/stock-product.jpg",
-      "width": 1600,
-      "height": 2249
-    },
-    {
-      "src": "/images/brands/chemistrie/stock-note.jpg",
-      "width": 1600,
-      "height": 2133
-    },
-    {
-      "src": "/images/brands/chemistrie/stock-skin.jpg",
-      "width": 1600,
-      "height": 2034
-    },
-    {
-      "src": "/images/brands/chemistrie/952.jpg",
-      "width": 1600,
-      "height": 1600
-    },
-    {
-      "src": "/images/brands/chemistrie/natural-products-arrangement-top-view.jpg",
-      "width": 1600,
-      "height": 1600
-    },
-    {
-      "src": "/images/brands/chemistrie/stock-lifestyle.jpg",
-      "width": 1600,
-      "height": 1600
-    },
-    {
-      "src": "/images/brands/chemistrie/stock-packaging.jpg",
-      "width": 1600,
-      "height": 1600
-    },
-    {
-      "src": "/images/brands/chemistrie/founder-1.jpg",
-      "width": 1200,
-      "height": 1799
-    },
-    {
-      "src": "/images/brands/chemistrie/high-angle-natural-cream-concept-2.jpg",
-      "width": 1280,
-      "height": 1600
-    },
-    {
-      "src": "/images/brands/chemistrie/natural-products-arrangement-top-view-2.jpg",
-      "width": 1400,
-      "height": 1400
-    },
-    {
-      "src": "/images/brands/chemistrie/founder-2.jpg",
-      "width": 1200,
-      "height": 1500
-    },
-    {
-      "src": "/images/brands/chemistrie/beach-skincare-product-still-life-2.jpg",
-      "width": 1067,
-      "height": 1600
-    },
-    {
-      "src": "/images/brands/chemistrie/stock-ingredients.jpg",
-      "width": 1600,
-      "height": 1067
-    },
-    {
-      "src": "/images/brands/chemistrie/stock-lab.jpg",
-      "width": 1600,
-      "height": 1067
-    },
-    {
-      "src": "/images/brands/chemistrie/beach-skincare-product-still-life-3.jpg",
-      "width": 500,
-      "height": 750
-    },
-    {
-      "src": "/images/brands/chemistrie/high-angle-natural-cream-concept-3.jpg",
-      "width": 500,
-      "height": 625
-    },
-    {
-      "src": "/images/brands/chemistrie/952-2.jpg",
-      "width": 500,
-      "height": 500
-    },
-    {
-      "src": "/images/brands/chemistrie/dda85c0a-53f5-4881-bc23-c9d3314d64c7-2.jpg",
-      "width": 500,
-      "height": 500
-    },
-    {
-      "src": "/images/brands/chemistrie/natural-products-arrangement-top-view-3.jpg",
-      "width": 500,
-      "height": 500
-    }
-  ],
-  "crystal": [
-    {
-      "src": "/images/brands/crystal/hero-2.jpg",
-      "width": 1501,
-      "height": 1501
-    },
-    {
-      "src": "/images/brands/crystal/hero-3.jpg",
-      "width": 1501,
-      "height": 1501
-    },
-    {
-      "src": "/images/brands/crystal/hero.jpg",
-      "width": 1501,
-      "height": 1501
-    },
-    {
-      "src": "/images/brands/crystal/amz-4.jpg",
-      "width": 1500,
-      "height": 1296
-    },
-    {
-      "src": "/images/brands/crystal/crystal-prefooter.png",
-      "width": 1203,
-      "height": 913
-    },
-    {
-      "src": "/images/brands/crystal/amz-1.jpg",
-      "width": 1500,
-      "height": 625
-    },
-    {
-      "src": "/images/brands/crystal/hero-poster.jpg",
-      "width": 1280,
-      "height": 720
-    },
-    {
-      "src": "/images/brands/crystal/1-1.jpg",
-      "width": 960,
-      "height": 832
-    },
-    {
-      "src": "/images/brands/crystal/2-1-1-2.jpg",
-      "width": 960,
-      "height": 832
-    },
-    {
-      "src": "/images/brands/crystal/2-1-1.jpg",
-      "width": 960,
-      "height": 832
-    },
-    {
-      "src": "/images/brands/crystal/3-1.jpg",
-      "width": 960,
-      "height": 832
-    },
-    {
-      "src": "/images/brands/crystal/4-2.jpg",
-      "width": 960,
-      "height": 832
-    },
-    {
-      "src": "/images/brands/crystal/amz-1-2.jpg",
-      "width": 686,
-      "height": 1048
-    },
-    {
-      "src": "/images/brands/crystal/1-2.jpg",
-      "width": 941,
-      "height": 534
-    },
-    {
-      "src": "/images/brands/crystal/01-crystal-cooker-1024x419.jpg",
-      "width": 1024,
-      "height": 419
-    },
-    {
-      "src": "/images/brands/crystal/02-crystal-kadhai-1024x419.jpg",
-      "width": 1024,
-      "height": 419
-    },
-    {
-      "src": "/images/brands/crystal/03-trusted-indian-brand-heritage-1024x419.jpg",
-      "width": 1024,
-      "height": 419
-    },
-    {
-      "src": "/images/brands/crystal/3-lac-factory-size.jpg",
-      "width": 840,
-      "height": 316
-    },
-    {
-      "src": "/images/brands/crystal/factories.jpg",
-      "width": 840,
-      "height": 316
-    },
-    {
-      "src": "/images/brands/crystal/office.jpg",
-      "width": 840,
-      "height": 316
-    },
-    {
-      "src": "/images/brands/crystal/outlets.jpg",
-      "width": 840,
-      "height": 316
-    },
-    {
-      "src": "/images/brands/crystal/warehouse.jpg",
-      "width": 840,
-      "height": 316
-    },
-    {
-      "src": "/images/brands/crystal/logo.png",
-      "width": 334,
-      "height": 105
-    }
-  ],
-  "greencap-health": [
-    {
-      "src": "/images/brands/greencap-health/lab-work-photo.jpg",
-      "width": 1200,
-      "height": 1800
-    },
-    {
-      "src": "/images/brands/greencap-health/logo.png",
-      "width": 2560,
-      "height": 641
-    },
-    {
-      "src": "/images/brands/greencap-health/pharmacy-partners.png",
-      "width": 1254,
-      "height": 1254
-    },
-    {
-      "src": "/images/brands/greencap-health/green-cap-creatives-07.png",
-      "width": 1080,
-      "height": 1350
-    },
-    {
-      "src": "/images/brands/greencap-health/green-cap-creatives-12-1.png",
-      "width": 1080,
-      "height": 1350
-    },
-    {
-      "src": "/images/brands/greencap-health/green-cap-creatives-12-3.png",
-      "width": 1080,
-      "height": 1350
-    },
-    {
-      "src": "/images/brands/greencap-health/green-cap-creatives-24.png",
-      "width": 1080,
-      "height": 1350
-    },
-    {
-      "src": "/images/brands/greencap-health/process-provider-review.png",
-      "width": 1080,
-      "height": 1350
-    },
-    {
-      "src": "/images/brands/greencap-health/process-select-plan.png",
-      "width": 1080,
-      "height": 1350
-    },
-    {
-      "src": "/images/brands/greencap-health/story1.png",
-      "width": 1080,
-      "height": 1350
-    },
-    {
-      "src": "/images/brands/greencap-health/story2.png",
-      "width": 1080,
-      "height": 1350
-    },
-    {
-      "src": "/images/brands/greencap-health/story3.png",
-      "width": 1080,
-      "height": 1350
-    },
-    {
-      "src": "/images/brands/greencap-health/08-desire-2.png",
-      "width": 1080,
-      "height": 1080
-    },
-    {
-      "src": "/images/brands/greencap-health/acne-cream-wb.png",
-      "width": 1080,
-      "height": 1080
-    },
-    {
-      "src": "/images/brands/greencap-health/acne-cream.png",
-      "width": 1080,
-      "height": 1080
-    },
-    {
-      "src": "/images/brands/greencap-health/capsules-wb.png",
-      "width": 1080,
-      "height": 1080
-    },
-    {
-      "src": "/images/brands/greencap-health/capsules.png",
-      "width": 1080,
-      "height": 1080
-    },
-    {
-      "src": "/images/brands/greencap-health/semaglutide-wb.png",
-      "width": 1080,
-      "height": 1080
-    },
-    {
-      "src": "/images/brands/greencap-health/semaglutide.png",
-      "width": 1080,
-      "height": 1080
-    },
-    {
-      "src": "/images/brands/greencap-health/sildenafil-1.png",
-      "width": 1080,
-      "height": 1080
-    },
-    {
-      "src": "/images/brands/greencap-health/sildenafil-2.png",
-      "width": 1080,
-      "height": 1080
-    },
-    {
-      "src": "/images/brands/greencap-health/tadalafil-1.png",
-      "width": 1080,
-      "height": 1080
-    },
-    {
-      "src": "/images/brands/greencap-health/tadalafil-2.png",
-      "width": 1080,
-      "height": 1080
-    },
-    {
-      "src": "/images/brands/greencap-health/triple-troche-wb.png",
-      "width": 1080,
-      "height": 1080
-    },
-    {
-      "src": "/images/brands/greencap-health/triple-troche.png",
-      "width": 1080,
-      "height": 1080
-    },
-    {
-      "src": "/images/brands/greencap-health/referral-photo.jpg",
-      "width": 1200,
-      "height": 800
-    },
-    {
-      "src": "/images/brands/greencap-health/cialis-transparent.png",
-      "width": 768,
-      "height": 768
-    },
-    {
-      "src": "/images/brands/greencap-health/viagra-transparent.png",
-      "width": 768,
-      "height": 768
-    },
-    {
-      "src": "/images/brands/greencap-health/unnamed.png",
-      "width": 292,
-      "height": 316
-    },
-    {
-      "src": "/images/brands/greencap-health/unnamed-277x300.png",
-      "width": 277,
-      "height": 300
-    }
-  ],
   "the-chemist-pharmacy": [
     {
       "src": "/images/brands/the-chemist-pharmacy/pexels-photo-3825529.jpeg",
@@ -1933,6 +1888,11 @@ export const BRAND_MEDIA: Record<string, BrandImage[]> = {
       "src": "/images/brands/the-chemist-pharmacy/pexels-photo-4393426-2.jpeg",
       "width": 600,
       "height": 400
+    },
+    {
+      "src": "/images/brands/the-chemist-pharmacy/logo.png",
+      "width": 896,
+      "height": 240
     }
   ],
   "vamas": [

@@ -72,6 +72,14 @@
   border-radius: 10px;
   box-sizing: content-box;
 }
+/* When the logo replaces the giant name text, it's the thing people actually
+   read — give it real size instead of the small kicker-adjacent mark. */
+.brand-premium .sp-hero-logo--lead {
+  height: 56px;
+  max-width: min(80vw, 340px);
+  padding: 18px 26px;
+  margin-bottom: 28px;
+}
 .brand-premium .sp-hero-kicker {
   font-family: var(--font-body);
   font-size: 11px;
@@ -247,12 +255,20 @@
   padding: 10px;
   box-shadow: 0 -18px 40px rgba(0, 0, 0, 0.55);
 }
-.brand-premium .sp-stack-item img {
-  width: auto;
-  max-width: 100%;
-  height: auto;
+/* Fixed-size box shared by all 3 stack cards, every brand. object-fit:contain
+   on the fill'd <Image> inside shows the full photo — letterboxed, never
+   cropped — no matter the source's native aspect ratio. */
+.brand-premium .sp-stack-frame {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 4 / 3;
   max-height: 46vh;
   margin: 0 auto;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.brand-premium .sp-stack-frame img {
   border-radius: 4px;
 }
 .brand-premium .sp-stack-item figcaption {
@@ -498,6 +514,7 @@
   .brand-premium .sp-growth-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
   .brand-premium .sp-delivered-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
   .brand-premium .sp-hero-logo { height: 40px; }
+  .brand-premium .sp-hero-logo--lead { height: 64px; }
   .brand-premium .sp-showcase { --sp-stack-top: 90px; }
 }
 
@@ -507,6 +524,7 @@
   .brand-premium .sp-hero { padding-top: 120px; padding-bottom: 90px; }
   .brand-premium .sp-hero-logo { height: 46px; margin-bottom: 30px; }
   .brand-premium .sp-hero-line { width: 110px; margin: 30px auto; }
+  .brand-premium .sp-hero-logo--lead { height: 76px; margin-bottom: 34px; }
 
   .brand-premium .sp-stats { padding: 80px var(--sp-pad); }
   .brand-premium .sp-stats-inner { grid-template-columns: repeat(4, 1fr); gap: 0; }
@@ -519,7 +537,7 @@
 
   .brand-premium .sp-showcase { padding-bottom: 60px; --sp-stack-top: 100px; }
   .brand-premium .sp-stack { gap: 60px; }
-  .brand-premium .sp-stack-item img { max-height: 58vh; }
+  .brand-premium .sp-stack-frame { max-width: 780px; aspect-ratio: 16 / 10; max-height: 58vh; }
   .brand-premium .sp-stack-item { padding: 14px; }
 
   .brand-premium .sp-growth { padding-bottom: 120px; }
@@ -584,7 +602,8 @@
 .brand-premium--gallery-led .sp-showcase {
   max-width: none;
 }
-.brand-premium--gallery-led .sp-stack-item img { border-radius: 2px; }
+.brand-premium--gallery-led .sp-stack-frame,
+.brand-premium--gallery-led .sp-stack-frame img { border-radius: 2px; }
 .brand-premium--gallery-led .sp-stack-item figcaption { padding: 0 4px; }
 .brand-premium--gallery-led .sp-stats {
   background: transparent;

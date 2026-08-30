@@ -33,7 +33,7 @@ const IMPORTED_BRANDS: Brand[] = [
   {
     "slug": "intellve",
     "name": "Intellve",
-    "logo": "",
+    "logo": "/images/brands/intellve/logo.png",
     "cardDescription": "AI, ML and IoT-driven facility surveillance software brand — social, content and client servicing.",
     "published": true,
     "palette": {
@@ -357,7 +357,7 @@ const IMPORTED_BRANDS: Brand[] = [
   {
     "slug": "kunuts",
     "name": "Kunuts",
-    "logo": "",
+    "logo": "/images/brands/kunuts/logo.png",
     "cardDescription": "Premium dry fruits brand. Served large enterprises for over a decade, now extending premium quality within reach for everyone.",
     "published": true,
     "palette": {
@@ -971,7 +971,7 @@ const IMPORTED_BRANDS: Brand[] = [
   {
     "slug": "monarch",
     "name": "Monarch",
-    "logo": "",
+    "logo": "/images/brands/monarch/logo.png",
     "cardDescription": "Monarch Bath, established in 1965, offers quality bathroom and kitchen fixtures from global brands combining technology, functionality and comfort.",
     "published": true,
     "palette": {
@@ -1307,7 +1307,7 @@ const IMPORTED_BRANDS: Brand[] = [
   {
     "slug": "rapoo",
     "name": "Rapoo",
-    "logo": "",
+    "logo": "/images/brands/rapoo/logo.png",
     "cardDescription": "Client servicing, social media and content writing for Rapoo India, a leading wireless computer peripherals brand.",
     "published": true,
     "palette": {
@@ -1631,7 +1631,7 @@ const IMPORTED_BRANDS: Brand[] = [
   {
     "slug": "rapoo-middle-east",
     "name": "Rapoo Middle East",
-    "logo": "",
+    "logo": "/images/brands/rapoo-middle-east/logo.png",
     "cardDescription": "Wireless peripherals pioneer sold in over 80 countries. Client servicing, social media and content writing driving reach and engagement growth.",
     "published": true,
     "palette": {
@@ -1930,7 +1930,7 @@ const IMPORTED_BRANDS: Brand[] = [
   {
     "slug": "furnishing-home",
     "name": "Furnishing Home",
-    "logo": "",
+    "logo": "/images/brands/furnishing-home/logo.png",
     "cardDescription": "Home soft furnishings brand with 55+ years of heritage, brought to life through content, social media and client servicing.",
     "published": true,
     "palette": {
@@ -2200,7 +2200,7 @@ const IMPORTED_BRANDS: Brand[] = [
   {
     "slug": "secure-my-shop",
     "name": "Secure My Shop",
-    "logo": "",
+    "logo": "/images/brands/secure-my-shop/logo.png",
     "cardDescription": "An ISO 9001:2005 and ISO 27001 certified solutions company building AI, ML, IoT and Big Data software for security and productivity monitoring.",
     "published": true,
     "palette": {
@@ -2536,7 +2536,7 @@ const IMPORTED_BRANDS: Brand[] = [
   {
     "slug": "icici",
     "name": "ICICI",
-    "logo": "",
+    "logo": "/images/brands/icici/logo.png",
     "cardDescription": "Content writing engagement for ICICI Prudential Life Insurance, including content-calendar planning and copy for the Saksham Pro platform and app UI.",
     "published": true,
     "palette": {

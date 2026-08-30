@@ -191,8 +191,11 @@ export default function BrandPremiumPage({ data }: { data: Brand }) {
     ),
 
     /* Sticky stack: each image pins in turn and the next scrolls up over it.
-       Sizing is capped by max-height with width:auto, so the whole frame scales
-       down — the image is never cropped. */
+       All three cards share one fixed-size box (.sp-stack-frame, set in
+       brand-premium.css) so every brand's stack reads the same regardless of
+       source photo dimensions; each image uses `fill` + `object-fit: contain`
+       inside that box, so the full photo is always visible — never cropped,
+       just letterboxed when its ratio doesn't match the box. */
     showcase:
       showcase.length > 0 ? (
         <section key="showcase" className="sp-showcase">
@@ -204,13 +207,15 @@ export default function BrandPremiumPage({ data }: { data: Brand }) {
                 className="sp-stack-item"
                 style={{ zIndex: i + 1, top: `calc(var(--sp-stack-top) + ${i * 14}px)` }}
               >
-                <Image
-                  src={img.src}
-                  alt={`${data.name} creative`}
-                  width={img.width}
-                  height={img.height}
-                  sizes="(max-width:900px) 92vw, 80vw"
-                />
+                <div className="sp-stack-frame">
+                  <Image
+                    src={img.src}
+                    alt={`${data.name} creative`}
+                    fill
+                    style={{ objectFit: "contain" }}
+                    sizes="(max-width:900px) 92vw, 80vw"
+                  />
+                </div>
                 <figcaption>
                   <span>{String(i + 1).padStart(2, "0")}</span>
                   {["Creative direction", "Campaign work", "In the feed"][i] ?? "Selected work"}
@@ -347,26 +352,32 @@ export default function BrandPremiumPage({ data }: { data: Brand }) {
       <section className="sp-hero">
         <div className="sp-hero-glow" aria-hidden="true" />
         <div className="sp-hero-inner">
-          {data.logo && (
+          {data.logo ? (
+            // The logo already carries the brand name — showing it again as a
+            // giant wordmark underneath was redundant. Give the logo the room
+            // instead so it's the thing that actually reads.
             /* eslint-disable-next-line @next/next/no-img-element */
-            <img src={data.logo} alt={data.name} className="sp-hero-logo" />
-          )}
+            <img src={data.logo} alt={data.name} className="sp-hero-logo sp-hero-logo--lead" />
+          ) : null}
           <p className="sp-hero-kicker">{data.hero.eyebrow}</p>
           {/* Chars animate individually, but each word is kept in its own
               nowrap box so a long brand name breaks between words, never
-              mid-word. */}
-          <h1 className="sp-hero-title" aria-label={data.name}>
-            {data.name.split(" ").map((word, w, arr) => (
-              <span key={w} className="sp-hero-wordwrap">
-                {word.split("").map((ch, i) => (
-                  <span key={i} className="sp-hero-word">
-                    {ch}
-                  </span>
-                ))}
-                {w < arr.length - 1 ? " " : ""}
-              </span>
-            ))}
-          </h1>
+              mid-word. No logo file → the name IS the mark, so it still
+              renders as the big display title. */}
+          {!data.logo && (
+            <h1 className="sp-hero-title" aria-label={data.name}>
+              {data.name.split(" ").map((word, w, arr) => (
+                <span key={w} className="sp-hero-wordwrap">
+                  {word.split("").map((ch, i) => (
+                    <span key={i} className="sp-hero-word">
+                      {ch}
+                    </span>
+                  ))}
+                  {w < arr.length - 1 ? " " : ""}
+                </span>
+              ))}
+            </h1>
+          )}
           <div className="sp-hero-line" />
           <p className="sp-hero-tagline">{data.hero.tagline}</p>
           <div className="sp-hero-tags">

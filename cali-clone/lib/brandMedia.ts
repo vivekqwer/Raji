@@ -1161,42 +1161,37 @@ export const BRAND_MEDIA: Record<string, BrandImage[]> = {
       "height": 1248
     },
     {
-      "src": "/images/brands/furnishing-home/freepik-generate-diiferent-angles-and-beautiful-close-up-s-5.png",
+      "src": "/images/brands/furnishing-home/freepik-generate-diiferent-angles-and-beautiful-close-up-s-5-2.png",
       "width": 832,
       "height": 1248
     },
     {
-      "src": "/images/brands/furnishing-home/freepik-generate-diiferent-angles-and-beautiful-close-up-s-5.png",
+      "src": "/images/brands/furnishing-home/freepik-generate-diiferent-angles-and-beautiful-close-up-s-5-3.png",
       "width": 832,
       "height": 1248
     },
     {
-      "src": "/images/brands/furnishing-home/freepik-generate-diiferent-angles-and-beautiful-close-up-s-5.png",
+      "src": "/images/brands/furnishing-home/freepik-generate-diiferent-angles-and-beautiful-close-up-s-5-4.png",
       "width": 832,
       "height": 1248
     },
     {
-      "src": "/images/brands/furnishing-home/freepik-generate-diiferent-angles-and-beautiful-close-up-s-5.png",
+      "src": "/images/brands/furnishing-home/freepik-generate-diiferent-angles-and-beautiful-close-up-s-5-5.png",
       "width": 832,
       "height": 1248
     },
     {
-      "src": "/images/brands/furnishing-home/freepik-generate-diiferent-angles-and-beautiful-close-up-s-5.png",
+      "src": "/images/brands/furnishing-home/freepik-generate-diiferent-angles-and-beautiful-close-up-s-5-6.png",
       "width": 832,
       "height": 1248
     },
     {
-      "src": "/images/brands/furnishing-home/freepik-generate-diiferent-angles-and-beautiful-close-up-s-5.png",
+      "src": "/images/brands/furnishing-home/freepik-generate-diiferent-angles-and-beautiful-close-up-s-5-7.png",
       "width": 832,
       "height": 1248
     },
     {
-      "src": "/images/brands/furnishing-home/freepik-generate-diiferent-angles-and-beautiful-close-up-s-5.png",
-      "width": 832,
-      "height": 1248
-    },
-    {
-      "src": "/images/brands/furnishing-home/freepik-gnenerate-this-type-if-image-img1-with-the-use-of-59.png",
+      "src": "/images/brands/furnishing-home/freepik-generate-diiferent-angles-and-beautiful-close-up-s-5-8.png",
       "width": 832,
       "height": 1248
     },
@@ -1206,7 +1201,12 @@ export const BRAND_MEDIA: Record<string, BrandImage[]> = {
       "height": 1248
     },
     {
-      "src": "/images/brands/furnishing-home/freepik-gnenerate-this-type-if-image-img1-with-the-use-of-59.png",
+      "src": "/images/brands/furnishing-home/freepik-gnenerate-this-type-if-image-img1-with-the-use-of-59-2.png",
+      "width": 832,
+      "height": 1248
+    },
+    {
+      "src": "/images/brands/furnishing-home/freepik-gnenerate-this-type-if-image-img1-with-the-use-of-59-3.png",
       "width": 832,
       "height": 1248
     },
@@ -1500,6 +1500,504 @@ export const BRAND_MEDIA: Record<string, BrandImage[]> = {
       "src": "/images/brands/godrej/retension-4.png",
       "width": 463,
       "height": 441
+    }
+  ],
+  "chemistrie": [
+    {
+      "src": "/images/brands/chemistrie/logo.png",
+      "width": 4000,
+      "height": 4000
+    },
+    {
+      "src": "/images/brands/chemistrie/dda85c0a-53f5-4881-bc23-c9d3314d64c7.jpg",
+      "width": 2500,
+      "height": 2500
+    },
+    {
+      "src": "/images/brands/chemistrie/stock-product.jpg",
+      "width": 1600,
+      "height": 2249
+    },
+    {
+      "src": "/images/brands/chemistrie/stock-note.jpg",
+      "width": 1600,
+      "height": 2133
+    },
+    {
+      "src": "/images/brands/chemistrie/stock-skin.jpg",
+      "width": 1600,
+      "height": 2034
+    },
+    {
+      "src": "/images/brands/chemistrie/952.jpg",
+      "width": 1600,
+      "height": 1600
+    },
+    {
+      "src": "/images/brands/chemistrie/natural-products-arrangement-top-view.jpg",
+      "width": 1600,
+      "height": 1600
+    },
+    {
+      "src": "/images/brands/chemistrie/stock-lifestyle.jpg",
+      "width": 1600,
+      "height": 1600
+    },
+    {
+      "src": "/images/brands/chemistrie/stock-packaging.jpg",
+      "width": 1600,
+      "height": 1600
+    },
+    {
+      "src": "/images/brands/chemistrie/founder-1.jpg",
+      "width": 1200,
+      "height": 1799
+    },
+    {
+      "src": "/images/brands/chemistrie/high-angle-natural-cream-concept-2.jpg",
+      "width": 1280,
+      "height": 1600
+    },
+    {
+      "src": "/images/brands/chemistrie/high-angle-natural-cream-concept.jpg",
+      "width": 1280,
+      "height": 1600
+    },
+    {
+      "src": "/images/brands/chemistrie/natural-products-arrangement-top-view-2.jpg",
+      "width": 1400,
+      "height": 1400
+    },
+    {
+      "src": "/images/brands/chemistrie/founder-2.jpg",
+      "width": 1200,
+      "height": 1500
+    },
+    {
+      "src": "/images/brands/chemistrie/beach-skincare-product-still-life-2.jpg",
+      "width": 1067,
+      "height": 1600
+    },
+    {
+      "src": "/images/brands/chemistrie/beach-skincare-product-still-life.jpg",
+      "width": 1067,
+      "height": 1600
+    },
+    {
+      "src": "/images/brands/chemistrie/stock-ingredients.jpg",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "/images/brands/chemistrie/stock-lab.jpg",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "/images/brands/chemistrie/beach-skincare-product-still-life-3.jpg",
+      "width": 500,
+      "height": 750
+    },
+    {
+      "src": "/images/brands/chemistrie/high-angle-natural-cream-concept-3.jpg",
+      "width": 500,
+      "height": 625
+    },
+    {
+      "src": "/images/brands/chemistrie/952-2.jpg",
+      "width": 500,
+      "height": 500
+    },
+    {
+      "src": "/images/brands/chemistrie/dda85c0a-53f5-4881-bc23-c9d3314d64c7-2.jpg",
+      "width": 500,
+      "height": 500
+    },
+    {
+      "src": "/images/brands/chemistrie/natural-products-arrangement-top-view-3.jpg",
+      "width": 500,
+      "height": 500
+    }
+  ],
+  "crystal": [
+    {
+      "src": "/images/brands/crystal/hero-2.jpg",
+      "width": 1501,
+      "height": 1501
+    },
+    {
+      "src": "/images/brands/crystal/hero-3.jpg",
+      "width": 1501,
+      "height": 1501
+    },
+    {
+      "src": "/images/brands/crystal/hero.jpg",
+      "width": 1501,
+      "height": 1501
+    },
+    {
+      "src": "/images/brands/crystal/amz-4.jpg",
+      "width": 1500,
+      "height": 1296
+    },
+    {
+      "src": "/images/brands/crystal/crystal-prefooter.png",
+      "width": 1203,
+      "height": 913
+    },
+    {
+      "src": "/images/brands/crystal/amz-1.jpg",
+      "width": 1500,
+      "height": 625
+    },
+    {
+      "src": "/images/brands/crystal/hero-poster.jpg",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "src": "/images/brands/crystal/1-1.jpg",
+      "width": 960,
+      "height": 832
+    },
+    {
+      "src": "/images/brands/crystal/2-1-1-2.jpg",
+      "width": 960,
+      "height": 832
+    },
+    {
+      "src": "/images/brands/crystal/2-1-1.jpg",
+      "width": 960,
+      "height": 832
+    },
+    {
+      "src": "/images/brands/crystal/3-1.jpg",
+      "width": 960,
+      "height": 832
+    },
+    {
+      "src": "/images/brands/crystal/4-2.jpg",
+      "width": 960,
+      "height": 832
+    },
+    {
+      "src": "/images/brands/crystal/amz-1-2.jpg",
+      "width": 686,
+      "height": 1048
+    },
+    {
+      "src": "/images/brands/crystal/1-2.jpg",
+      "width": 941,
+      "height": 534
+    },
+    {
+      "src": "/images/brands/crystal/01-crystal-cooker-1024x419.jpg",
+      "width": 1024,
+      "height": 419
+    },
+    {
+      "src": "/images/brands/crystal/02-crystal-kadhai-1024x419.jpg",
+      "width": 1024,
+      "height": 419
+    },
+    {
+      "src": "/images/brands/crystal/03-trusted-indian-brand-heritage-1024x419.jpg",
+      "width": 1024,
+      "height": 419
+    },
+    {
+      "src": "/images/brands/crystal/3-lac-factory-size.jpg",
+      "width": 840,
+      "height": 316
+    },
+    {
+      "src": "/images/brands/crystal/factories.jpg",
+      "width": 840,
+      "height": 316
+    },
+    {
+      "src": "/images/brands/crystal/office.jpg",
+      "width": 840,
+      "height": 316
+    },
+    {
+      "src": "/images/brands/crystal/outlets.jpg",
+      "width": 840,
+      "height": 316
+    },
+    {
+      "src": "/images/brands/crystal/warehouse.jpg",
+      "width": 840,
+      "height": 316
+    },
+    {
+      "src": "/images/brands/crystal/logo.png",
+      "width": 334,
+      "height": 105
+    }
+  ],
+  "greencap-health": [
+    {
+      "src": "/images/brands/greencap-health/lab-work-photo.jpg",
+      "width": 1200,
+      "height": 1800
+    },
+    {
+      "src": "/images/brands/greencap-health/logo.png",
+      "width": 2560,
+      "height": 641
+    },
+    {
+      "src": "/images/brands/greencap-health/pharmacy-partners.png",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "src": "/images/brands/greencap-health/green-cap-creatives-07.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "src": "/images/brands/greencap-health/green-cap-creatives-12-1.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "src": "/images/brands/greencap-health/green-cap-creatives-12-3.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "src": "/images/brands/greencap-health/green-cap-creatives-24.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "src": "/images/brands/greencap-health/process-ongoing-support.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "src": "/images/brands/greencap-health/process-provider-review.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "src": "/images/brands/greencap-health/process-select-plan.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "src": "/images/brands/greencap-health/story1.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "src": "/images/brands/greencap-health/story2.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "src": "/images/brands/greencap-health/story3.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "src": "/images/brands/greencap-health/08-desire-2.png",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "src": "/images/brands/greencap-health/acne-cream-wb.png",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "src": "/images/brands/greencap-health/acne-cream.png",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "src": "/images/brands/greencap-health/capsules-wb.png",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "src": "/images/brands/greencap-health/capsules.png",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "src": "/images/brands/greencap-health/semaglutide-wb.png",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "src": "/images/brands/greencap-health/semaglutide.png",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "src": "/images/brands/greencap-health/sildenafil-1.png",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "src": "/images/brands/greencap-health/sildenafil-2.png",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "src": "/images/brands/greencap-health/tadalafil-1.png",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "src": "/images/brands/greencap-health/tadalafil-2.png",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "src": "/images/brands/greencap-health/triple-troche-wb.png",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "src": "/images/brands/greencap-health/triple-troche.png",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "src": "/images/brands/greencap-health/referral-photo.jpg",
+      "width": 1200,
+      "height": 800
+    },
+    {
+      "src": "/images/brands/greencap-health/cialis-transparent.png",
+      "width": 768,
+      "height": 768
+    },
+    {
+      "src": "/images/brands/greencap-health/viagra-transparent.png",
+      "width": 768,
+      "height": 768
+    },
+    {
+      "src": "/images/brands/greencap-health/unnamed.png",
+      "width": 292,
+      "height": 316
+    },
+    {
+      "src": "/images/brands/greencap-health/unnamed-277x300.png",
+      "width": 277,
+      "height": 300
+    }
+  ],
+  "the-chemist-pharmacy": [
+    {
+      "src": "/images/brands/the-chemist-pharmacy/pexels-photo-3825529.jpeg",
+      "width": 1600,
+      "height": 1143
+    },
+    {
+      "src": "/images/brands/the-chemist-pharmacy/pexels-photo-2280571.jpeg",
+      "width": 1200,
+      "height": 801
+    },
+    {
+      "src": "/images/brands/the-chemist-pharmacy/pexels-photo-5215024.jpeg",
+      "width": 800,
+      "height": 1200
+    },
+    {
+      "src": "/images/brands/the-chemist-pharmacy/pexels-photo-5407206.jpeg",
+      "width": 800,
+      "height": 1200
+    },
+    {
+      "src": "/images/brands/the-chemist-pharmacy/pexels-photo-5452201.jpeg",
+      "width": 800,
+      "height": 1200
+    },
+    {
+      "src": "/images/brands/the-chemist-pharmacy/pexels-photo-5215024-2.jpeg",
+      "width": 600,
+      "height": 900
+    },
+    {
+      "src": "/images/brands/the-chemist-pharmacy/pexels-photo-2280571-2.jpeg",
+      "width": 800,
+      "height": 534
+    },
+    {
+      "src": "/images/brands/the-chemist-pharmacy/pexels-photo-3735709.jpeg",
+      "width": 800,
+      "height": 533
+    },
+    {
+      "src": "/images/brands/the-chemist-pharmacy/pexels-photo-3735747.jpeg",
+      "width": 800,
+      "height": 533
+    },
+    {
+      "src": "/images/brands/the-chemist-pharmacy/pexels-photo-3768916.jpeg",
+      "width": 800,
+      "height": 533
+    },
+    {
+      "src": "/images/brands/the-chemist-pharmacy/pexels-photo-3985163.jpeg",
+      "width": 800,
+      "height": 533
+    },
+    {
+      "src": "/images/brands/the-chemist-pharmacy/pexels-photo-4386370.jpeg",
+      "width": 800,
+      "height": 533
+    },
+    {
+      "src": "/images/brands/the-chemist-pharmacy/pexels-photo-4386466.jpeg",
+      "width": 800,
+      "height": 533
+    },
+    {
+      "src": "/images/brands/the-chemist-pharmacy/pexels-photo-4393426.jpeg",
+      "width": 800,
+      "height": 533
+    },
+    {
+      "src": "/images/brands/the-chemist-pharmacy/pexels-photo-7089401.jpeg",
+      "width": 800,
+      "height": 533
+    },
+    {
+      "src": "/images/brands/the-chemist-pharmacy/pexels-photo-7579831.jpeg",
+      "width": 800,
+      "height": 533
+    },
+    {
+      "src": "/images/brands/the-chemist-pharmacy/pexels-photo-236380.jpeg",
+      "width": 800,
+      "height": 529
+    },
+    {
+      "src": "/images/brands/the-chemist-pharmacy/pexels-photo-5025639.jpeg",
+      "width": 800,
+      "height": 450
+    },
+    {
+      "src": "/images/brands/the-chemist-pharmacy/pexels-photo-3735709-2.jpeg",
+      "width": 600,
+      "height": 400
+    },
+    {
+      "src": "/images/brands/the-chemist-pharmacy/pexels-photo-3985163-2.jpeg",
+      "width": 600,
+      "height": 400
+    },
+    {
+      "src": "/images/brands/the-chemist-pharmacy/pexels-photo-4393426-2.jpeg",
+      "width": 600,
+      "height": 400
     }
   ],
   "vamas": [

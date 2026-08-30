@@ -12,9 +12,32 @@ function easeOutExpo(t: number) {
 
 const ratio = (i: BrandImage) => i.width / i.height;
 
+/* Three editorial layouts so consecutive brand pages don't read as one template.
+   Each variant reorders the sections and swaps the hero / stats / gallery
+   treatment via a modifier class. The variant is derived from the slug, so a
+   brand always renders the same way. */
+type Variant = "editorial" | "gallery-led" | "narrative";
+const VARIANTS: Variant[] = ["editorial", "gallery-led", "narrative"];
+
+const variantFor = (slug: string): Variant => {
+  let h = 0;
+  for (let i = 0; i < slug.length; i++) h = (h * 31 + slug.charCodeAt(i)) >>> 0;
+  return VARIANTS[h % VARIANTS.length];
+};
+
+const SECTION_ORDER: Record<Variant, string[]> = {
+  // Type-led: the classic case-study read.
+  editorial: ["stats", "story", "showcase", "growth", "approach", "gallery", "delivered"],
+  // Image-led: creative hits first, numbers land after the work has spoken.
+  "gallery-led": ["showcase", "gallery", "stats", "story", "growth", "approach", "delivered"],
+  // Narrative: story and method first, proof last.
+  narrative: ["story", "approach", "showcase", "gallery", "growth", "stats", "delivered"],
+};
+
 export default function BrandPremiumPage({ data }: { data: Brand }) {
   const rootRef = useRef<HTMLDivElement | null>(null);
   const media = useMemo(() => getBrandMedia(data.slug), [data.slug]);
+  const variant = useMemo(() => variantFor(data.slug), [data.slug]);
 
   /* Nothing on this page is ever cropped: the hero carries no background photo,
      and every image below renders at its own intrinsic aspect ratio.
@@ -22,17 +45,27 @@ export default function BrandPremiumPage({ data }: { data: Brand }) {
      own performance section, the widest creative leads as full-width showcases,
      and the rest flows into a masonry gallery. */
   const { charts, showcase, gallery } = useMemo(() => {
+    // The exported chart filenames are inconsistently spelled across brands
+    // (retension / rentention / engamenrt / crt-left), so match loosely rather
+    // than letting a misspelt chart leak into the creative gallery.
     const isChart = (m: BrandImage) =>
-      /(reach-growth|engagement|ctr|retention|impress|click|analytic)/i.test(m.src);
-    const isLogo = (m: BrandImage) => /(^|\/)(logo|cropped-)/i.test(m.src);
+      /(reach[-_]?growth|eng[a-z]*m[a-z]*n?rt?|engagement|c[tr]{2}[-_]?(left|lift)?|ctr|rete[n]?[st]ion|renten[ct]ion|impress|click|analytic)/i.test(
+        m.src.split("/").pop() ?? ""
+      );
+    const isLogo = (m: BrandImage) => /(^|\/)(logo|cropped-)|[-_]logo\./i.test(m.src);
 
     const chartImgs = media.filter(isChart);
     const creative = media.filter((m) => !isChart(m) && !isLogo(m));
+    // Lead with the widest creative available. Several brands shoot square or
+    // portrait only, so fall back to the largest images rather than rendering
+    // an empty showcase.
+    const byArea = [...creative].sort((a, b) => b.width * b.height - a.width * a.height);
     const wide = creative.filter((m) => ratio(m) >= 1.2).slice(0, 2);
+    const lead = wide.length > 0 ? wide : byArea.slice(0, 1);
     return {
       charts: chartImgs,
-      showcase: wide,
-      gallery: creative.filter((m) => !wide.some((w) => w.src === m.src)),
+      showcase: lead,
+      gallery: creative.filter((m) => !lead.some((w) => w.src === m.src)),
     };
   }, [media]);
 
@@ -118,52 +151,28 @@ export default function BrandPremiumPage({ data }: { data: Brand }) {
 
   const pal = data.palette;
 
-  return (
-    <main
-      className="brand-premium"
-      ref={rootRef}
-      style={{
-        "--bpx-primary": pal.primary,
-        "--bpx-accent": pal.accent,
-      } as React.CSSProperties}
-    >
-      {/* ── Hero ─────────────────────────────────────────── */}
-      <section className="sp-hero">
-        <div className="sp-hero-glow" aria-hidden="true" />
-        <div className="sp-hero-inner">
-          {data.logo && (
-            /* eslint-disable-next-line @next/next/no-img-element */
-            <img src={data.logo} alt={data.name} className="sp-hero-logo" />
-          )}
-          <p className="sp-hero-kicker">{data.hero.eyebrow}</p>
-          <h1 className="sp-hero-title" aria-label={data.name}>
-            {data.name.split("").map((ch, i) => (
-              <span key={i} className="sp-hero-word">{ch === " " ? " " : ch}</span>
-            ))}
-          </h1>
-          <div className="sp-hero-line" />
-          <p className="sp-hero-tagline">{data.hero.tagline}</p>
-          <div className="sp-hero-tags">
-            {data.hero.tags.map((t) => <span key={t} className="sp-tag">{t}</span>)}
-          </div>
-        </div>
-        <div className="sp-hero-scroll">Scroll</div>
-      </section>
-
-      {/* ── Stats ────────────────────────────────────────── */}
-      <section className="sp-stats" ref={statsWrapRef}>
+  /* Each section is built once, then emitted in the order this brand's variant
+     asks for — see SECTION_ORDER. Sections with no content resolve to null and
+     simply don't render. */
+  const sections: Record<string, React.ReactNode> = {
+    stats: (
+      <section key="stats" className="sp-stats" ref={statsWrapRef}>
         <div className="sp-stats-inner">
           {data.stats.map((s, i) => (
             <div key={s.label} className="sp-stat" data-reveal>
-              <span className="sp-stat-num">{vals[i].toFixed(s.decimals)}{s.suffix}</span>
+              <span className="sp-stat-num">
+                {vals[i].toFixed(s.decimals)}
+                {s.suffix}
+              </span>
               <span className="sp-stat-label">{s.label}</span>
             </div>
           ))}
         </div>
       </section>
+    ),
 
-      {/* ── Story ────────────────────────────────────────── */}
-      <section className="sp-story">
+    story: (
+      <section key="story" className="sp-story">
         <div className="sp-story-grid">
           <div className="sp-story-num" data-reveal>
             <span>{data.story.bigNum}</span>
@@ -175,41 +184,68 @@ export default function BrandPremiumPage({ data }: { data: Brand }) {
           </div>
         </div>
       </section>
+    ),
 
-      {/* ── Showcase: full images, uncropped, alternating ── */}
-      {showcase.length > 0 && (
-        <section className="sp-showcase">
+    showcase:
+      showcase.length > 0 ? (
+        <section key="showcase" className="sp-showcase">
           {showcase.map((img, i) => (
             <figure key={img.src} className="sp-showcase-item" data-reveal>
-              <Image src={img.src} alt={`${data.name} creative`} width={img.width} height={img.height} sizes="(max-width:900px) 100vw, 90vw" />
+              <Image
+                src={img.src}
+                alt={`${data.name} creative`}
+                width={img.width}
+                height={img.height}
+                sizes="(max-width:900px) 100vw, 90vw"
+              />
               <figcaption>{i === 0 ? "Creative direction" : "Campaign work"}</figcaption>
             </figure>
           ))}
         </section>
-      )}
+      ) : null,
 
-      {/* ── Growth: the real analytics exports, in their own section ── */}
-      {charts.length > 0 && (
-        <section className="sp-growth">
-          <p className="sp-eyebrow sp-center" data-reveal>Performance</p>
-          <h2 className="sp-center sp-growth-heading" data-reveal>Growth, in <em>numbers</em></h2>
+    growth:
+      charts.length > 0 ? (
+        <section key="growth" className="sp-growth">
+          <p className="sp-eyebrow sp-center" data-reveal>
+            Performance
+          </p>
+          <h2 className="sp-center sp-growth-heading" data-reveal>
+            Growth, in <em>numbers</em>
+          </h2>
           <div className="sp-growth-grid">
             {charts.map((img) => (
               <figure key={img.src} className="sp-growth-card" data-reveal>
-                <Image src={img.src} alt={`${data.name} performance chart`} width={img.width} height={img.height} sizes="(max-width:900px) 100vw, 50vw" />
+                <Image
+                  src={img.src}
+                  alt={`${data.name} performance chart`}
+                  width={img.width}
+                  height={img.height}
+                  sizes="(max-width:900px) 100vw, 50vw"
+                />
               </figure>
             ))}
           </div>
         </section>
-      )}
+      ) : null,
 
-      {/* ── Approach ─────────────────────────────────────── */}
-      <section className="sp-approach">
-        <p className="sp-eyebrow sp-center" data-reveal>{data.approach.eyebrow}</p>
-        <h2 className="sp-approach-heading sp-center" data-reveal dangerouslySetInnerHTML={{ __html: data.approach.heading }} />
+    approach: (
+      <section key="approach" className="sp-approach">
+        <p className="sp-eyebrow sp-center" data-reveal>
+          {data.approach.eyebrow}
+        </p>
+        <h2
+          className="sp-approach-heading sp-center"
+          data-reveal
+          dangerouslySetInnerHTML={{ __html: data.approach.heading }}
+        />
         <div className="sp-approach-list">
           {data.approach.items.map((item, i) => (
-            <div key={item.num} className={`sp-approach-item${i % 2 === 1 ? " sp-approach-item--reverse" : ""}`} data-reveal>
+            <div
+              key={item.num}
+              className={`sp-approach-item${i % 2 === 1 ? " sp-approach-item--reverse" : ""}`}
+              data-reveal
+            >
               <span className="sp-approach-num">{item.num}</span>
               <div>
                 <h3>{item.title}</h3>
@@ -219,11 +255,14 @@ export default function BrandPremiumPage({ data }: { data: Brand }) {
           ))}
         </div>
       </section>
+    ),
 
-      {/* ── Gallery — masonry columns, every image full & uncropped ── */}
-      {gallery.length > 0 && (
-        <section className="sp-gallery">
-          <p className="sp-eyebrow sp-center" data-reveal>{data.gallery.title}</p>
+    gallery:
+      gallery.length > 0 ? (
+        <section key="gallery" className="sp-gallery">
+          <p className="sp-eyebrow sp-center" data-reveal>
+            {data.gallery.title}
+          </p>
           <div className="sp-gallery-masonry">
             {gallery.map((img) => (
               <figure key={img.src} className="sp-gallery-item">
@@ -238,12 +277,18 @@ export default function BrandPremiumPage({ data }: { data: Brand }) {
             ))}
           </div>
         </section>
-      )}
+      ) : null,
 
-      {/* ── Delivered ────────────────────────────────────── */}
-      <section className="sp-delivered">
-        <p className="sp-eyebrow sp-center" data-reveal>{data.delivered.eyebrow}</p>
-        <h2 className="sp-center" data-reveal dangerouslySetInnerHTML={{ __html: data.delivered.heading }} />
+    delivered: (
+      <section key="delivered" className="sp-delivered">
+        <p className="sp-eyebrow sp-center" data-reveal>
+          {data.delivered.eyebrow}
+        </p>
+        <h2
+          className="sp-center"
+          data-reveal
+          dangerouslySetInnerHTML={{ __html: data.delivered.heading }}
+        />
         <div className="sp-delivered-grid">
           {data.delivered.cards.map((c, i) => (
             <div key={i} className="sp-delivered-card" data-reveal>
@@ -254,18 +299,72 @@ export default function BrandPremiumPage({ data }: { data: Brand }) {
           ))}
           {data.workDone.bullets.length > 0 && (
             <div className="sp-delivered-card sp-delivered-card--list" data-reveal>
-              <span className="sp-delivered-num">{String(data.delivered.cards.length + 1).padStart(2, "0")}</span>
+              <span className="sp-delivered-num">
+                {String(data.delivered.cards.length + 1).padStart(2, "0")}
+              </span>
               <h3>{data.workDone.title}</h3>
-              <ul>{data.workDone.bullets.map((b) => <li key={b}>{b}</li>)}</ul>
+              <ul>
+                {data.workDone.bullets.map((b) => (
+                  <li key={b}>{b}</li>
+                ))}
+              </ul>
             </div>
           )}
         </div>
       </section>
+    ),
+  };
+
+  return (
+    <main
+      className={`brand-premium brand-premium--${variant}`}
+      ref={rootRef}
+      style={
+        {
+          "--bpx-primary": pal.primary,
+          "--bpx-accent": pal.accent,
+        } as React.CSSProperties
+      }
+    >
+      {/* ── Hero ─────────────────────────────────────────── */}
+      <section className="sp-hero">
+        <div className="sp-hero-glow" aria-hidden="true" />
+        <div className="sp-hero-inner">
+          {data.logo && (
+            /* eslint-disable-next-line @next/next/no-img-element */
+            <img src={data.logo} alt={data.name} className="sp-hero-logo" />
+          )}
+          <p className="sp-hero-kicker">{data.hero.eyebrow}</p>
+          <h1 className="sp-hero-title" aria-label={data.name}>
+            {data.name.split("").map((ch, i) => (
+              <span key={i} className="sp-hero-word">
+                {ch === " " ? " " : ch}
+              </span>
+            ))}
+          </h1>
+          <div className="sp-hero-line" />
+          <p className="sp-hero-tagline">{data.hero.tagline}</p>
+          <div className="sp-hero-tags">
+            {data.hero.tags.map((t) => (
+              <span key={t} className="sp-tag">
+                {t}
+              </span>
+            ))}
+          </div>
+        </div>
+        <div className="sp-hero-scroll">Scroll</div>
+      </section>
+
+      {SECTION_ORDER[variant].map((key) => sections[key])}
 
       {/* ── CTA ──────────────────────────────────────────── */}
       <section className="sp-cta">
-        <p className="sp-cta-sub" data-reveal>{data.cta.sub}</p>
-        <Link href={data.cta.href} className="sp-cta-btn" data-reveal>{data.cta.label}</Link>
+        <p className="sp-cta-sub" data-reveal>
+          {data.cta.sub}
+        </p>
+        <Link href={data.cta.href} className="sp-cta-btn" data-reveal>
+          {data.cta.label}
+        </Link>
       </section>
     </main>
   );

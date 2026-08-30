@@ -356,35 +356,35 @@ const IMPORTED_BRANDS: Brand[] = [
       "title": "Creative Gallery",
       "images": [
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/Ambedkar-jayanti-INTELLVE.jpg",
+          "src": "/images/brands/intellve/ambedkar-jayanti-intellve.jpg",
           "alt": "Ambedkar Jayanti"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/Dhanteras-2-.jpeg",
+          "src": "/images/brands/intellve/dhanteras-2.jpeg",
           "alt": "Dhanteras"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/Dussera.jpg",
+          "src": "/images/brands/intellve/dussera.jpg",
           "alt": "Dussera"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/earth-day-INTELLVE.jpg",
+          "src": "/images/brands/intellve/earth-day-intellve.jpg",
           "alt": "Earth Day"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/Gandhi-Jayanti.jpg",
+          "src": "/images/brands/intellve/gandhi-jayanti.jpg",
           "alt": "Gandhi Jayanti"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/Guru-Nanak-Jayanti-.jpeg",
+          "src": "/images/brands/intellve/guru-nanak-jayanti.jpeg",
           "alt": "Guru Nanak Jayanti"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/Independence-day.jpg",
+          "src": "/images/brands/intellve/independence-day.jpg",
           "alt": "Independence Day"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/Intellve_Bhai_Dooj.jpg",
+          "src": "/images/brands/intellve/intellve-bhai-dooj.jpg",
           "alt": "Bhai Dooj"
         }
       ]
@@ -692,35 +692,35 @@ const IMPORTED_BRANDS: Brand[] = [
       "title": "Creative Gallery",
       "images": [
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/Crt-Left.png",
+          "src": "/images/brands/kunuts/crt-left.png",
           "alt": "Crt Left"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/kunuts-jan-republic-day-.jpg",
+          "src": "/images/brands/kunuts/kunuts-jan-republic-day.jpg",
           "alt": "Jan Republic Day"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/Holi.jpg",
+          "src": "/images/brands/kunuts/holi.jpg",
           "alt": "Holi"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/Ramdan@2x-1.jpg",
+          "src": "/images/brands/kunuts/ramdan-2x-1.jpg",
           "alt": "Ramdan@2x"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/kunuts-jan-makarsankrat.png",
+          "src": "/images/brands/kunuts/kunuts-jan-makarsankrat.png",
           "alt": "Jan Makarsankrat"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/kunuts-jan-makarsankrat-1.png",
+          "src": "/images/brands/kunuts/kunuts-jan-makarsankrat-1.png",
           "alt": "Jan Makarsankrat"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/kunuts-jan-3_.jpg",
+          "src": "/images/brands/kunuts/kunuts-jan-3.jpg",
           "alt": "Jan"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/kunuts-jan-republic-day-1-1.jpg",
+          "src": "/images/brands/kunuts/kunuts-jan-republic-day-1-1.jpg",
           "alt": "Jan Republic Day"
         }
       ]
@@ -1306,35 +1306,35 @@ const IMPORTED_BRANDS: Brand[] = [
       "title": "Creative Gallery",
       "images": [
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/441175069_1697447383996963_5303440128693367193_n.jpg",
+          "src": "/images/brands/monarch/441175069-1697447383996963-5303440128693367193-n.jpg",
           "alt": "N"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/441129253_460025499780541_4898027462062335074_n.jpg",
+          "src": "/images/brands/monarch/441129253-460025499780541-4898027462062335074-n.jpg",
           "alt": "N"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/436270261_962201035644999_8047582674078374948_n.jpg",
+          "src": "/images/brands/monarch/436270261-962201035644999-8047582674078374948-n.jpg",
           "alt": "N"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/436346202_1265801647713538_6708095825783625845_n.jpg",
+          "src": "/images/brands/monarch/436346202-1265801647713538-6708095825783625845-n.jpg",
           "alt": "N"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/447582014_365123279919267_1632428410918691261_n.jpg",
+          "src": "/images/brands/monarch/447582014-365123279919267-1632428410918691261-n.jpg",
           "alt": "N"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/468322917_18107859313445274_2901932152859157014_n.jpg",
+          "src": "/images/brands/monarch/468322917-18107859313445274-2901932152859157014-n.jpg",
           "alt": "N"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/452870056_2161826644182312_5928892124035476037_n.jpg",
+          "src": "/images/brands/monarch/452870056-2161826644182312-5928892124035476037-n.jpg",
           "alt": "N"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/455224616_476757474990504_8533215241120221454_n.jpg",
+          "src": "/images/brands/monarch/455224616-476757474990504-8533215241120221454-n.jpg",
           "alt": "N"
         }
       ]
@@ -1630,35 +1630,35 @@ const IMPORTED_BRANDS: Brand[] = [
       "title": "Creative Gallery",
       "images": [
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/mt760L-1.png",
+          "src": "/images/brands/rapoo/mt760l-1.png",
           "alt": "Mt760l"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/V500-Pro.png",
+          "src": "/images/brands/rapoo/v500-pro.png",
           "alt": "V500 Pro"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/VT9PRO.png",
+          "src": "/images/brands/rapoo/vt9pro.png",
           "alt": "Vt9pro"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/10_Static.jpg",
+          "src": "/images/brands/rapoo/10-static.jpg",
           "alt": "Rapoo post"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/11-1.jpg",
+          "src": "/images/brands/rapoo/11-1.jpg",
           "alt": "Rapoo post"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/Mousepad.jpg",
+          "src": "/images/brands/rapoo/mousepad.jpg",
           "alt": "Mousepad"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/Copy-of-02-1.jpg",
+          "src": "/images/brands/rapoo/copy-of-02-1.jpg",
           "alt": "Rapoo post"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/Copy-of-03.jpg",
+          "src": "/images/brands/rapoo/copy-of-03.jpg",
           "alt": "Rapoo post"
         }
       ]
@@ -1929,35 +1929,35 @@ const IMPORTED_BRANDS: Brand[] = [
       "title": "Creative Gallery",
       "images": [
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/1-1.jpg",
+          "src": "/images/brands/rapoo-middle-east/1-1.jpg",
           "alt": "Rapoo Middle East post"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/2-2.jpg",
+          "src": "/images/brands/rapoo-middle-east/2-2.jpg",
           "alt": "Rapoo Middle East post"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/3-2.jpg",
+          "src": "/images/brands/rapoo-middle-east/3-2.jpg",
           "alt": "Rapoo Middle East post"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/4-2.jpg",
+          "src": "/images/brands/rapoo-middle-east/4-2.jpg",
           "alt": "Rapoo Middle East post"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/5-1.jpg",
+          "src": "/images/brands/rapoo-middle-east/5-1.jpg",
           "alt": "Rapoo Middle East post"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/6-1.jpg",
+          "src": "/images/brands/rapoo-middle-east/6-1.jpg",
           "alt": "Rapoo Middle East post"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/7-1.jpg",
+          "src": "/images/brands/rapoo-middle-east/7-1.jpg",
           "alt": "Rapoo Middle East post"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/8-2.jpg",
+          "src": "/images/brands/rapoo-middle-east/8-2.jpg",
           "alt": "Rapoo Middle East post"
         }
       ]
@@ -2207,11 +2207,11 @@ const IMPORTED_BRANDS: Brand[] = [
       "title": "Creative Gallery",
       "images": [
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/564987481_18063087149576460_6542216695873398226_n.jpg",
+          "src": "/images/brands/furnishing-home/564987481-18063087149576460-6542216695873398226-n.jpg",
           "alt": "N"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/Dhanteras-.jpeg",
+          "src": "/images/brands/furnishing-home/dhanteras.jpeg",
           "alt": "Dhanteras"
         },
         {
@@ -2219,19 +2219,19 @@ const IMPORTED_BRANDS: Brand[] = [
           "alt": "Bhaidooj Scaled"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/Bhaidooj.png",
+          "src": "/images/brands/furnishing-home/bhaidooj.png",
           "alt": "Bhaidooj"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/furnishing_home_CC_3.png",
+          "src": "/images/brands/furnishing-home/furnishing-home-cc-3.png",
           "alt": "Cc"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/furnishing_home_CC_6.png",
+          "src": "/images/brands/furnishing-home/furnishing-home-cc-6.png",
           "alt": "Cc"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/furnishing_home_CC_11.png",
+          "src": "/images/brands/furnishing-home/furnishing-home-cc-11.png",
           "alt": "Cc"
         },
         {
@@ -2543,35 +2543,35 @@ const IMPORTED_BRANDS: Brand[] = [
       "title": "Creative Gallery",
       "images": [
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/newyear_resizee2.png",
+          "src": "/images/brands/secure-my-shop/newyear-resizee2.png",
           "alt": "Newyear Resizee2"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/newyear_resizee1.png",
+          "src": "/images/brands/secure-my-shop/newyear-resizee1.png",
           "alt": "Newyear Resizee1"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/christmas_reelsize3.png",
+          "src": "/images/brands/secure-my-shop/christmas-reelsize3.png",
           "alt": "Christmas Reelsize3"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/slide1-1.png",
+          "src": "/images/brands/secure-my-shop/slide1-1.png",
           "alt": "Slide1"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/slide2.png",
+          "src": "/images/brands/secure-my-shop/slide2.png",
           "alt": "Slide2"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/slide3.png",
+          "src": "/images/brands/secure-my-shop/slide3.png",
           "alt": "Slide3"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/slide4.png",
+          "src": "/images/brands/secure-my-shop/slide4.png",
           "alt": "Slide4"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/slide1.png",
+          "src": "/images/brands/secure-my-shop/slide1.png",
           "alt": "Slide1"
         }
       ]
@@ -2697,35 +2697,35 @@ const IMPORTED_BRANDS: Brand[] = [
       "title": "Creative Gallery",
       "images": [
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/1.jpeg",
+          "src": "/images/brands/icici/1.jpeg",
           "alt": "Icici post"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/2.jpeg",
+          "src": "/images/brands/icici/2.jpeg",
           "alt": "Icici post"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/5.jpeg",
+          "src": "/images/brands/icici/5.jpeg",
           "alt": "Icici post"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/4.jpeg",
+          "src": "/images/brands/icici/4.jpeg",
           "alt": "Icici post"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/3-1.jpeg",
+          "src": "/images/brands/icici/3-1.jpeg",
           "alt": "Icici post"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/5-1.jpeg",
+          "src": "/images/brands/icici/5-1.jpeg",
           "alt": "Icici post"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/6-1.jpeg",
+          "src": "/images/brands/icici/6-1.jpeg",
           "alt": "Icici post"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/7-1.jpeg",
+          "src": "/images/brands/icici/7-1.jpeg",
           "alt": "Icici post"
         }
       ]
@@ -2798,7 +2798,7 @@ const IMPORTED_BRANDS: Brand[] = [
   {
     "slug": "godrej",
     "name": "Godrej",
-    "logo": "https://rajeshwarichauhan.in/wp-content/uploads/2025/11/Godrej.png",
+    "logo": "/images/brands/godrej/godrej.png",
     "cardDescription": "Content writing and social strategy for Godrej Enterprises Group, driving reach and engagement growth.",
     "published": true,
     "palette": {
@@ -2877,31 +2877,31 @@ const IMPORTED_BRANDS: Brand[] = [
       "title": "Creative Gallery",
       "images": [
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-04-at-9.55.12-AM-1.jpeg",
+          "src": "/images/brands/godrej/whatsapp-image-2026-01-04-at-9-55-12-am-1.jpeg",
           "alt": "Whatsapp Image At 9.55.12 Am"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-04-at-9.55.12-AM-2.jpeg",
+          "src": "/images/brands/godrej/whatsapp-image-2026-01-04-at-9-55-12-am-2.jpeg",
           "alt": "Whatsapp Image At 9.55.12 Am"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-04-at-9.55.12-AM.jpeg",
+          "src": "/images/brands/godrej/whatsapp-image-2026-01-04-at-9-55-12-am.jpeg",
           "alt": "Whatsapp Image At 9.55.12 Am"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-04-at-9.55.12-AM-1-1.jpeg",
+          "src": "/images/brands/godrej/whatsapp-image-2026-01-04-at-9-55-12-am-1-1.jpeg",
           "alt": "Whatsapp Image At 9.55.12 Am"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-04-at-9.55.12-AM-2-1.jpeg",
+          "src": "/images/brands/godrej/whatsapp-image-2026-01-04-at-9-55-12-am-2-1.jpeg",
           "alt": "Whatsapp Image At 9.55.12 Am"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-04-at-9.55.12-AM-3.jpeg",
+          "src": "/images/brands/godrej/whatsapp-image-2026-01-04-at-9-55-12-am-3.jpeg",
           "alt": "Whatsapp Image At 9.55.12 Am"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-04-at-9.55.13-AM.jpeg",
+          "src": "/images/brands/godrej/whatsapp-image-2026-01-04-at-9-55-13-am.jpeg",
           "alt": "Whatsapp Image At 9.55.13 Am"
         }
       ]
@@ -3450,10 +3450,233 @@ const IMPORTED_BRANDS: Brand[] = [
   }
 ];
 
+// Brands scraped from their own live sites (greencaphealth.com, thechemistpharm.com,
+// crystalcook, chemistrieco.com). Copy and imagery below are taken from those sites.
+const LIVE_SITE_BRANDS: Brand[] = [
+  {
+    ...structuredClone(DEFAULT_BRAND),
+    slug: "greencap-health",
+    name: "Green Cap Health",
+    logo: "/images/brands/greencap-health/logo.png",
+    cardDescription:
+      "A licensed Texas telehealth practice — real providers, a real pharmacy, and full transparency on every treatment.",
+    published: true,
+    logoBg: "#0e1a12",
+    palette: { primary: "#2f7d4f", bg: "#f2f7f3", bgSoft: "#e6f0e9", ink: "#0a1710", accent: "#7fc79a" },
+    brandColor: "linear-gradient(135deg, #2f7d4f, #205c39)",
+    hero: {
+      eyebrow: "CLIENT ARCHIVE",
+      title: "GREEN CAP HEALTH",
+      bgText: "GC",
+      tagline: "No Insurance, No Waiting Rooms",
+      tags: ["Content Writing", "Social Media", "Client Servicing"],
+    },
+    story: {
+      title: "Your Health, Simplified",
+      body: "We're not a supplement brand. Green Cap Health is a licensed Texas telehealth practice with real providers, a real pharmacy, and full transparency on everything that goes into your treatment. Affordable, personalised care from the comfort of your home — licensed Texas providers, real prescriptions, free consultation.",
+      bigNum: "2,400+",
+    },
+    approach: {
+      eyebrow: "HOW IT WORKS",
+      heading: "Straightforward, <em>100% online</em>",
+      items: [
+        { num: "01", title: "Select Your Plan", body: "Choose your program and complete a quick online intake form." },
+        { num: "02", title: "Provider Review", body: "A licensed provider reviews your history to confirm the right plan for you." },
+        { num: "03", title: "Ships to Your Door", body: "Compounded by a state-licensed pharmacy partner, with biweekly check-ins and ongoing physician support." },
+      ],
+    },
+    workDone: {
+      title: "Work Done",
+      bullets: [
+        "Physician-led care, not a bot or a one-time consult",
+        "Pharmaceutical-grade actives from FDA-registered facilities",
+        "State-licensed compounding pharmacy partners",
+        "Monthly lab reports included",
+      ],
+    },
+    gallery: { title: "Creative Gallery", images: [] },
+    delivered: {
+      eyebrow: "DELIVERABLES",
+      heading: "What We <em>Delivered</em>",
+      cards: [
+        { video: "", title: "Treatment Storytelling", body: "Weight loss, hair regrowth, skin care and sexual health explained without supplement-brand gimmicks." },
+        { video: "", title: "Trust & Compliance Copy", body: "Sourcing, licensing and lab-report transparency written so patients can actually follow it." },
+      ],
+    },
+    featured: { ...DEFAULT_BRAND.featured, video: "" },
+    philosophy: { ...DEFAULT_BRAND.philosophy, video: "" },
+    cta: { sub: "Want results like these?", label: "Book a discovery call with Raji →", href: "/contact" },
+  },
+  {
+    ...structuredClone(DEFAULT_BRAND),
+    slug: "the-chemist-pharmacy",
+    name: "The Chemist Pharmacy",
+    logo: "/images/brands/the-chemist-pharmacy/logo.png",
+    cardDescription:
+      "A Houston compounding pharmacy rejecting one-size-fits-all medicine — precision formulations, delivered next day.",
+    published: true,
+    logoBg: "#12161f",
+    palette: { primary: "#2b6fb0", bg: "#f1f5fa", bgSoft: "#e3ebf5", ink: "#0a1220", accent: "#7fb0dd" },
+    brandColor: "linear-gradient(135deg, #2b6fb0, #1d4e7d)",
+    hero: {
+      eyebrow: "CLIENT ARCHIVE",
+      title: "THE CHEMIST",
+      bgText: "TCP",
+      tagline: "Precision Medicine. Personal Care.",
+      tags: ["Content Writing", "Social Media", "Client Servicing"],
+    },
+    story: {
+      title: "We Take Your Health Personally",
+      body: "More than a compounding pharmacy, The Chemist Pharmacy is dedicated to transforming how patients experience medication. They reject the one-size-fits-all approach because precise formulation matters — every patient deserves medication that fits their life, not the other way around. Houston, TX, serving patients across Texas.",
+      bigNum: "4",
+    },
+    approach: {
+      eyebrow: "OUR PROCESS",
+      heading: "From prescription to your door in <em>four steps</em>",
+      items: [
+        { num: "01", title: "Submit Your Info", body: "Complete the secure new-patient form online or call directly — health goals and medication needs, nothing more." },
+        { num: "02", title: "We Handle the Rest", body: "Prescriptions coordinated and compounded precisely to dose, form and delivery." },
+        { num: "03", title: "Next-Day Delivery", body: "Complimentary shipping on every order, arriving the next business day." },
+      ],
+    },
+    workDone: {
+      title: "Work Done",
+      bullets: [
+        "Custom compounding explained in plain language",
+        "Independent testing and safety messaging",
+        "Immediate pharmacist support positioning",
+        "Prevention over prescription brand pillar",
+      ],
+    },
+    gallery: { title: "Creative Gallery", images: [] },
+    delivered: {
+      eyebrow: "DELIVERABLES",
+      heading: "What We <em>Delivered</em>",
+      cards: [
+        { video: "", title: "Service Architecture", body: "Compounding, dermatology, weight management and hormone care structured into a readable set of offers." },
+        { video: "", title: "Patient Proof", body: "Testimonials and FAQ content that answer what patients actually ask before switching pharmacy." },
+      ],
+    },
+    featured: { ...DEFAULT_BRAND.featured, video: "" },
+    philosophy: { ...DEFAULT_BRAND.philosophy, video: "" },
+    cta: { sub: "Want results like these?", label: "Book a discovery call with Raji →", href: "/contact" },
+  },
+  {
+    ...structuredClone(DEFAULT_BRAND),
+    slug: "crystal",
+    name: "Crystal",
+    logo: "/images/brands/crystal/logo.png",
+    cardDescription:
+      "Crystal Cook N Serve — kitchenware and home solutions simplifying daily chores across India since 1971.",
+    published: true,
+    logoBg: "#1b1410",
+    palette: { primary: "#b8442e", bg: "#faf3ec", bgSoft: "#f2e6da", ink: "#1a1008", accent: "#e0a06f" },
+    brandColor: "linear-gradient(135deg, #b8442e, #8c3020)",
+    hero: {
+      eyebrow: "CLIENT ARCHIVE",
+      title: "CRYSTAL",
+      bgText: "CC",
+      tagline: "Simplifying daily chores, adding pride to every home",
+      tags: ["Content Writing", "Social Media", "Client Servicing"],
+    },
+    story: {
+      title: "Half a Century of Trust",
+      body: "Since 1971, Crystal has brought together smart design, durable material and everyday practicality to enhance every corner of the home — from cooking to serving to cleaning. Made in India, available in multiple countries: 3 offices, 3 factories, 5 warehouses, 100,000+ outlets and 300,000 sq ft of factory floor.",
+      bigNum: "54 yrs",
+    },
+    approach: {
+      eyebrow: "HOW WE WORK",
+      heading: "Built for the way <em>India cooks</em>",
+      items: [
+        { num: "01", title: "Category Storytelling", body: "Cookware, kitchenware, houseware and cleaning mapped into content people can shop from." },
+        { num: "02", title: "Heritage With Utility", body: "A 50-year legacy told through everyday practicality rather than nostalgia alone." },
+        { num: "03", title: "Retail-Scale Consistency", body: "One voice across a catalogue serving 100,000+ outlets." },
+      ],
+    },
+    workDone: {
+      title: "Work Done",
+      bullets: [
+        "Multi-brand architecture: Crystal, Crystalina, Sparkle",
+        "Product-category content across cookware and houseware",
+        "Blog and resource programme",
+        "Trade and retail messaging",
+      ],
+    },
+    gallery: { title: "Creative Gallery", images: [] },
+    delivered: {
+      eyebrow: "DELIVERABLES",
+      heading: "What We <em>Delivered</em>",
+      cards: [
+        { video: "", title: "Brand System", body: "Three sub-brands given distinct voices without fracturing the parent identity." },
+        { video: "", title: "Everyday Utility Content", body: "Cooking-led storytelling that makes durable hardware feel desirable." },
+      ],
+    },
+    featured: { ...DEFAULT_BRAND.featured, video: "" },
+    philosophy: { ...DEFAULT_BRAND.philosophy, video: "" },
+    cta: { sub: "Want results like these?", label: "Book a discovery call with Raji →", href: "/contact" },
+  },
+  {
+    ...structuredClone(DEFAULT_BRAND),
+    slug: "chemistrie",
+    name: "Chemistrie",
+    // chemistrieco.com sets its wordmark as live text, not an image — the file
+    // served as a "logo" is a product render, so the hero title carries the name.
+    logo: "",
+    cardDescription:
+      "Pharmacist-formulated skincare out of Houston — a quiet standard, applied every morning.",
+    published: true,
+    logoBg: "#17130f",
+    palette: { primary: "#9a7b5f", bg: "#f7f3ee", bgSoft: "#ece4da", ink: "#141009", accent: "#cbb094" },
+    brandColor: "linear-gradient(135deg, #9a7b5f, #6f5641)",
+    hero: {
+      eyebrow: "CLIENT ARCHIVE",
+      title: "CHEMISTRIE",
+      bgText: "CH",
+      tagline: "Made by pharmacists. Made with love.",
+      tags: ["Content Writing", "Social Media", "Client Servicing"],
+    },
+    story: {
+      title: "It Began at a Pharmacy Counter",
+      body: "Not a marketing meeting. Harin and Zach, compounding pharmacists, spent years behind a counter before Chemistrie existed — formulating for the women they love. Every formula answers to two pharmacists, by name, not a lab Chemistrie doesn't own. Some rituals don't need reinventing; they need to be done well.",
+      bigNum: "28",
+    },
+    approach: {
+      eyebrow: "THE PHARMACY STANDARD",
+      heading: "Numbers, <em>not noise</em>",
+      items: [
+        { num: "01", title: "Pharmacist-Formulated", body: "Every formula answers to two pharmacists, by name — every batch." },
+        { num: "02", title: "Pharmacist-Selected Sourcing", body: "Actives chosen for concentration, source and half-life, published in an open index." },
+        { num: "03", title: "The Ritual", body: "Cleanse, hydrate, renew, repeat — built to layer, not to compete with itself." },
+      ],
+    },
+    workDone: {
+      title: "Work Done",
+      bullets: [
+        "Founder-led narrative from the compounding lab",
+        "The Active Index — twelve actives, documented",
+        "Collection storytelling: Veil, Velvet, Aura",
+        "Trust signals written without rounding up",
+      ],
+    },
+    gallery: { title: "Creative Gallery", images: [] },
+    delivered: {
+      eyebrow: "DELIVERABLES",
+      heading: "What We <em>Delivered</em>",
+      cards: [
+        { video: "", title: "Editorial Voice", body: "A restrained, pharmacy-grade tone that reads as credibility rather than beauty-industry hype." },
+        { video: "", title: "Ingredient Transparency", body: "Concentration, source and half-life published per active — proof in place of claims." },
+      ],
+    },
+    featured: { ...DEFAULT_BRAND.featured, video: "" },
+    philosophy: { ...DEFAULT_BRAND.philosophy, video: "" },
+    cta: { sub: "Want results like these?", label: "Book a discovery call with Raji →", href: "/contact" },
+  },
+];
+
 export const DEFAULT_BRANDS: BrandsData = {
   archiveTitle: "Brands",
   archiveIntro: "A selection of brands we've helped grow with strategy, content and community.",
-  items: [MAST_MASALA, GREENCAP, ...IMPORTED_BRANDS],
+  items: [MAST_MASALA, GREENCAP, ...LIVE_SITE_BRANDS, ...IMPORTED_BRANDS],
 };
 
 export function findBrand(d: BrandsData, slug: string): Brand | undefined {

@@ -57,13 +57,20 @@
   max-width: 900px;
   width: 100%;
 }
+/* No colour filter here: some brands' logo files are full-colour lockups or
+   product renders, and forcing brightness(0)/invert flattened them to a white
+   blob. Sit them on a light chip instead so dark marks stay legible on the
+   dark hero without touching their artwork. */
 .brand-premium .sp-hero-logo {
-  height: 42px;
+  height: 34px;
   width: auto;
+  max-width: min(70vw, 260px);
   object-fit: contain;
   margin: 0 auto 24px;
-  filter: brightness(0) invert(1);
-  opacity: 0.92;
+  padding: 12px 18px;
+  background: rgba(244, 238, 226, 0.94);
+  border-radius: 10px;
+  box-sizing: content-box;
 }
 .brand-premium .sp-hero-kicker {
   font-family: var(--font-body);
@@ -466,7 +473,7 @@
   .brand-premium .sp-gallery-item { margin-bottom: 16px; }
   .brand-premium .sp-growth-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
   .brand-premium .sp-delivered-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
-  .brand-premium .sp-hero-logo { height: 50px; }
+  .brand-premium .sp-hero-logo { height: 40px; }
   .brand-premium .sp-showcase { gap: 56px; }
 }
 
@@ -474,7 +481,7 @@
 @media (min-width: 900px) {
   .brand-premium { --sp-pad: var(--gutter-desktop); }
   .brand-premium .sp-hero { padding-top: 120px; padding-bottom: 90px; }
-  .brand-premium .sp-hero-logo { height: 56px; margin-bottom: 30px; }
+  .brand-premium .sp-hero-logo { height: 46px; margin-bottom: 30px; }
   .brand-premium .sp-hero-line { width: 110px; margin: 30px auto; }
 
   .brand-premium .sp-stats { padding: 80px var(--sp-pad); }
@@ -530,4 +537,84 @@
 /* ════════ ≥ 1100px ════════ */
 @media (min-width: 1100px) {
   .brand-premium .sp-gallery-masonry { column-count: 3; }
+}
+
+/* ════════════════════════════════════════════════════════
+   Layout variants — each brand gets one of three treatments
+   so consecutive case studies don't read as one template.
+   ════════════════════════════════════════════════════════ */
+
+/* ── editorial: type-led, centred, generous rules ── */
+.brand-premium--editorial .sp-story-num {
+  border-bottom: 1px solid var(--sp-divider);
+  padding-bottom: 18px;
+}
+
+/* ── gallery-led: work first, tighter type, full-bleed showcase ── */
+.brand-premium--gallery-led .sp-hero {
+  min-height: 74vh;
+}
+.brand-premium--gallery-led .sp-showcase {
+  padding-left: 0;
+  padding-right: 0;
+  max-width: none;
+}
+.brand-premium--gallery-led .sp-showcase-item img {
+  border-radius: 0;
+}
+.brand-premium--gallery-led .sp-showcase-item figcaption {
+  padding: 0 var(--sp-pad);
+}
+.brand-premium--gallery-led .sp-stats {
+  background: transparent;
+}
+.brand-premium--gallery-led .sp-stat-num {
+  color: var(--sp-gold);
+}
+
+/* ── narrative: story first, left-aligned headings, quieter numbers ── */
+.brand-premium--narrative .sp-hero {
+  text-align: left;
+  align-items: flex-start;
+}
+.brand-premium--narrative .sp-hero-inner {
+  margin-right: auto;
+}
+.brand-premium--narrative .sp-hero-logo {
+  margin-left: 0;
+}
+.brand-premium--narrative .sp-hero-line {
+  margin-left: 0;
+}
+.brand-premium--narrative .sp-hero-tags {
+  justify-content: flex-start;
+}
+.brand-premium--narrative .sp-hero-scroll {
+  left: var(--sp-pad);
+  transform: none;
+}
+.brand-premium--narrative .sp-hero-scroll::after {
+  margin-left: 0;
+}
+.brand-premium--narrative .sp-center {
+  text-align: left;
+}
+.brand-premium--narrative .sp-stats {
+  background: transparent;
+  border-top: none;
+}
+.brand-premium--narrative .sp-gallery-masonry {
+  column-gap: 10px;
+}
+.brand-premium--narrative .sp-gallery-item {
+  margin-bottom: 10px;
+}
+
+@media (min-width: 900px) {
+  .brand-premium--gallery-led .sp-showcase { gap: 0; }
+  .brand-premium--narrative .sp-story-grid { grid-template-columns: 1fr 1fr; }
+  .brand-premium--narrative .sp-approach-item--reverse {
+    flex-direction: row;
+    text-align: left;
+  }
 }

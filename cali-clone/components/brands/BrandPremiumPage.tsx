@@ -49,7 +49,10 @@ export default function BrandPremiumPage({ data }: { data: Brand }) {
       .from(el.querySelectorAll(".sp-hero-scroll"), { opacity: 0, duration: 0.6 }, "-=0.2");
   }, []);
 
-  /* ── Scroll reveals ────────────────────────────────── */
+  /* ── Scroll reveals ──────────────────────────────────
+     Only text blocks and single figures get a reveal. The masonry gallery is
+     laid out with CSS columns, whose item positions ScrollTrigger cannot
+     measure reliably — animating those left images stuck at opacity 0. */
   useEffect(() => {
     const el = rootRef.current;
     if (!el) return;
@@ -58,11 +61,30 @@ export default function BrandPremiumPage({ data }: { data: Brand }) {
     targets.forEach((t) => {
       const tw = gsap.from(t, {
         y: 40, opacity: 0, duration: 0.8, ease: "power3.out",
-        scrollTrigger: { trigger: t, start: "top 85%" },
+        scrollTrigger: { trigger: t, start: "top 92%", once: true },
       });
       if (tw.scrollTrigger) triggers.push(tw.scrollTrigger);
     });
-    return () => triggers.forEach((t) => t.kill());
+
+    // Images finishing later shift everything below them; re-measure so no
+    // trigger is left with a stale start position.
+    const imgs = Array.from(el.querySelectorAll("img"));
+    const pending = imgs.filter((i) => !i.complete);
+    const refresh = () => ScrollTrigger.refresh();
+    pending.forEach((i) => {
+      i.addEventListener("load", refresh);
+      i.addEventListener("error", refresh);
+    });
+    const t = setTimeout(refresh, 400);
+
+    return () => {
+      clearTimeout(t);
+      pending.forEach((i) => {
+        i.removeEventListener("load", refresh);
+        i.removeEventListener("error", refresh);
+      });
+      triggers.forEach((tr) => tr.kill());
+    };
   }, [media]);
 
   /* ── Stat count-up ─────────────────────────────────── */
@@ -204,7 +226,7 @@ export default function BrandPremiumPage({ data }: { data: Brand }) {
           <p className="sp-eyebrow sp-center" data-reveal>{data.gallery.title}</p>
           <div className="sp-gallery-masonry">
             {gallery.map((img) => (
-              <figure key={img.src} className="sp-gallery-item" data-reveal>
+              <figure key={img.src} className="sp-gallery-item">
                 <Image
                   src={img.src}
                   alt={`${data.name} creative`}

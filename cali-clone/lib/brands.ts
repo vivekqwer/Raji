@@ -3292,7 +3292,7 @@ const IMPORTED_BRANDS: Brand[] = [
   {
     "slug": "vamas",
     "name": "Vamas",
-    "logo": "https://www.vamas.in/cdn/shop/files/Logo_58817fa3-d97a-4f1d-9351-033987ae46c5.png?v=1711731102&width=300",
+    "logo": "/images/brands/vamas/vamas-logo.avif",
     "cardDescription": "Vamas designs premium custom-fitted saree blouses for Indian women, blending classic silhouettes with modern trends.",
     "published": true,
     "palette": {

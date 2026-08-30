@@ -1501,6 +1501,83 @@ export const BRAND_MEDIA: Record<string, BrandImage[]> = {
       "width": 463,
       "height": 441
     }
+  ],
+  "vamas": [
+    {
+      "src": "/images/brands/vamas/prod-blue.jpg",
+      "width": 1080,
+      "height": 1620
+    },
+    {
+      "src": "/images/brands/vamas/prod-cobalt.jpg",
+      "width": 1080,
+      "height": 1620
+    },
+    {
+      "src": "/images/brands/vamas/prod-darkmaroon.jpg",
+      "width": 1080,
+      "height": 1620
+    },
+    {
+      "src": "/images/brands/vamas/prod-green2.jpg",
+      "width": 1080,
+      "height": 1620
+    },
+    {
+      "src": "/images/brands/vamas/bridal.jpg",
+      "width": 1080,
+      "height": 1440
+    },
+    {
+      "src": "/images/brands/vamas/festive.jpg",
+      "width": 1080,
+      "height": 1440
+    },
+    {
+      "src": "/images/brands/vamas/full-look.jpg",
+      "width": 1080,
+      "height": 1440
+    },
+    {
+      "src": "/images/brands/vamas/party-wear.jpg",
+      "width": 1080,
+      "height": 1440
+    },
+    {
+      "src": "/images/brands/vamas/prod-brinjal.jpg",
+      "width": 1080,
+      "height": 1440
+    },
+    {
+      "src": "/images/brands/vamas/prod-indigo.jpg",
+      "width": 1080,
+      "height": 1440
+    },
+    {
+      "src": "/images/brands/vamas/slide-green.jpg",
+      "width": 1080,
+      "height": 1440
+    },
+    {
+      "src": "/images/brands/vamas/slide-maroon.jpg",
+      "width": 1080,
+      "height": 1440
+    },
+    {
+      "src": "/images/brands/vamas/slide-pink.jpg",
+      "width": 1080,
+      "height": 1440
+    },
+    {
+      "src": "/images/brands/vamas/casual.jpg",
+      "width": 1000,
+      "height": 1000
+    },
+    {
+      "src": "/images/brands/vamas/fulllook.webp",
+      "width": 1280,
+      "height": 409
+    }
   ]
 };
 

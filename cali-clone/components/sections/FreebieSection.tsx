@@ -34,12 +34,12 @@ export default function FreebieSection({ data = DEFAULT_CONTENT.freebie }: { dat
           <div className="freebie-copy-inner">
             <span className="eyebrow-italic">let&apos;s connect</span>
             <h2 className="freebie-heading">
-              Sounds Good?<br />
-              <em>Let&apos;s connect.</em>
+              Ready<br />
+              <em>When You Are.</em>
             </h2>
             <p className="freebie-body">
-              Drop your email and I&apos;ll reach out for a free 30-minute discovery call —
-              no pressure, no obligation, just a real conversation about your social media goals.
+              Leave your email and I&apos;ll set up a quick, no-obligation call to talk about
+              your client servicing and social media needs.
             </p>
             <form onSubmit={onSubmit} className="freebie-form">
               <input

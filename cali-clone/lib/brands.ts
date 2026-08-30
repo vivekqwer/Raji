@@ -8,6 +8,7 @@ export type Brand = BrandData & {
   logo: string;          // logo image URL or /api/media/... (empty → initials placeholder)
   cardDescription: string; // short blurb on the archive card
   published?: boolean;   // hidden from public site when false (draft). undefined = visible.
+  layout?: "standard" | "premium"; // "premium" renders a bespoke one-off page component instead of the shared template
 };
 
 export type BrandsData = {
@@ -792,7 +793,7 @@ const IMPORTED_BRANDS: Brand[] = [
   {
     "slug": "salus",
     "name": "Salus",
-    "logo": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/Salus.png",
+    "logo": "/images/brands/salus/logo.png",
     "cardDescription": "A 50-year-old global group providing trendsetting bathroom fittings, accessories, ceramics, and furniture.",
     "published": true,
     "palette": {
@@ -969,35 +970,35 @@ const IMPORTED_BRANDS: Brand[] = [
       "title": "Creative Gallery",
       "images": [
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/431977276_410283718245931_7764317246885861589_n.jpg",
+          "src": "/images/brands/salus/social/431977276_410283718245931_7764317246885861589_n.jpg",
           "alt": "N"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/433478734_366351463041248_825631383532726654_n.jpg",
+          "src": "/images/brands/salus/social/433478734_366351463041248_825631383532726654_n.jpg",
           "alt": "N"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/437939287_444412791420947_1581008568433222134_n.jpg",
+          "src": "/images/brands/salus/social/437939287_444412791420947_1581008568433222134_n.jpg",
           "alt": "N"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/437296980_963829161518959_6682349479197223728_n.jpg",
+          "src": "/images/brands/salus/social/437296980_963829161518959_6682349479197223728_n.jpg",
           "alt": "N"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/440373174_961749555089587_7992986260996373891_n.jpg",
+          "src": "/images/brands/salus/social/440373174_961749555089587_7992986260996373891_n.jpg",
           "alt": "N"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/437981279_7324738997621909_1183900633170419247_n.jpg",
+          "src": "/images/brands/salus/social/437981279_7324738997621909_1183900633170419247_n.jpg",
           "alt": "N"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/441181954_750928500201159_5840406652411348696_n.jpg",
+          "src": "/images/brands/salus/social/441181954_750928500201159_5840406652411348696_n.jpg",
           "alt": "N"
         },
         {
-          "src": "https://rajeshwarichauhan.in/wp-content/uploads/2025/12/436283118_1533709947360122_9198187085610752614_n.jpg",
+          "src": "/images/brands/salus/social/436283118_1533709947360122_9198187085610752614_n.jpg",
           "alt": "N"
         }
       ]

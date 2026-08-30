@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans, Instrument_Serif } from "next/font/google";
 import "./globals.css";
+import "./brand-premium.css";
 import SiteChrome from "@/components/layout/SiteChrome";
 import { getDoc } from "@/lib/store";
 import { DEFAULT_SITE } from "@/lib/site";

@@ -47,7 +47,7 @@ export const DEFAULT_SITE: SiteChrome = {
     ctaLabel: "Sounds Good? Let's connect",
     ctaHref: "/contact",
     tagline:
-      "Social media strategy, content and steady community building for brands that want growth with intention.",
+      "Steady client servicing, thoughtful strategy and content for brands that want to grow the right way.",
     socials: [
       { label: "ln", href: "#" },
     ],
